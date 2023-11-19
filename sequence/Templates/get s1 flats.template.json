@@ -334,7 +334,7 @@
                       {
                         "$id": "42",
                         "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                        "Text": "requesteds-ii flats have been completed",
+                        "Text": "requested s-ii flats have been completed",
                         "Parent": {
                           "$ref": "37"
                         },

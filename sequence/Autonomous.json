@@ -4314,7 +4314,7 @@
                                     {
                                       "$id": "470",
                                       "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageAfterImageTrigger, Discord Alert",
-                                      "Text": "last image for $$TARGETNAME$$ ($$FILTER$$)",
+                                      "Text": "latest image for $$TARGETNAME$$ ($$FILTER$$)",
                                       "Parent": {
                                         "$ref": "443"
                                       },

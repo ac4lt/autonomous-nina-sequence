@@ -2157,7 +2157,7 @@
             {
               "$id": "199",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous: The Sequence started",
+              "Text": "Autonomous v0.1.1 started",
               "Parent": {
                 "$ref": "15"
               },

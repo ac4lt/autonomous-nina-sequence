@@ -55,9 +55,4 @@ NINA stores its sequences in JSON format. The sequence is made up of a collectio
 
 ## Wiki
 
-For information on how to configure and customize the sequence, please see the wiki.
-
-
-
-
-to be written...
+For information on how to configure and customize the sequence, please see the [Wiki](https://github.com/ac4lt/autonomous-nina-sequence/wiki).

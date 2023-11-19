@@ -41,7 +41,7 @@
               {
                 "$id": "8",
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                "Text": "starting luminancebin1 flats",
+                "Text": "starting luminance bin1 flats",
                 "Parent": {
                   "$ref": "5"
                 },

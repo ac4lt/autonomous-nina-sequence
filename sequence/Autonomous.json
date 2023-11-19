@@ -2157,7 +2157,7 @@
             {
               "$id": "199",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous v0.1.1 started",
+              "Text": "Autonomous v0.2.0 started",
               "Parent": {
                 "$ref": "15"
               },
@@ -4004,7 +4004,7 @@
                         }
                       ]
                     },
-                    "IsExpanded": true,
+                    "IsExpanded": false,
                     "Items": {
                       "$id": "430",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",

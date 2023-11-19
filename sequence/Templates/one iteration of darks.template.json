@@ -22,20 +22,20 @@
           "$id": "5",
           "$type": "NINA.Core.Model.Equipment.FilterInfo, NINA.Core",
           "_name": "s2",
-          "_focusOffset": -10,
+          "_focusOffset": -81,
           "_position": 6,
-          "_autoFocusExposureTime": 13.0,
+          "_autoFocusExposureTime": 30.0,
           "_autoFocusFilter": false,
           "FlatWizardFilterSettings": {
             "$id": "6",
             "$type": "NINA.Core.Model.Equipment.FlatWizardFilterSettings, NINA.Core",
             "FlatWizardMode": 0,
             "HistogramMeanTarget": 0.5,
-            "HistogramTolerance": 0.05,
-            "MaxFlatExposureTime": 30.0,
-            "MinFlatExposureTime": 10.0,
+            "HistogramTolerance": 0.35,
+            "MaxFlatExposureTime": 60.0,
+            "MinFlatExposureTime": 5.0,
             "MaxAbsoluteFlatDeviceBrightness": 255,
-            "MinAbsoluteFlatDeviceBrightness": 1,
+            "MinAbsoluteFlatDeviceBrightness": 0,
             "Gain": -1,
             "Offset": -1,
             "Binning": {
@@ -48,8 +48,8 @@
           "_autoFocusBinning": {
             "$id": "8",
             "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
-            "X": 1,
-            "Y": 1
+            "X": 2,
+            "Y": 2
           },
           "_autoFocusGain": -1,
           "_autoFocusOffset": -1
@@ -349,7 +349,7 @@
               {
                 "$id": "41",
                 "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
-                "ExposureTimeExpr": "BIN2_EXPOSURE_TIME",
+                "ExposureTimeExpr": "bin2_exposure_time",
                 "ExposureTime": 0.0,
                 "GainExpr": "",
                 "Gain": -1,
@@ -514,7 +514,7 @@
         "$id": "57",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "(not get_bin1_bias or actual_bias_bin1_count >= DESIRED_BIAS_COUNT) and (not get_bin2_bias or actual_bias_bin2_count >= DESIRED_BIAS_COUNT) and (not get_bin1_darks or actual_bb_dark_bin1_count >= DESIRED_DARK_COUNT) and (not get_bin1_darks or actual_nb_dark_bin1_count >= DESIRED_DARK_COUNT or bb_bin1_exposure_time == nb_bin1_exposure_time)and (not get_bin2_bias or actual_bias_bin2_count >= DESIRED_BIAS_COUNT)",
+        "Predicate": "(not get_bin1_bias or actual_bias_bin1_count >= DESIRED_BIAS_COUNT) and (not get_bin2_bias or actual_bias_bin2_count >= DESIRED_BIAS_COUNT) and (not get_bin1_darks or actual_bb_dark_bin1_count >= DESIRED_DARK_COUNT) and (not get_bin1_darks or (actual_nb_dark_bin1_count >= DESIRED_DARK_COUNT or bb_bin1_exposure_time == nb_bin1_exposure_time)) and (not get_bin2_bias or actual_bias_bin2_count >= DESIRED_BIAS_COUNT)",
         "Condition": null,
         "Instructions": {
           "$id": "58",

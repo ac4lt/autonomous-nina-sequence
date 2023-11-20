@@ -61,18 +61,6 @@
               },
               {
                 "$id": "10",
-                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-                "Variable": "camera_is_cooled",
-                "CValueExpr": "1",
-                "CValue": "Undefined",
-                "Parent": {
-                  "$ref": "5"
-                },
-                "ErrorBehavior": 0,
-                "Attempts": 1
-              },
-              {
-                "$id": "11",
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
                 "Text": "camera cooling cycle complete",
                 "Parent": {
@@ -84,7 +72,7 @@
             ]
           },
           "Triggers": {
-            "$id": "12",
+            "$id": "11",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -103,7 +91,7 @@
     ]
   },
   "Triggers": {
-    "$id": "13",
+    "$id": "12",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

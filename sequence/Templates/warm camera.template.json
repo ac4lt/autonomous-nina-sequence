@@ -130,18 +130,6 @@
       },
       {
         "$id": "17",
-        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-        "Variable": "camera_is_cooled",
-        "CValueExpr": "0",
-        "CValue": "Undefined",
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "18",
         "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
         "Text": "carmera warming cycle complete",
         "Parent": {
@@ -153,7 +141,7 @@
     ]
   },
   "Triggers": {
-    "$id": "19",
+    "$id": "18",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

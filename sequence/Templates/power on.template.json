@@ -258,7 +258,7 @@
                 "$id": "32",
                 "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
                 "iPredicateValue": "0",
-                "Predicate": "THIS_OBSERVATORY == DSOC_AP175_ML16300",
+                "Predicate": "THIS_OBSERVATORY == DSOC_AP175_ML16200",
                 "Condition": null,
                 "Instructions": {
                   "$id": "33",

@@ -198,7 +198,7 @@
               "Variable": "get_darks",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -222,7 +222,7 @@
               "Variable": "get_b1_flats",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -236,7 +236,7 @@
               "Variable": "get_b2_flats",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -250,7 +250,7 @@
               "Variable": "get_g1_flats",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -264,7 +264,7 @@
               "Variable": "get_g2_flats",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -278,7 +278,7 @@
               "Variable": "get_h1_flats",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -292,7 +292,7 @@
               "Variable": "get_l1_flats",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -306,7 +306,7 @@
               "Variable": "get_o1_flats",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -320,7 +320,7 @@
               "Variable": "get_osc1_flats",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -334,7 +334,7 @@
               "Variable": "get_r1_flats",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -348,7 +348,7 @@
               "Variable": "get_r2_flats",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -362,7 +362,7 @@
               "Variable": "get_s1_flats",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -646,7 +646,7 @@
               "Variable": "desired_camera_temperature",
               "CValueExpr": "-25",
               "OValueExpr": "-999",
-              "CValue": "NaN",
+              "CValue": "-25",
               "OValue": "-999",
               "Parent": {
                 "$ref": "15"
@@ -660,7 +660,7 @@
               "Variable": "bb_bin1_exposure_time",
               "CValueExpr": "600",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "600",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -674,7 +674,7 @@
               "Variable": "nb_bin1_exposure_time",
               "CValueExpr": "600",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "600",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -688,7 +688,7 @@
               "Variable": "bin2_exposure_time",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -702,7 +702,7 @@
               "Variable": "get_bin1_bias",
               "CValueExpr": "1",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "1",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -716,7 +716,7 @@
               "Variable": "get_bin2_bias",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -730,7 +730,7 @@
               "Variable": "get_bin1_darks",
               "CValueExpr": "1",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "1",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -744,7 +744,7 @@
               "Variable": "get_bin2_darks",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -755,7 +755,7 @@
             {
               "$id": "69",
               "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-              "iPredicateValue": "1",
+              "iPredicateValue": "0",
               "Predicate": "THIS_OBSERVATORY == SRO_PW14",
               "Condition": null,
               "Instructions": {
@@ -893,7 +893,7 @@
             {
               "$id": "82",
               "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-              "iPredicateValue": "0",
+              "iPredicateValue": "1",
               "Predicate": "THIS_OBSERVATORY == DSOC_CERAVOLO",
               "Condition": null,
               "Instructions": {
@@ -1384,7 +1384,7 @@
                     {
                       "$id": "131",
                       "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                      "iPredicateValue": "0",
+                      "iPredicateValue": "1",
                       "Predicate": "Temperature >= 5",
                       "Condition": null,
                       "Instructions": {
@@ -1618,7 +1618,7 @@
                     {
                       "$id": "155",
                       "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                      "iPredicateValue": "0",
+                      "iPredicateValue": "1",
                       "Predicate": "Temperature >= 5",
                       "Condition": null,
                       "Instructions": {
@@ -1798,7 +1798,7 @@
               "Variable": "power_is_on",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1822,7 +1822,7 @@
               "Variable": "actual_bb_dark_bin1_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1836,7 +1836,7 @@
               "Variable": "actual_nb_dark_bin1_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1850,7 +1850,7 @@
               "Variable": "actual_dark_bin2_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1864,7 +1864,7 @@
               "Variable": "actual_bias_bin1_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1878,7 +1878,7 @@
               "Variable": "actual_bias_bin2_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1902,7 +1902,7 @@
               "Variable": "actual_b1_flat_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1916,7 +1916,7 @@
               "Variable": "actual_b2_flat_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1930,7 +1930,7 @@
               "Variable": "actual_g1_flat_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1944,7 +1944,7 @@
               "Variable": "actual_g2_flat_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1958,7 +1958,7 @@
               "Variable": "actual_h1_flat_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1972,7 +1972,7 @@
               "Variable": "actual_l1_flat_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -1986,7 +1986,7 @@
               "Variable": "actual_o1_flat_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -2000,7 +2000,7 @@
               "Variable": "actual_r1_flat_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -2014,7 +2014,7 @@
               "Variable": "actual_r2_flat_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -2028,7 +2028,7 @@
               "Variable": "actual_s1_flat_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -2042,7 +2042,7 @@
               "Variable": "actual_osc1_flat_count",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -2088,7 +2088,7 @@
               "Variable": "cycles_completed",
               "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "NaN",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "15"
@@ -2119,7 +2119,7 @@
             {
               "$id": "196",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous v0.3.0-alpha.2 started",
+              "Text": "Autonomous v0.3.0 started",
               "Parent": {
                 "$ref": "15"
               },
@@ -2456,10 +2456,10 @@
                                       {
                                         "$id": "238",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 16,
-                                        "Minutes": 44,
+                                        "Hours": 17,
+                                        "Minutes": 56,
                                         "MinutesOffset": 0,
-                                        "Seconds": 10,
+                                        "Seconds": 43,
                                         "SelectedProvider": {
                                           "$id": "239",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunsetProvider, NINA.Sequencer"
@@ -3123,10 +3123,10 @@
                                       {
                                         "$id": "324",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 16,
-                                        "Minutes": 44,
+                                        "Hours": 17,
+                                        "Minutes": 56,
                                         "MinutesOffset": 0,
-                                        "Seconds": 10,
+                                        "Seconds": 43,
                                         "SelectedProvider": {
                                           "$ref": "239"
                                         },
@@ -3378,10 +3378,10 @@
                                 {
                                   "$id": "355",
                                   "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                  "Hours": 15,
-                                  "Minutes": 59,
+                                  "Hours": 17,
+                                  "Minutes": 11,
                                   "MinutesOffset": -45,
-                                  "Seconds": 10,
+                                  "Seconds": 43,
                                   "SelectedProvider": {
                                     "$ref": "239"
                                   },
@@ -3442,10 +3442,10 @@
                                 {
                                   "$id": "362",
                                   "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                  "Hours": 16,
-                                  "Minutes": 59,
+                                  "Hours": 18,
+                                  "Minutes": 11,
                                   "MinutesOffset": 15,
-                                  "Seconds": 10,
+                                  "Seconds": 43,
                                   "SelectedProvider": {
                                     "$ref": "239"
                                   },
@@ -3469,10 +3469,10 @@
                                       {
                                         "$id": "365",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 17,
-                                        "Minutes": 42,
+                                        "Hours": 18,
+                                        "Minutes": 49,
                                         "MinutesOffset": -2,
-                                        "Seconds": 5,
+                                        "Seconds": 45,
                                         "SelectedProvider": {
                                           "$id": "366",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
@@ -4065,10 +4065,10 @@
                         {
                           "$id": "440",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                          "Hours": 17,
-                          "Minutes": 14,
+                          "Hours": 18,
+                          "Minutes": 20,
                           "MinutesOffset": -60,
-                          "Seconds": 56,
+                          "Seconds": 38,
                           "SelectedProvider": {
                             "$id": "441",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.DuskProvider, NINA.Sequencer"
@@ -4114,10 +4114,10 @@
                         {
                           "$id": "446",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                          "Hours": 5,
-                          "Minutes": 48,
+                          "Hours": 6,
+                          "Minutes": 38,
                           "MinutesOffset": 5,
-                          "Seconds": 42,
+                          "Seconds": 1,
                           "SelectedProvider": {
                             "$id": "447",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -5144,10 +5144,10 @@
                                                     {
                                                       "$id": "578",
                                                       "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                      "Hours": 5,
-                                                      "Minutes": 43,
+                                                      "Hours": 6,
+                                                      "Minutes": 33,
                                                       "MinutesOffset": 0,
-                                                      "Seconds": 42,
+                                                      "Seconds": 1,
                                                       "SelectedProvider": {
                                                         "$ref": "447"
                                                       },
@@ -5758,10 +5758,10 @@
                                                     {
                                                       "$id": "657",
                                                       "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                      "Hours": 5,
-                                                      "Minutes": 43,
+                                                      "Hours": 6,
+                                                      "Minutes": 33,
                                                       "MinutesOffset": 0,
-                                                      "Seconds": 42,
+                                                      "Seconds": 1,
                                                       "SelectedProvider": {
                                                         "$ref": "447"
                                                       },
@@ -6247,10 +6247,10 @@
                                 {
                                   "$id": "713",
                                   "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                  "Hours": 5,
-                                  "Minutes": 43,
+                                  "Hours": 6,
+                                  "Minutes": 33,
                                   "MinutesOffset": 0,
-                                  "Seconds": 42,
+                                  "Seconds": 1,
                                   "SelectedProvider": {
                                     "$ref": "447"
                                   },
@@ -6274,10 +6274,10 @@
                                       {
                                         "$id": "716",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 6,
-                                        "Minutes": 28,
+                                        "Hours": 7,
+                                        "Minutes": 13,
                                         "MinutesOffset": -15,
-                                        "Seconds": 25,
+                                        "Seconds": 20,
                                         "SelectedProvider": {
                                           "$id": "717",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
@@ -6788,10 +6788,10 @@
                                       {
                                         "$id": "783",
                                         "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                        "Hours": 6,
-                                        "Minutes": 28,
+                                        "Hours": 7,
+                                        "Minutes": 13,
                                         "MinutesOffset": -15,
-                                        "Seconds": 25,
+                                        "Seconds": 20,
                                         "SelectedProvider": {
                                           "$ref": "717"
                                         },
@@ -7055,7 +7055,7 @@
                                 {
                                   "$id": "813",
                                   "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                                  "iPredicateValue": "1",
+                                  "iPredicateValue": "0",
                                   "Predicate": "THIS_OBSERVATORY == SRO_PW14",
                                   "Condition": null,
                                   "Instructions": {
@@ -7129,7 +7129,7 @@
                                 {
                                   "$id": "821",
                                   "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                                  "iPredicateValue": "0",
+                                  "iPredicateValue": "1",
                                   "Predicate": "THIS_OBSERVATORY == DSOC_CERAVOLO",
                                   "Condition": null,
                                   "Instructions": {
@@ -7508,10 +7508,10 @@
                                       {
                                         "$id": "867",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 6,
-                                        "Minutes": 38,
+                                        "Hours": 7,
+                                        "Minutes": 23,
                                         "MinutesOffset": -5,
-                                        "Seconds": 25,
+                                        "Seconds": 20,
                                         "SelectedProvider": {
                                           "$ref": "717"
                                         },
@@ -7682,10 +7682,10 @@
                         {
                           "$id": "886",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                          "Hours": 6,
-                          "Minutes": 43,
+                          "Hours": 7,
+                          "Minutes": 28,
                           "MinutesOffset": 0,
-                          "Seconds": 25,
+                          "Seconds": 20,
                           "SelectedProvider": {
                             "$ref": "717"
                           },

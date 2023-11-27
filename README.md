@@ -12,16 +12,18 @@ Although intended for permanent setups in an observatory, the sequence currently
  While NINA 3 is in early release as of November 2023, it has proved quite stable for me. However, as of this pont in time, it should be considered beta software at best. *Be aware that it is a rapidly mvoing project and that problems likely will occur*.
  
  ## NINA Plugin Requirements
-- Target Scheduler plugin
-- Scheduler Powerups plugin
+- Target Scheduler
+- Scheduler Powerups
 - Connector plugin
+- Discord Alerts[^1]
+- Smart Meridian Flip[^2]
+- Astro-Physics Tools[^3]
 
-## NINA Plugins Soft Requirements
+[^1]: You could replace the instructions that send notifications to Discord with another alerting plugin (like **Ground Station**) or remove those instructions if notifications are not needed.
+[^2]: If you don't plan to take advantage of the **Smert Meridian Flip** plugin then you can replace the **Smart Meridian Flip** trigger with the standard NINA **Meridian Flip** trigger. Or create a configuration file for Smart Meridian Flip that flips at a fixed time (e.g. 10 minutes past the meridian) for each declination.
+[^3]: The sequence only uses the plugin to start he APCC program.
 
-- Discord Alerts plugin
-- Smart Meridian Flip plugin
-
- You could replace the instructions that send notifications to Discord with another alerting plugin (like **Ground Station**) or remove those instructions if notifications are not needed. Similarly if you don't plan to take advantage of the **Smert Meridian Flip** plugin then you can replace the **Smart Meridian Flip** trigger with the standard NINA **Meridian Flip** trigger.
+The first three plugins are initegral to the structure of the sequence. The others are particular to the way the teams using the sequence are using NINA. While the instuctions from Smart Mridian Flip and Astro-Physics Tools are confined to specific spots and not numerous, the Discord Alerts instructions are used throughout the sequence. While it is definitely possible to remove them or replace them with instructions from another notification plugin, it would be fairly tedious to do.
 
  ## Equipment Requirements (from NINA's equipment tab)
 
@@ -42,10 +44,6 @@ If you want the sequence to be able to turn equipment power on or off then you e
 ## Equipment That Probably Won't (Yet) Work Well With This Sequence
 
 **Rotators can be problematic** with this sequence as it currently stand in November 2023 unless your flats can work regardless of rotator position. If you can use a flat from rotator angle "a" with a light froame taken at some different angle "b" and get a good calibration then it will be fine but if not then this sequence is not currently a good choice for you. Eventually, the Target Scheduler author is planning to add flat support that will handle rotation but until that happens this sequence works best at a fixed rotation angle.
-
- ## Optional
-
-For those using Astro-Physics mounts with the APCC program, the **Astro-Physics Tools** plugin can be used. For those with 10Micron mounts, the **10 Micron Tools** plug-in can be used.
 
 ## Installation
 

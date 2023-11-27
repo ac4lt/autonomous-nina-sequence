@@ -25,6 +25,8 @@ Although intended for permanent setups in an observatory, the sequence currently
 
 The first three plugins are initegral to the structure of the sequence. The others are particular to the way the teams using the sequence are using NINA. While the instuctions from Smart Mridian Flip and Astro-Physics Tools are confined to specific spots and not numerous, the Discord Alerts instructions are used throughout the sequence. While it is definitely possible to remove them or replace them with instructions from another notification plugin, it would be fairly tedious to do.
 
+You can run this sequence with only the first three plugins installed and NINA will skip over the instructions that it doesn't have the plugin for. However, if you plan to contribute changes back to this repository you must have alll required plugins installed for your changes to merge in properly.
+
  ## Equipment Requirements (from NINA's equipment tab)
 
  - Camera (what's the point of astro-imaging withoout one!)

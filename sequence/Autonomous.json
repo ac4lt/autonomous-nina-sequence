@@ -135,7 +135,7 @@
             {
               "$id": "18",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous v0.6.1 started",
+              "Text": "Autonomous v0.6.2 started",
               "Parent": {
                 "$ref": "15"
               },
@@ -4680,7 +4680,7 @@
                         }
                       ]
                     },
-                    "IsExpanded": false,
+                    "IsExpanded": true,
                     "Items": {
                       "$id": "497",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -6410,7 +6410,7 @@
                                 },
                                 {
                                   "$id": "716",
-                                  "$type": "NINA.Sequencer.SequenceItem.SafetyMonitor.WaitUntilSafe, NINA.Sequencer",
+                                  "$type": "WhenPlugin.When.WaitUntilSafe, WhenPlugin",
                                   "Parent": {
                                     "$ref": "573"
                                   },

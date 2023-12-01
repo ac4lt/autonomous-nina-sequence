@@ -39,6 +39,8 @@ You can run this sequence with only the first three plugins installed and NINA w
 
 All other equipment is optional. The Weather and Safety monitor are integral to the operation of the sequence. If NINA doesn't have access to weather and safety data then much of the logic of the sequence will not be able to operate. Similarly, if a flat panel does not exist then the sequence will not be able to get flats automatically. While NINA 3 does support sky flats, this sequence does not currently use them.
 
+To use the automatic dark collection features you either need a camera with a physical shutter or a controllabllable cover for the front of the telescope (like a Flip-Flat). It meeds to make a light tight seal to be usable for darks.
+
 ## Equipment Requirements If Power Management Is Needed
 
 If you want the sequence to be able to turn equipment power on or off then you either need an ASCOM switch driver or an external script that can turn the switches on or off.

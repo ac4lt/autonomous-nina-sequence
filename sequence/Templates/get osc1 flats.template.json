@@ -77,14 +77,16 @@
                   "$values": [
                     {
                       "$id": "13",
-                      "$type": "NINA.Sequencer.SequenceItem.FlatDevice.TrainedFlatExposure, NINA.Sequencer",
+                      "$type": "WhenPlugin.When.TrainedFlatExposure, WhenPlugin",
                       "ErrorBehavior": 0,
                       "Attempts": 1,
                       "KeepPanelClosed": true,
+                      "IterationsExpr": "1",
+                      "IterationCount": 0,
                       "Strategy": {
                         "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                       },
-                      "Name": "Trained Flat Exposure",
+                      "Name": "Trained Flat Exposure +",
                       "Conditions": {
                         "$id": "14",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
@@ -149,7 +151,7 @@
                                   "$id": "22",
                                   "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                                   "CompletedIterations": 0,
-                                  "Iterations": 5,
+                                  "Iterations": 0,
                                   "Parent": {
                                     "$ref": "20"
                                   }
@@ -163,10 +165,13 @@
                               "$values": [
                                 {
                                   "$id": "24",
-                                  "$type": "NINA.Sequencer.SequenceItem.Imaging.TakeExposure, NINA.Sequencer",
+                                  "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
+                                  "ExposureTimeExpr": "0",
                                   "ExposureTime": 0.0,
-                                  "Gain": -1,
-                                  "Offset": -1,
+                                  "GainExpr": "bb_bin1-gain",
+                                  "Gain": 0,
+                                  "OffsetExpr": "bb_bin1_offset",
+                                  "Offset": 0,
                                   "Binning": {
                                     "$id": "25",
                                     "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",

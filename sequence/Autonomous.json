@@ -95,7 +95,7 @@
             {
               "$id": "14",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous v0.7.1 started",
+              "Text": "Autonomous v0.7.2 started",
               "Parent": {
                 "$ref": "11"
               },
@@ -272,7 +272,7 @@
               "$id": "28",
               "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
               "Variable": "get_r1_flats",
-              "CValueExpr": "0",
+              "CValueExpr": "1",
               "OValueExpr": "0",
               "CValue": "0",
               "OValue": "0",
@@ -1713,9 +1713,9 @@
                       "$id": "146",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin1_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "117"
@@ -1727,9 +1727,9 @@
                       "$id": "147",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin2_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "117"
@@ -1741,9 +1741,9 @@
                       "$id": "148",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "nb_bin1_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "117"
@@ -1755,9 +1755,9 @@
                       "$id": "149",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin1_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "117"
@@ -1769,9 +1769,9 @@
                       "$id": "150",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin2_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "117"
@@ -1783,9 +1783,9 @@
                       "$id": "151",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "nb_bin1_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "117"
@@ -2151,9 +2151,9 @@
                       "$id": "183",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin1_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "154"
@@ -2165,9 +2165,9 @@
                       "$id": "184",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin2_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "154"
@@ -2179,9 +2179,9 @@
                       "$id": "185",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "nb_bin1_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "154"
@@ -2193,9 +2193,9 @@
                       "$id": "186",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin1_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "154"
@@ -2207,9 +2207,9 @@
                       "$id": "187",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin2_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "154"
@@ -2221,9 +2221,9 @@
                       "$id": "188",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "nb_bin1_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "154"
@@ -2589,9 +2589,9 @@
                       "$id": "220",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin1_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "191"
@@ -2603,9 +2603,9 @@
                       "$id": "221",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin2_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "191"
@@ -2617,9 +2617,9 @@
                       "$id": "222",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "nb_bin1_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "191"
@@ -2631,9 +2631,9 @@
                       "$id": "223",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin1_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "191"
@@ -2645,9 +2645,9 @@
                       "$id": "224",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin2_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "191"
@@ -2659,9 +2659,9 @@
                       "$id": "225",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "nb_bin1_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "191"
@@ -3123,9 +3123,9 @@
                       "$id": "268",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin1_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "228"
@@ -3137,9 +3137,9 @@
                       "$id": "269",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin2_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "228"
@@ -3151,9 +3151,9 @@
                       "$id": "270",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "nb_bin1_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "100",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "228"
@@ -3165,9 +3165,9 @@
                       "$id": "271",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin1_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "50",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "228"
@@ -3179,9 +3179,9 @@
                       "$id": "272",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin2_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "50",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "228"
@@ -3193,9 +3193,9 @@
                       "$id": "273",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "nb_bin1_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "50",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "228"
@@ -3657,9 +3657,9 @@
                       "$id": "316",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin1_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "276"
@@ -3671,9 +3671,9 @@
                       "$id": "317",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin2_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "0",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "276"
@@ -3685,9 +3685,9 @@
                       "$id": "318",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "nb_bin1_gain",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "100",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "276"
@@ -3699,9 +3699,9 @@
                       "$id": "319",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin1_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "50",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "276"
@@ -3713,9 +3713,9 @@
                       "$id": "320",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "bb_bin2_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "50",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "276"
@@ -3727,9 +3727,9 @@
                       "$id": "321",
                       "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
                       "Variable": "nb_bin1_offset",
-                      "CValueExpr": "0",
+                      "CValueExpr": "",
                       "OValueExpr": "50",
-                      "CValue": "Undefined",
+                      "CValue": "",
                       "OValue": "Undefined",
                       "Parent": {
                         "$ref": "276"
@@ -4237,7 +4237,7 @@
               "$type": "WhenPlugin.When.SetConstant, WhenPlugin",
               "Constant": "GET_FLATS",
               "CValueExpr": "get_l1_flats or get_r1_flats or get_g1_flats or get_b1_flats or get_r2_flats or get_g2_flats or get_b2_flats or get_h1_flats or get_o1_flats or get_s1_flats or get_osc1_flats",
-              "CValue": "0",
+              "CValue": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -4258,9 +4258,9 @@
               "$id": "361",
               "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
               "Variable": "cycles_completed",
-              "CValueExpr": "1",
+              "CValueExpr": "0",
               "OValueExpr": "0",
-              "CValue": "1",
+              "CValue": "0",
               "OValue": "0",
               "Parent": {
                 "$ref": "11"
@@ -4747,7 +4747,7 @@
                                       {
                                         "$id": "421",
                                         "$type": "WhenPlugin.When.LoopWhile, WhenPlugin",
-                                        "iPredicateValue": "0",
+                                        "iPredicateValue": "1",
                                         "Predicate": "GET_FLATS",
                                         "Parent": {
                                           "$ref": "417"
@@ -5583,8 +5583,8 @@
                         {
                           "$id": "526",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                          "iPredicateValue": "0",
-                          "Predicate": "GET_FLATS && get_evening_flats",
+                          "iPredicateValue": "1",
+                          "Predicate": "GET_FLATS and get_flats_when_evening",
                           "Condition": null,
                           "Instructions": {
                             "$id": "527",
@@ -6404,7 +6404,7 @@
                         }
                       ]
                     },
-                    "IsExpanded": true,
+                    "IsExpanded": false,
                     "Items": {
                       "$id": "629",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -7269,7 +7269,7 @@
                                 {
                                   "$id": "738",
                                   "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                                  "iPredicateValue": "0",
+                                  "iPredicateValue": "1",
                                   "Predicate": "GET_FLATS and get_flats_when_unsafe",
                                   "Condition": null,
                                   "Instructions": {
@@ -8453,7 +8453,7 @@
                         {
                           "$id": "885",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                          "iPredicateValue": "0",
+                          "iPredicateValue": "1",
                           "Predicate": "GET_FLATS and get_flats_when_morning",
                           "Condition": null,
                           "Instructions": {
@@ -10020,7 +10020,7 @@
                           "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                           "Variable": "cycles_completed",
                           "CValueExpr": "cycles_completed + 1",
-                          "CValue": "2",
+                          "CValue": "1",
                           "Parent": {
                             "$ref": "1036"
                           },

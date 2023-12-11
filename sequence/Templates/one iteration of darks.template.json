@@ -62,38 +62,48 @@
       },
       {
         "$id": "9",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "bin1  broadband",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "10",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_bin1_darks and actual_bb_dark1_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_bb_bin1_darks and actual_bb_dark1_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "10",
+          "$id": "11",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "11",
+            "$id": "12",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "12",
+            "$id": "13",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "13",
+                "$id": "14",
                 "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                 "ExposureTimeExpr": "bb_bin1_exposure_time",
                 "ExposureTime": 0.0,
                 "GainExpr": "bb_bin1_gain",
                 "Gain": 0,
-                "OffsetExpr": "",
-                "Offset": -1,
+                "OffsetExpr": "bb_bin1_offset",
+                "Offset": 0,
                 "Binning": {
-                  "$id": "14",
+                  "$id": "15",
                   "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                   "X": 1,
                   "Y": 1
@@ -101,19 +111,19 @@
                 "ImageType": "DARK",
                 "ExposureCount": 0,
                 "Parent": {
-                  "$ref": "10"
+                  "$ref": "11"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
-                "$id": "15",
+                "$id": "16",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_bb_dark1_count",
                 "CValueExpr": "actual_bb_dark1_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "10"
+                  "$ref": "11"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -121,7 +131,7 @@
             ]
           },
           "Triggers": {
-            "$id": "16",
+            "$id": "17",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -138,104 +148,30 @@
         "Attempts": 1
       },
       {
-        "$id": "17",
+        "$id": "18",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_bin1_darks and actual_nb_dark1_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_bb_bin1_bias and actual_bb_bias1_count < DESIRED_BIAS_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "18",
+          "$id": "19",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "19",
+            "$id": "20",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "20",
+            "$id": "21",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
-              {
-                "$id": "21",
-                "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
-                "ExposureTimeExpr": "nb_bin1_exposure_time",
-                "ExposureTime": 0.0,
-                "GainExpr": "nb_bin1_gain",
-                "Gain": 0,
-                "OffsetExpr": "",
-                "Offset": -1,
-                "Binning": {
-                  "$ref": "14"
-                },
-                "ImageType": "DARK",
-                "ExposureCount": 0,
-                "Parent": {
-                  "$ref": "18"
-                },
-                "ErrorBehavior": 0,
-                "Attempts": 1
-              },
               {
                 "$id": "22",
-                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-                "Variable": "actual_nb_dark1_count",
-                "CValueExpr": "actual_nb_dark1_count + 1",
-                "CValue": "Undefined",
-                "Parent": {
-                  "$ref": "18"
-                },
-                "ErrorBehavior": 0,
-                "Attempts": 1
-              }
-            ]
-          },
-          "Triggers": {
-            "$id": "23",
-            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
-            "$values": []
-          },
-          "Parent": {
-            "$ref": "1"
-          },
-          "ErrorBehavior": 0,
-          "Attempts": 1
-        },
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "24",
-        "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-        "iPredicateValue": "0",
-        "Predicate": "get_bin1_bias and actual_bias1_count < DESIRED_BIAS_COUNT",
-        "Condition": null,
-        "Instructions": {
-          "$id": "25",
-          "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
-          "Strategy": {
-            "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
-          },
-          "Name": "If",
-          "Conditions": {
-            "$id": "26",
-            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
-            "$values": []
-          },
-          "IsExpanded": true,
-          "Items": {
-            "$id": "27",
-            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
-            "$values": [
-              {
-                "$id": "28",
                 "$type": "WhenPlugin.When.TakeManyExposures, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -246,36 +182,36 @@
                 },
                 "Name": "Take Many Exposures +",
                 "Conditions": {
-                  "$id": "29",
+                  "$id": "23",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "30",
+                      "$id": "24",
                       "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                       "CompletedIterations": 0,
                       "Iterations": 0,
                       "Parent": {
-                        "$ref": "28"
+                        "$ref": "22"
                       }
                     }
                   ]
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "31",
+                  "$id": "25",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "32",
+                      "$id": "26",
                       "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                       "ExposureTimeExpr": "0",
                       "ExposureTime": 0.0,
                       "GainExpr": "bb_bin1_gain",
                       "Gain": 0,
-                      "OffsetExpr": "",
-                      "Offset": -1,
+                      "OffsetExpr": "bb_bin1_offset",
+                      "Offset": 0,
                       "Binning": {
-                        "$id": "33",
+                        "$id": "27",
                         "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                         "X": 1,
                         "Y": 1
@@ -283,7 +219,7 @@
                       "ImageType": "BIAS",
                       "ExposureCount": 0,
                       "Parent": {
-                        "$ref": "28"
+                        "$ref": "22"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -291,22 +227,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "34",
+                  "$id": "28",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "25"
+                  "$ref": "19"
                 }
               },
               {
-                "$id": "35",
+                "$id": "29",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-                "Variable": "actual_bias1_count",
-                "CValueExpr": "actual_bias1_count + 5",
+                "Variable": "actual_bb_bias1_count",
+                "CValueExpr": "actual_bb_bias1_count + 5",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "25"
+                  "$ref": "19"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -314,7 +250,7 @@
             ]
           },
           "Triggers": {
-            "$id": "36",
+            "$id": "30",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -331,59 +267,66 @@
         "Attempts": 1
       },
       {
-        "$id": "37",
+        "$id": "31",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "bin1 narrowband",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "32",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_bin2_darks and actual_dark2_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_nb_bin1_darks and actual_nb_dark1_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "38",
+          "$id": "33",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "39",
+            "$id": "34",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "40",
+            "$id": "35",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "41",
+                "$id": "36",
                 "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
-                "ExposureTimeExpr": "bin2_exposure_time",
+                "ExposureTimeExpr": "nb_bin1_exposure_time",
                 "ExposureTime": 0.0,
-                "GainExpr": "bb_bin2_gain",
+                "GainExpr": "nb_bin1_gain",
                 "Gain": 0,
-                "OffsetExpr": "",
-                "Offset": -1,
+                "OffsetExpr": "nb_bin1_offset",
+                "Offset": 0,
                 "Binning": {
-                  "$id": "42",
-                  "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
-                  "X": 2,
-                  "Y": 2
+                  "$ref": "15"
                 },
                 "ImageType": "DARK",
                 "ExposureCount": 0,
                 "Parent": {
-                  "$ref": "38"
+                  "$ref": "33"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
-                "$id": "43",
+                "$id": "37",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-                "Variable": "actual_dark2_count",
-                "CValueExpr": "actual_dark2_count + 1",
+                "Variable": "actual_nb_dark1_count",
+                "CValueExpr": "actual_nb_dark1_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "38"
+                  "$ref": "33"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -391,7 +334,7 @@
             ]
           },
           "Triggers": {
-            "$id": "44",
+            "$id": "38",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -408,30 +351,30 @@
         "Attempts": 1
       },
       {
-        "$id": "45",
+        "$id": "39",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_bin2_darks and actual_bias2_count < DESIRED_BIAS_COUNT",
+        "Predicate": "get_nb_bin1_bias and actual_nb_bias1_count < DESIRED_BIAS_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "46",
+          "$id": "40",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "47",
+            "$id": "41",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "48",
+            "$id": "42",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "49",
+                "$id": "43",
                 "$type": "WhenPlugin.When.TakeManyExposures, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -442,44 +385,41 @@
                 },
                 "Name": "Take Many Exposures +",
                 "Conditions": {
-                  "$id": "50",
+                  "$id": "44",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "51",
+                      "$id": "45",
                       "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                       "CompletedIterations": 0,
                       "Iterations": 0,
                       "Parent": {
-                        "$ref": "49"
+                        "$ref": "43"
                       }
                     }
                   ]
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "52",
+                  "$id": "46",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "53",
+                      "$id": "47",
                       "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                       "ExposureTimeExpr": "0",
                       "ExposureTime": 0.0,
-                      "GainExpr": "bb_bin2_gain",
+                      "GainExpr": "nb_bin1_gain",
                       "Gain": 0,
-                      "OffsetExpr": "",
-                      "Offset": -1,
+                      "OffsetExpr": "nb_bin1_offset",
+                      "Offset": 0,
                       "Binning": {
-                        "$id": "54",
-                        "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
-                        "X": 2,
-                        "Y": 2
+                        "$ref": "27"
                       },
                       "ImageType": "BIAS",
                       "ExposureCount": 0,
                       "Parent": {
-                        "$ref": "49"
+                        "$ref": "43"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -487,22 +427,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "55",
+                  "$id": "48",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "46"
+                  "$ref": "40"
                 }
               },
               {
-                "$id": "56",
+                "$id": "49",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-                "Variable": "actual_bias2_count",
-                "CValueExpr": "actual_bias_bin2_count + 5",
+                "Variable": "actual_nb_bias1_count",
+                "CValueExpr": "actual_nb_bias1_count + 5",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "46"
+                  "$ref": "40"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -510,7 +450,7 @@
             ]
           },
           "Triggers": {
-            "$id": "57",
+            "$id": "50",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -527,30 +467,246 @@
         "Attempts": 1
       },
       {
-        "$id": "58",
+        "$id": "51",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "bin2 broadband ",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "52",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_l1_flat_darks and actual_l1_flat_dark_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_bb_bin2_darks and actual_bb_dark2_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "59",
+          "$id": "53",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "60",
+            "$id": "54",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "61",
+            "$id": "55",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "62",
+                "$id": "56",
+                "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
+                "ExposureTimeExpr": "bin2_exposure_time",
+                "ExposureTime": 0.0,
+                "GainExpr": "bb_bin2_gain",
+                "Gain": 0,
+                "OffsetExpr": "bb_bin2_offset",
+                "Offset": 0,
+                "Binning": {
+                  "$id": "57",
+                  "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                  "X": 2,
+                  "Y": 2
+                },
+                "ImageType": "DARK",
+                "ExposureCount": 0,
+                "Parent": {
+                  "$ref": "53"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "58",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_bb_dark2_count",
+                "CValueExpr": "actual_bb_dark2_count + 1",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "53"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              }
+            ]
+          },
+          "Triggers": {
+            "$id": "59",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "Parent": {
+            "$ref": "1"
+          },
+          "ErrorBehavior": 0,
+          "Attempts": 1
+        },
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "60",
+        "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+        "iPredicateValue": "0",
+        "Predicate": "get_bb_bin2_bias and actual_bb_bias2_count < DESIRED_BIAS_COUNT",
+        "Condition": null,
+        "Instructions": {
+          "$id": "61",
+          "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+          "Strategy": {
+            "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+          },
+          "Name": "If",
+          "Conditions": {
+            "$id": "62",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "IsExpanded": true,
+          "Items": {
+            "$id": "63",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+            "$values": [
+              {
+                "$id": "64",
+                "$type": "WhenPlugin.When.TakeManyExposures, WhenPlugin",
+                "ErrorBehavior": 0,
+                "Attempts": 1,
+                "IterationsExpr": "5",
+                "IterationCount": 0,
+                "Strategy": {
+                  "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+                },
+                "Name": "Take Many Exposures +",
+                "Conditions": {
+                  "$id": "65",
+                  "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                  "$values": [
+                    {
+                      "$id": "66",
+                      "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
+                      "CompletedIterations": 0,
+                      "Iterations": 0,
+                      "Parent": {
+                        "$ref": "64"
+                      }
+                    }
+                  ]
+                },
+                "IsExpanded": false,
+                "Items": {
+                  "$id": "67",
+                  "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                  "$values": [
+                    {
+                      "$id": "68",
+                      "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
+                      "ExposureTimeExpr": "0",
+                      "ExposureTime": 0.0,
+                      "GainExpr": "bb_bin2_gain",
+                      "Gain": 0,
+                      "OffsetExpr": "bb_bin2_offset",
+                      "Offset": 0,
+                      "Binning": {
+                        "$id": "69",
+                        "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                        "X": 2,
+                        "Y": 2
+                      },
+                      "ImageType": "BIAS",
+                      "ExposureCount": 0,
+                      "Parent": {
+                        "$ref": "64"
+                      },
+                      "ErrorBehavior": 0,
+                      "Attempts": 1
+                    }
+                  ]
+                },
+                "Triggers": {
+                  "$id": "70",
+                  "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                  "$values": []
+                },
+                "Parent": {
+                  "$ref": "61"
+                }
+              },
+              {
+                "$id": "71",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_bb_bias2_count",
+                "CValueExpr": "actual_bb_bias2_count + 5",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "61"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              }
+            ]
+          },
+          "Triggers": {
+            "$id": "72",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "Parent": {
+            "$ref": "1"
+          },
+          "ErrorBehavior": 0,
+          "Attempts": 1
+        },
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "73",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "bin1  broadband flat darks",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "74",
+        "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+        "iPredicateValue": "0",
+        "Predicate": "get_l1_flat_darks and actual_l1_flat_dark_count < DESIRED_DARK_COUNT",
+        "Condition": null,
+        "Instructions": {
+          "$id": "75",
+          "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+          "Strategy": {
+            "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+          },
+          "Name": "If",
+          "Conditions": {
+            "$id": "76",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "IsExpanded": true,
+          "Items": {
+            "$id": "77",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+            "$values": [
+              {
+                "$id": "78",
                 "$type": "WhenPlugin.When.TrainedDarkFlatExposure, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -565,83 +721,83 @@
                 },
                 "Name": "Trained Dark Flat Exposure +",
                 "Conditions": {
-                  "$id": "63",
+                  "$id": "79",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "64",
+                  "$id": "80",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "65",
+                      "$id": "81",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "62"
+                        "$ref": "78"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "66",
+                      "$id": "82",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                       "OnOff": false,
                       "Parent": {
-                        "$ref": "62"
+                        "$ref": "78"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "67",
+                      "$id": "83",
                       "$type": "WhenPlugin.When.SwitchFilter, WhenPlugin",
                       "FilterExpr": "(Current)",
                       "Parent": {
-                        "$ref": "62"
+                        "$ref": "78"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "68",
+                      "$id": "84",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
                       "Brightness": 0,
                       "Parent": {
-                        "$ref": "62"
+                        "$ref": "78"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "69",
+                      "$id": "85",
                       "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                       "Strategy": {
                         "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                       },
                       "Name": null,
                       "Conditions": {
-                        "$id": "70",
+                        "$id": "86",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "71",
+                            "$id": "87",
                             "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                             "CompletedIterations": 0,
                             "Iterations": 0,
                             "Parent": {
-                              "$ref": "69"
+                              "$ref": "85"
                             }
                           }
                         ]
                       },
                       "IsExpanded": true,
                       "Items": {
-                        "$id": "72",
+                        "$id": "88",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "73",
+                            "$id": "89",
                             "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                             "ExposureTimeExpr": "0",
                             "ExposureTime": 0.0,
@@ -650,15 +806,15 @@
                             "OffsetExpr": "bb_bin1_offset",
                             "Offset": 0,
                             "Binning": {
-                              "$id": "74",
+                              "$id": "90",
                               "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                               "X": 1,
                               "Y": 1
                             },
-                            "ImageType": "DARKFLAT",
+                            "ImageType": "DARK",
                             "ExposureCount": 0,
                             "Parent": {
-                              "$ref": "69"
+                              "$ref": "85"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
@@ -666,21 +822,21 @@
                         ]
                       },
                       "Triggers": {
-                        "$id": "75",
+                        "$id": "91",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                         "$values": []
                       },
                       "Parent": {
-                        "$ref": "62"
+                        "$ref": "78"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "76",
+                      "$id": "92",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "62"
+                        "$ref": "78"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -688,22 +844,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "77",
+                  "$id": "93",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "59"
+                  "$ref": "75"
                 }
               },
               {
-                "$id": "78",
+                "$id": "94",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_l1_flat_dark_count",
                 "CValueExpr": "actual_l1_flat_dark_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "59"
+                  "$ref": "75"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -711,7 +867,7 @@
             ]
           },
           "Triggers": {
-            "$id": "79",
+            "$id": "95",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -728,30 +884,30 @@
         "Attempts": 1
       },
       {
-        "$id": "80",
+        "$id": "96",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
         "Predicate": "get_r1_flat_darks and actual_r1_flat_dark_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "81",
+          "$id": "97",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "82",
+            "$id": "98",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "83",
+            "$id": "99",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "84",
+                "$id": "100",
                 "$type": "WhenPlugin.When.TrainedDarkFlatExposure, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -766,83 +922,83 @@
                 },
                 "Name": "Trained Dark Flat Exposure +",
                 "Conditions": {
-                  "$id": "85",
+                  "$id": "101",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "86",
+                  "$id": "102",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "87",
+                      "$id": "103",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "84"
+                        "$ref": "100"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "88",
+                      "$id": "104",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                       "OnOff": false,
                       "Parent": {
-                        "$ref": "84"
+                        "$ref": "100"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "89",
+                      "$id": "105",
                       "$type": "WhenPlugin.When.SwitchFilter, WhenPlugin",
                       "FilterExpr": "(Current)",
                       "Parent": {
-                        "$ref": "84"
+                        "$ref": "100"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "90",
+                      "$id": "106",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
                       "Brightness": 0,
                       "Parent": {
-                        "$ref": "84"
+                        "$ref": "100"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "91",
+                      "$id": "107",
                       "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                       "Strategy": {
                         "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                       },
                       "Name": null,
                       "Conditions": {
-                        "$id": "92",
+                        "$id": "108",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "93",
+                            "$id": "109",
                             "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                             "CompletedIterations": 0,
                             "Iterations": 0,
                             "Parent": {
-                              "$ref": "91"
+                              "$ref": "107"
                             }
                           }
                         ]
                       },
                       "IsExpanded": true,
                       "Items": {
-                        "$id": "94",
+                        "$id": "110",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "95",
+                            "$id": "111",
                             "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                             "ExposureTimeExpr": "0",
                             "ExposureTime": 0.0,
@@ -851,15 +1007,15 @@
                             "OffsetExpr": "bb_bin1_offset",
                             "Offset": 0,
                             "Binning": {
-                              "$id": "96",
+                              "$id": "112",
                               "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                               "X": 1,
                               "Y": 1
                             },
-                            "ImageType": "DARKFLAT",
+                            "ImageType": "DARK",
                             "ExposureCount": 0,
                             "Parent": {
-                              "$ref": "91"
+                              "$ref": "107"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
@@ -867,21 +1023,21 @@
                         ]
                       },
                       "Triggers": {
-                        "$id": "97",
+                        "$id": "113",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                         "$values": []
                       },
                       "Parent": {
-                        "$ref": "84"
+                        "$ref": "100"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "98",
+                      "$id": "114",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "84"
+                        "$ref": "100"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -889,22 +1045,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "99",
+                  "$id": "115",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "81"
+                  "$ref": "97"
                 }
               },
               {
-                "$id": "100",
+                "$id": "116",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_r1_flat_dark_count",
                 "CValueExpr": "actual_r1_flat_dark_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "81"
+                  "$ref": "97"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -912,7 +1068,7 @@
             ]
           },
           "Triggers": {
-            "$id": "101",
+            "$id": "117",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -929,30 +1085,30 @@
         "Attempts": 1
       },
       {
-        "$id": "102",
+        "$id": "118",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
         "Predicate": "get_g1_flat_darks and actual_g1_flat_dark_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "103",
+          "$id": "119",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "104",
+            "$id": "120",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "105",
+            "$id": "121",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "106",
+                "$id": "122",
                 "$type": "WhenPlugin.When.TrainedDarkFlatExposure, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -967,83 +1123,83 @@
                 },
                 "Name": "Trained Dark Flat Exposure +",
                 "Conditions": {
-                  "$id": "107",
+                  "$id": "123",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "108",
+                  "$id": "124",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "109",
+                      "$id": "125",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "106"
+                        "$ref": "122"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "110",
+                      "$id": "126",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                       "OnOff": false,
                       "Parent": {
-                        "$ref": "106"
+                        "$ref": "122"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "111",
+                      "$id": "127",
                       "$type": "WhenPlugin.When.SwitchFilter, WhenPlugin",
                       "FilterExpr": "(Current)",
                       "Parent": {
-                        "$ref": "106"
+                        "$ref": "122"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "112",
+                      "$id": "128",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
                       "Brightness": 0,
                       "Parent": {
-                        "$ref": "106"
+                        "$ref": "122"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "113",
+                      "$id": "129",
                       "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                       "Strategy": {
                         "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                       },
                       "Name": null,
                       "Conditions": {
-                        "$id": "114",
+                        "$id": "130",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "115",
+                            "$id": "131",
                             "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                             "CompletedIterations": 0,
                             "Iterations": 0,
                             "Parent": {
-                              "$ref": "113"
+                              "$ref": "129"
                             }
                           }
                         ]
                       },
                       "IsExpanded": true,
                       "Items": {
-                        "$id": "116",
+                        "$id": "132",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "117",
+                            "$id": "133",
                             "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                             "ExposureTimeExpr": "0",
                             "ExposureTime": 0.0,
@@ -1052,15 +1208,15 @@
                             "OffsetExpr": "bb_bin1_offset",
                             "Offset": 0,
                             "Binning": {
-                              "$id": "118",
+                              "$id": "134",
                               "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                               "X": 1,
                               "Y": 1
                             },
-                            "ImageType": "DARKFLAT",
+                            "ImageType": "DARK",
                             "ExposureCount": 0,
                             "Parent": {
-                              "$ref": "113"
+                              "$ref": "129"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
@@ -1068,21 +1224,21 @@
                         ]
                       },
                       "Triggers": {
-                        "$id": "119",
+                        "$id": "135",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                         "$values": []
                       },
                       "Parent": {
-                        "$ref": "106"
+                        "$ref": "122"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "120",
+                      "$id": "136",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "106"
+                        "$ref": "122"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -1090,22 +1246,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "121",
+                  "$id": "137",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "103"
+                  "$ref": "119"
                 }
               },
               {
-                "$id": "122",
+                "$id": "138",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_g1_flat_dark_count",
                 "CValueExpr": "actual_g1_flat_dark_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "103"
+                  "$ref": "119"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -1113,7 +1269,7 @@
             ]
           },
           "Triggers": {
-            "$id": "123",
+            "$id": "139",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -1130,30 +1286,30 @@
         "Attempts": 1
       },
       {
-        "$id": "124",
+        "$id": "140",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
         "Predicate": "get_b1_flat_darks and actual_b1_flat_dark_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "125",
+          "$id": "141",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "126",
+            "$id": "142",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "127",
+            "$id": "143",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "128",
+                "$id": "144",
                 "$type": "WhenPlugin.When.TrainedDarkFlatExposure, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -1168,83 +1324,83 @@
                 },
                 "Name": "Trained Dark Flat Exposure +",
                 "Conditions": {
-                  "$id": "129",
+                  "$id": "145",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "130",
+                  "$id": "146",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "131",
+                      "$id": "147",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "128"
+                        "$ref": "144"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "132",
+                      "$id": "148",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                       "OnOff": false,
                       "Parent": {
-                        "$ref": "128"
+                        "$ref": "144"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "133",
+                      "$id": "149",
                       "$type": "WhenPlugin.When.SwitchFilter, WhenPlugin",
                       "FilterExpr": "(Current)",
                       "Parent": {
-                        "$ref": "128"
+                        "$ref": "144"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "134",
+                      "$id": "150",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
                       "Brightness": 0,
                       "Parent": {
-                        "$ref": "128"
+                        "$ref": "144"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "135",
+                      "$id": "151",
                       "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                       "Strategy": {
                         "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                       },
                       "Name": null,
                       "Conditions": {
-                        "$id": "136",
+                        "$id": "152",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "137",
+                            "$id": "153",
                             "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                             "CompletedIterations": 0,
                             "Iterations": 0,
                             "Parent": {
-                              "$ref": "135"
+                              "$ref": "151"
                             }
                           }
                         ]
                       },
                       "IsExpanded": true,
                       "Items": {
-                        "$id": "138",
+                        "$id": "154",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "139",
+                            "$id": "155",
                             "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                             "ExposureTimeExpr": "0",
                             "ExposureTime": 0.0,
@@ -1253,15 +1409,15 @@
                             "OffsetExpr": "bb_bin1_offset",
                             "Offset": 0,
                             "Binning": {
-                              "$id": "140",
+                              "$id": "156",
                               "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                               "X": 1,
                               "Y": 1
                             },
-                            "ImageType": "DARKFLAT",
+                            "ImageType": "DARK",
                             "ExposureCount": 0,
                             "Parent": {
-                              "$ref": "135"
+                              "$ref": "151"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
@@ -1269,21 +1425,21 @@
                         ]
                       },
                       "Triggers": {
-                        "$id": "141",
+                        "$id": "157",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                         "$values": []
                       },
                       "Parent": {
-                        "$ref": "128"
+                        "$ref": "144"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "142",
+                      "$id": "158",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "128"
+                        "$ref": "144"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -1291,22 +1447,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "143",
+                  "$id": "159",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "125"
+                  "$ref": "141"
                 }
               },
               {
-                "$id": "144",
+                "$id": "160",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_b1_flat_dark_count",
                 "CValueExpr": "actual_b1_flat_dark_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "125"
+                  "$ref": "141"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -1314,7 +1470,7 @@
             ]
           },
           "Triggers": {
-            "$id": "145",
+            "$id": "161",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -1331,30 +1487,40 @@
         "Attempts": 1
       },
       {
-        "$id": "146",
+        "$id": "162",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "bin2 broadband flat darks",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "163",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
         "Predicate": "get_r2_flat_darks and actual_r2_flat_dark_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "147",
+          "$id": "164",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "148",
+            "$id": "165",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "149",
+            "$id": "166",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "150",
+                "$id": "167",
                 "$type": "WhenPlugin.When.TrainedDarkFlatExposure, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -1369,83 +1535,83 @@
                 },
                 "Name": "Trained Dark Flat Exposure +",
                 "Conditions": {
-                  "$id": "151",
+                  "$id": "168",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "152",
+                  "$id": "169",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "153",
+                      "$id": "170",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "150"
+                        "$ref": "167"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "154",
+                      "$id": "171",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                       "OnOff": false,
                       "Parent": {
-                        "$ref": "150"
+                        "$ref": "167"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "155",
+                      "$id": "172",
                       "$type": "WhenPlugin.When.SwitchFilter, WhenPlugin",
                       "FilterExpr": "(Current)",
                       "Parent": {
-                        "$ref": "150"
+                        "$ref": "167"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "156",
+                      "$id": "173",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
                       "Brightness": 0,
                       "Parent": {
-                        "$ref": "150"
+                        "$ref": "167"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "157",
+                      "$id": "174",
                       "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                       "Strategy": {
                         "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                       },
                       "Name": null,
                       "Conditions": {
-                        "$id": "158",
+                        "$id": "175",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "159",
+                            "$id": "176",
                             "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                             "CompletedIterations": 0,
                             "Iterations": 0,
                             "Parent": {
-                              "$ref": "157"
+                              "$ref": "174"
                             }
                           }
                         ]
                       },
                       "IsExpanded": true,
                       "Items": {
-                        "$id": "160",
+                        "$id": "177",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "161",
+                            "$id": "178",
                             "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                             "ExposureTimeExpr": "0",
                             "ExposureTime": 0.0,
@@ -1454,15 +1620,15 @@
                             "OffsetExpr": "bb_bin2_offset",
                             "Offset": 0,
                             "Binning": {
-                              "$id": "162",
+                              "$id": "179",
                               "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                               "X": 2,
                               "Y": 2
                             },
-                            "ImageType": "DARKFLAT",
+                            "ImageType": "DARK",
                             "ExposureCount": 0,
                             "Parent": {
-                              "$ref": "157"
+                              "$ref": "174"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
@@ -1470,21 +1636,21 @@
                         ]
                       },
                       "Triggers": {
-                        "$id": "163",
+                        "$id": "180",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                         "$values": []
                       },
                       "Parent": {
-                        "$ref": "150"
+                        "$ref": "167"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "164",
+                      "$id": "181",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "150"
+                        "$ref": "167"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -1492,22 +1658,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "165",
+                  "$id": "182",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "147"
+                  "$ref": "164"
                 }
               },
               {
-                "$id": "166",
+                "$id": "183",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_r2_flat_dark_count",
                 "CValueExpr": "actual_r2_flat_dark_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "147"
+                  "$ref": "164"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -1515,7 +1681,7 @@
             ]
           },
           "Triggers": {
-            "$id": "167",
+            "$id": "184",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -1532,30 +1698,30 @@
         "Attempts": 1
       },
       {
-        "$id": "168",
+        "$id": "185",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
         "Predicate": "get_g2_flat_darks and actual_g2_flat_dark_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "169",
+          "$id": "186",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "170",
+            "$id": "187",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "171",
+            "$id": "188",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "172",
+                "$id": "189",
                 "$type": "WhenPlugin.When.TrainedDarkFlatExposure, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -1570,83 +1736,83 @@
                 },
                 "Name": "Trained Dark Flat Exposure +",
                 "Conditions": {
-                  "$id": "173",
+                  "$id": "190",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "174",
+                  "$id": "191",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "175",
+                      "$id": "192",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "172"
+                        "$ref": "189"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "176",
+                      "$id": "193",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                       "OnOff": false,
                       "Parent": {
-                        "$ref": "172"
+                        "$ref": "189"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "177",
+                      "$id": "194",
                       "$type": "WhenPlugin.When.SwitchFilter, WhenPlugin",
                       "FilterExpr": "(Current)",
                       "Parent": {
-                        "$ref": "172"
+                        "$ref": "189"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "178",
+                      "$id": "195",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
                       "Brightness": 0,
                       "Parent": {
-                        "$ref": "172"
+                        "$ref": "189"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "179",
+                      "$id": "196",
                       "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                       "Strategy": {
                         "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                       },
                       "Name": null,
                       "Conditions": {
-                        "$id": "180",
+                        "$id": "197",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "181",
+                            "$id": "198",
                             "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                             "CompletedIterations": 0,
                             "Iterations": 0,
                             "Parent": {
-                              "$ref": "179"
+                              "$ref": "196"
                             }
                           }
                         ]
                       },
                       "IsExpanded": true,
                       "Items": {
-                        "$id": "182",
+                        "$id": "199",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "183",
+                            "$id": "200",
                             "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                             "ExposureTimeExpr": "0",
                             "ExposureTime": 0.0,
@@ -1655,15 +1821,15 @@
                             "OffsetExpr": "bb_bin2_offset",
                             "Offset": 0,
                             "Binning": {
-                              "$id": "184",
+                              "$id": "201",
                               "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                               "X": 2,
                               "Y": 2
                             },
-                            "ImageType": "DARKFLAT",
+                            "ImageType": "DARK",
                             "ExposureCount": 0,
                             "Parent": {
-                              "$ref": "179"
+                              "$ref": "196"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
@@ -1671,21 +1837,21 @@
                         ]
                       },
                       "Triggers": {
-                        "$id": "185",
+                        "$id": "202",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                         "$values": []
                       },
                       "Parent": {
-                        "$ref": "172"
+                        "$ref": "189"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "186",
+                      "$id": "203",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "172"
+                        "$ref": "189"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -1693,22 +1859,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "187",
+                  "$id": "204",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "169"
+                  "$ref": "186"
                 }
               },
               {
-                "$id": "188",
+                "$id": "205",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_g2_flat_dark_count",
                 "CValueExpr": "actual_g2_flat_dark_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "169"
+                  "$ref": "186"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -1716,7 +1882,7 @@
             ]
           },
           "Triggers": {
-            "$id": "189",
+            "$id": "206",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -1733,30 +1899,30 @@
         "Attempts": 1
       },
       {
-        "$id": "190",
+        "$id": "207",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
         "Predicate": "get_b2_flat_darks and actual_b2_flat_dark_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "191",
+          "$id": "208",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "192",
+            "$id": "209",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "193",
+            "$id": "210",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "194",
+                "$id": "211",
                 "$type": "WhenPlugin.When.TrainedDarkFlatExposure, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -1771,83 +1937,83 @@
                 },
                 "Name": "Trained Dark Flat Exposure +",
                 "Conditions": {
-                  "$id": "195",
+                  "$id": "212",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "196",
+                  "$id": "213",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "197",
+                      "$id": "214",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "194"
+                        "$ref": "211"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "198",
+                      "$id": "215",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                       "OnOff": false,
                       "Parent": {
-                        "$ref": "194"
+                        "$ref": "211"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "199",
+                      "$id": "216",
                       "$type": "WhenPlugin.When.SwitchFilter, WhenPlugin",
                       "FilterExpr": "(Current)",
                       "Parent": {
-                        "$ref": "194"
+                        "$ref": "211"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "200",
+                      "$id": "217",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
                       "Brightness": 0,
                       "Parent": {
-                        "$ref": "194"
+                        "$ref": "211"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "201",
+                      "$id": "218",
                       "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                       "Strategy": {
                         "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                       },
                       "Name": null,
                       "Conditions": {
-                        "$id": "202",
+                        "$id": "219",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "203",
+                            "$id": "220",
                             "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                             "CompletedIterations": 0,
                             "Iterations": 0,
                             "Parent": {
-                              "$ref": "201"
+                              "$ref": "218"
                             }
                           }
                         ]
                       },
                       "IsExpanded": true,
                       "Items": {
-                        "$id": "204",
+                        "$id": "221",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "205",
+                            "$id": "222",
                             "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                             "ExposureTimeExpr": "0",
                             "ExposureTime": 0.0,
@@ -1856,15 +2022,15 @@
                             "OffsetExpr": "bb_bin2_offset",
                             "Offset": 0,
                             "Binning": {
-                              "$id": "206",
+                              "$id": "223",
                               "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                               "X": 2,
                               "Y": 2
                             },
-                            "ImageType": "DARKFLAT",
+                            "ImageType": "DARK",
                             "ExposureCount": 0,
                             "Parent": {
-                              "$ref": "201"
+                              "$ref": "218"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
@@ -1872,21 +2038,21 @@
                         ]
                       },
                       "Triggers": {
-                        "$id": "207",
+                        "$id": "224",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                         "$values": []
                       },
                       "Parent": {
-                        "$ref": "194"
+                        "$ref": "211"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "208",
+                      "$id": "225",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "194"
+                        "$ref": "211"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -1894,22 +2060,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "209",
+                  "$id": "226",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "191"
+                  "$ref": "208"
                 }
               },
               {
-                "$id": "210",
+                "$id": "227",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_b2_flat_dark_count",
                 "CValueExpr": "actual_b2_flat_dark_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "191"
+                  "$ref": "208"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -1917,7 +2083,7 @@
             ]
           },
           "Triggers": {
-            "$id": "211",
+            "$id": "228",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -1934,30 +2100,40 @@
         "Attempts": 1
       },
       {
-        "$id": "212",
+        "$id": "229",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "bin1 narrowband flat darks",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "230",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
         "Predicate": "get_h1_flat_darks and actual_h1_flat_dark_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "213",
+          "$id": "231",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "214",
+            "$id": "232",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "215",
+            "$id": "233",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "216",
+                "$id": "234",
                 "$type": "WhenPlugin.When.TrainedDarkFlatExposure, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -1972,83 +2148,83 @@
                 },
                 "Name": "Trained Dark Flat Exposure +",
                 "Conditions": {
-                  "$id": "217",
+                  "$id": "235",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "218",
+                  "$id": "236",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "219",
+                      "$id": "237",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "216"
+                        "$ref": "234"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "220",
+                      "$id": "238",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                       "OnOff": false,
                       "Parent": {
-                        "$ref": "216"
+                        "$ref": "234"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "221",
+                      "$id": "239",
                       "$type": "WhenPlugin.When.SwitchFilter, WhenPlugin",
                       "FilterExpr": "(Current)",
                       "Parent": {
-                        "$ref": "216"
+                        "$ref": "234"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "222",
+                      "$id": "240",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
                       "Brightness": 0,
                       "Parent": {
-                        "$ref": "216"
+                        "$ref": "234"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "223",
+                      "$id": "241",
                       "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                       "Strategy": {
                         "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                       },
                       "Name": null,
                       "Conditions": {
-                        "$id": "224",
+                        "$id": "242",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "225",
+                            "$id": "243",
                             "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                             "CompletedIterations": 0,
                             "Iterations": 0,
                             "Parent": {
-                              "$ref": "223"
+                              "$ref": "241"
                             }
                           }
                         ]
                       },
                       "IsExpanded": true,
                       "Items": {
-                        "$id": "226",
+                        "$id": "244",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "227",
+                            "$id": "245",
                             "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                             "ExposureTimeExpr": "0",
                             "ExposureTime": 0.0,
@@ -2057,15 +2233,15 @@
                             "OffsetExpr": "nb_bin1_offset",
                             "Offset": 0,
                             "Binning": {
-                              "$id": "228",
+                              "$id": "246",
                               "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                               "X": 1,
                               "Y": 1
                             },
-                            "ImageType": "DARKFLAT",
+                            "ImageType": "DARK",
                             "ExposureCount": 0,
                             "Parent": {
-                              "$ref": "223"
+                              "$ref": "241"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
@@ -2073,21 +2249,21 @@
                         ]
                       },
                       "Triggers": {
-                        "$id": "229",
+                        "$id": "247",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                         "$values": []
                       },
                       "Parent": {
-                        "$ref": "216"
+                        "$ref": "234"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "230",
+                      "$id": "248",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "216"
+                        "$ref": "234"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -2095,22 +2271,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "231",
+                  "$id": "249",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "213"
+                  "$ref": "231"
                 }
               },
               {
-                "$id": "232",
+                "$id": "250",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_h1_flat_dark_count",
                 "CValueExpr": "actual_h1_flat_dark_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "213"
+                  "$ref": "231"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -2118,7 +2294,7 @@
             ]
           },
           "Triggers": {
-            "$id": "233",
+            "$id": "251",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -2135,30 +2311,30 @@
         "Attempts": 1
       },
       {
-        "$id": "234",
+        "$id": "252",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
         "Predicate": "get_s1_flat_darks and actual_s1_flat_dark_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "235",
+          "$id": "253",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "236",
+            "$id": "254",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "237",
+            "$id": "255",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "238",
+                "$id": "256",
                 "$type": "WhenPlugin.When.TrainedDarkFlatExposure, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -2173,83 +2349,83 @@
                 },
                 "Name": "Trained Dark Flat Exposure +",
                 "Conditions": {
-                  "$id": "239",
+                  "$id": "257",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "240",
+                  "$id": "258",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "241",
+                      "$id": "259",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "238"
+                        "$ref": "256"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "242",
+                      "$id": "260",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                       "OnOff": false,
                       "Parent": {
-                        "$ref": "238"
+                        "$ref": "256"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "243",
+                      "$id": "261",
                       "$type": "WhenPlugin.When.SwitchFilter, WhenPlugin",
                       "FilterExpr": "(Current)",
                       "Parent": {
-                        "$ref": "238"
+                        "$ref": "256"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "244",
+                      "$id": "262",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
                       "Brightness": 0,
                       "Parent": {
-                        "$ref": "238"
+                        "$ref": "256"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "245",
+                      "$id": "263",
                       "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                       "Strategy": {
                         "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                       },
                       "Name": null,
                       "Conditions": {
-                        "$id": "246",
+                        "$id": "264",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "247",
+                            "$id": "265",
                             "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                             "CompletedIterations": 0,
                             "Iterations": 0,
                             "Parent": {
-                              "$ref": "245"
+                              "$ref": "263"
                             }
                           }
                         ]
                       },
                       "IsExpanded": true,
                       "Items": {
-                        "$id": "248",
+                        "$id": "266",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "249",
+                            "$id": "267",
                             "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                             "ExposureTimeExpr": "0",
                             "ExposureTime": 0.0,
@@ -2258,15 +2434,15 @@
                             "OffsetExpr": "nb_bin1_offset",
                             "Offset": 0,
                             "Binning": {
-                              "$id": "250",
+                              "$id": "268",
                               "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                               "X": 1,
                               "Y": 1
                             },
-                            "ImageType": "DARKFLAT",
+                            "ImageType": "DARK",
                             "ExposureCount": 0,
                             "Parent": {
-                              "$ref": "245"
+                              "$ref": "263"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
@@ -2274,21 +2450,21 @@
                         ]
                       },
                       "Triggers": {
-                        "$id": "251",
+                        "$id": "269",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                         "$values": []
                       },
                       "Parent": {
-                        "$ref": "238"
+                        "$ref": "256"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "252",
+                      "$id": "270",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "238"
+                        "$ref": "256"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -2296,22 +2472,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "253",
+                  "$id": "271",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "235"
+                  "$ref": "253"
                 }
               },
               {
-                "$id": "254",
+                "$id": "272",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_s1_flat_dark_count",
                 "CValueExpr": "actual_s1_flat_dark_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "235"
+                  "$ref": "253"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -2319,7 +2495,7 @@
             ]
           },
           "Triggers": {
-            "$id": "255",
+            "$id": "273",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -2336,30 +2512,30 @@
         "Attempts": 1
       },
       {
-        "$id": "256",
+        "$id": "274",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
         "Predicate": "get_o1_flat_darks and actual_o1_flat_dark_count < DESIRED_DARK_COUNT",
         "Condition": null,
         "Instructions": {
-          "$id": "257",
+          "$id": "275",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "258",
+            "$id": "276",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "259",
+            "$id": "277",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "260",
+                "$id": "278",
                 "$type": "WhenPlugin.When.TrainedDarkFlatExposure, WhenPlugin",
                 "ErrorBehavior": 0,
                 "Attempts": 1,
@@ -2374,83 +2550,83 @@
                 },
                 "Name": "Trained Dark Flat Exposure +",
                 "Conditions": {
-                  "$id": "261",
+                  "$id": "279",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": false,
                 "Items": {
-                  "$id": "262",
+                  "$id": "280",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "263",
+                      "$id": "281",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "260"
+                        "$ref": "278"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "264",
+                      "$id": "282",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                       "OnOff": false,
                       "Parent": {
-                        "$ref": "260"
+                        "$ref": "278"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "265",
+                      "$id": "283",
                       "$type": "WhenPlugin.When.SwitchFilter, WhenPlugin",
                       "FilterExpr": "(Current)",
                       "Parent": {
-                        "$ref": "260"
+                        "$ref": "278"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "266",
+                      "$id": "284",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
                       "Brightness": 0,
                       "Parent": {
-                        "$ref": "260"
+                        "$ref": "278"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "267",
+                      "$id": "285",
                       "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                       "Strategy": {
                         "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                       },
                       "Name": null,
                       "Conditions": {
-                        "$id": "268",
+                        "$id": "286",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "269",
+                            "$id": "287",
                             "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                             "CompletedIterations": 0,
                             "Iterations": 0,
                             "Parent": {
-                              "$ref": "267"
+                              "$ref": "285"
                             }
                           }
                         ]
                       },
                       "IsExpanded": true,
                       "Items": {
-                        "$id": "270",
+                        "$id": "288",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                         "$values": [
                           {
-                            "$id": "271",
+                            "$id": "289",
                             "$type": "WhenPlugin.When.TakeExposure, WhenPlugin",
                             "ExposureTimeExpr": "0",
                             "ExposureTime": 0.0,
@@ -2459,15 +2635,15 @@
                             "OffsetExpr": "nb_bin1_offset",
                             "Offset": 0,
                             "Binning": {
-                              "$id": "272",
+                              "$id": "290",
                               "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
                               "X": 1,
                               "Y": 1
                             },
-                            "ImageType": "DARKFLAT",
+                            "ImageType": "DARK",
                             "ExposureCount": 0,
                             "Parent": {
-                              "$ref": "267"
+                              "$ref": "285"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
@@ -2475,21 +2651,21 @@
                         ]
                       },
                       "Triggers": {
-                        "$id": "273",
+                        "$id": "291",
                         "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                         "$values": []
                       },
                       "Parent": {
-                        "$ref": "260"
+                        "$ref": "278"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
                     },
                     {
-                      "$id": "274",
+                      "$id": "292",
                       "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
                       "Parent": {
-                        "$ref": "260"
+                        "$ref": "278"
                       },
                       "ErrorBehavior": 0,
                       "Attempts": 1
@@ -2497,22 +2673,22 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "275",
+                  "$id": "293",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Parent": {
-                  "$ref": "257"
+                  "$ref": "275"
                 }
               },
               {
-                "$id": "276",
+                "$id": "294",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_o1_flat_dark_count",
                 "CValueExpr": "actual_o1_flat_dark_count + 1",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "257"
+                  "$ref": "275"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -2520,7 +2696,7 @@
             ]
           },
           "Triggers": {
-            "$id": "277",
+            "$id": "295",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -2537,116 +2713,126 @@
         "Attempts": 1
       },
       {
-        "$id": "278",
+        "$id": "296",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "check if we are done for any of the combinations",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "297",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
         "Predicate": "(not get_bb_bin1_bias or actual_bb_bias1_count >= DESIRED_BIAS_COUNT) and (not get_bb_bin2_bias or actual_bb_bias2_count >= DESIRED_BIAS_COUNT) and (not get_bb_bin1_darks or actual_bb_dark1_count >= DESIRED_DARK_COUNT) and (not get_bb_bin2_darks or actual_bb_dark2_count >= DESIRED_DARK_COUNT) and (not get_nb_bin1_darks or (actual_nb_dark1_count >= DESIRED_DARK_COUNT and (not get_l1_flat_darks or (actual_l1_flat_dark_count >= DESIRED_DARK_COUNT and (not get_r1_flat_darks or (actual_r1_flat_dark_count >= DESIRED_DARK_COUNT and (not get_g1_flat_darks or (actual_g1_flat_dark_count >= DESIRED_DARK_COUNT and (not get_b1_flat_darks or (actual_b1_flat_dark_count >= DESIRED_DARK_COUNT and (not get_r2_flat_darks or (actual_r2_flat_dark_count >= DESIRED_DARK_COUNT and (not get_g2_flat_darks or (actual_g2_flat_dark_count >= DESIRED_DARK_COUNT and (not get_b2_flat_darks or (actual_b2_flat_dark_count >= DESIRED_DARK_COUNT and (not get_h1_flat_darks or (actual_h1_flat_dark_count >= DESIRED_DARK_COUNT and (not get_s1_flat_darks or (actual_s1_flat_dark_count >= DESIRED_DARK_COUNT and (not get_o1_flat_darks or (actual_o1_flat_dark_count >= DESIRED_DARK_COUNT ",
         "Condition": null,
         "Instructions": {
-          "$id": "279",
+          "$id": "298",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "280",
+            "$id": "299",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "281",
+            "$id": "300",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "282",
+                "$id": "301",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_bias1_count",
                 "CValueExpr": "0",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "279"
+                  "$ref": "298"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
-                "$id": "283",
+                "$id": "302",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_bb_dark1_count",
                 "CValueExpr": "0",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "279"
+                  "$ref": "298"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
-                "$id": "284",
+                "$id": "303",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_nb_dark1_count",
                 "CValueExpr": "0",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "279"
+                  "$ref": "298"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
-                "$id": "285",
+                "$id": "304",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_bias2_count",
                 "CValueExpr": "0",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "279"
+                  "$ref": "298"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
-                "$id": "286",
+                "$id": "305",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "actual_dark2_count",
                 "CValueExpr": "0",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "279"
+                  "$ref": "298"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
-                "$id": "287",
+                "$id": "306",
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
                 "Text": "Requested darks have been completed",
                 "Parent": {
-                  "$ref": "279"
+                  "$ref": "298"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
-                "$id": "288",
+                "$id": "307",
                 "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                 "Text": "clearing get_darks needs to come last to ensure the other statements execute because it is part of  a loop condition",
                 "Parent": {
-                  "$ref": "279"
+                  "$ref": "298"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
-                "$id": "289",
+                "$id": "308",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "get_darks",
                 "CValueExpr": "0",
                 "CValue": "Undefined",
                 "Parent": {
-                  "$ref": "279"
+                  "$ref": "298"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -2654,7 +2840,7 @@
             ]
           },
           "Triggers": {
-            "$id": "290",
+            "$id": "309",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -2673,7 +2859,7 @@
     ]
   },
   "Triggers": {
-    "$id": "291",
+    "$id": "310",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

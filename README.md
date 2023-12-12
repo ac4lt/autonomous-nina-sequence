@@ -11,13 +11,13 @@ Although intended for permanent setups in an observatory, the sequence currently
 
  While NINA 3 is in early release as of November 2023, it has proved quite stable for me. However, as of this pont in time, it should be considered beta software at best. *Be aware that it is a rapidly mvoing project and that problems likely will occur*.
  
- ## NINA Plugin Requirements
-- Target Scheduler
-- Scheduler Powerups
-- Connector plugin
-- Discord Alerts[^1]
-- Smart Meridian Flip[^2]
-- Astro-Physics Tools[^3]
+ ## NINA Plugin Minimum Version Requirements
+- Target Scheduler (4.1.0.7)
+- Scheduler Powerups (3.1.16.35)
+- Connector plugin (2.0.2.1)
+- Discord Alerts (2.2.0.0) [^1]
+- Smart Meridian Flip (2.0.0.0) [^2]
+- Astro-Physics Tools (2.0.0.0) [^3]
 
 [^1]: You could replace the instructions that send notifications to Discord with another alerting plugin (like **Ground Station**) or remove those instructions if notifications are not needed.
 [^2]: If you don't plan to take advantage of the **Smert Meridian Flip** plugin then you can replace the **Smart Meridian Flip** trigger with the standard NINA **Meridian Flip** trigger. Or create a configuration file for Smart Meridian Flip that flips at a fixed time (e.g. 10 minutes past the meridian) for each declination.

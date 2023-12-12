@@ -95,7 +95,7 @@
             {
               "$id": "14",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous v0.9.4 started",
+              "Text": "Autonomous v0.9.5 started",
               "Parent": {
                 "$ref": "11"
               },
@@ -5429,7 +5429,9 @@
                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                     "$values": []
                                   },
-                                  "Parent": null,
+                                  "Parent": {
+                                    "$ref": "498"
+                                  },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
                                 },
@@ -7102,7 +7104,7 @@
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
-                    "IsExpanded": false,
+                    "IsExpanded": true,
                     "Items": {
                       "$id": "731",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -7148,8 +7150,8 @@
                         {
                           "$id": "737",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                          "iPredicateValue": "0",
-                          "Predicate": "not (get_darks and get_darks_when_daytime) and not (GET_FLATS and get_flats_when_daytime) and power_is_on",
+                          "iPredicateValue": "1",
+                          "Predicate": "not (get_darks and get_darks_when_daytime) ",
                           "Condition": null,
                           "Instructions": {
                             "$id": "738",

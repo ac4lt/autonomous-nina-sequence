@@ -2748,7 +2748,7 @@
               {
                 "$id": "301",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-                "Variable": "actual_bias1_count",
+                "Variable": "actual_bb_dark1_count",
                 "CValueExpr": "0",
                 "CValue": "Undefined",
                 "Parent": {
@@ -2760,7 +2760,7 @@
               {
                 "$id": "302",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-                "Variable": "actual_bb_dark1_count",
+                "Variable": "actual_bb_bias1_count",
                 "CValueExpr": "0",
                 "CValue": "Undefined",
                 "Parent": {
@@ -2784,7 +2784,7 @@
               {
                 "$id": "304",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-                "Variable": "actual_bias2_count",
+                "Variable": "actual_nb_bias1_count",
                 "CValueExpr": "0",
                 "CValue": "Undefined",
                 "Parent": {
@@ -2796,7 +2796,7 @@
               {
                 "$id": "305",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-                "Variable": "actual_dark2_count",
+                "Variable": "actual_bb_dark2_count",
                 "CValueExpr": "0",
                 "CValue": "Undefined",
                 "Parent": {
@@ -2807,6 +2807,138 @@
               },
               {
                 "$id": "306",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_bb_bias2_count",
+                "CValueExpr": "0",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "298"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "307",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_l1_flat_dark_count",
+                "CValueExpr": "0",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "298"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "308",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_r1_flat_dark_count",
+                "CValueExpr": "0",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "298"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "309",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_g1_flat_dark_count",
+                "CValueExpr": "0",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "298"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "310",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_b1_flat_dark_count",
+                "CValueExpr": "0",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "298"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "311",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_r2_flat_dark_count",
+                "CValueExpr": "0",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "298"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "312",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_g2_flat_dark_count",
+                "CValueExpr": "0",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "298"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "313",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_b2_flat_dark_count",
+                "CValueExpr": "0",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "298"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "314",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_h1_flat_dark_count",
+                "CValueExpr": "0",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "298"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "315",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_o1_flat_dark_count",
+                "CValueExpr": "0",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "298"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "316",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Variable": "actual_s1_flat_dark_count",
+                "CValueExpr": "0",
+                "CValue": "Undefined",
+                "Parent": {
+                  "$ref": "298"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "317",
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
                 "Text": "Requested darks have been completed",
                 "Parent": {
@@ -2816,7 +2948,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "307",
+                "$id": "318",
                 "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                 "Text": "clearing get_darks needs to come last to ensure the other statements execute because it is part of  a loop condition",
                 "Parent": {
@@ -2826,7 +2958,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "308",
+                "$id": "319",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "get_darks",
                 "CValueExpr": "0",
@@ -2840,7 +2972,7 @@
             ]
           },
           "Triggers": {
-            "$id": "309",
+            "$id": "320",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -2859,7 +2991,7 @@
     ]
   },
   "Triggers": {
-    "$id": "310",
+    "$id": "321",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

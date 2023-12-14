@@ -95,7 +95,7 @@
             {
               "$id": "14",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous v0.9.7 started",
+              "Text": "Autonomous v0.9.8 started",
               "Parent": {
                 "$ref": "11"
               },
@@ -1331,7 +1331,7 @@
                       "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                       "Variable": "get_darks_when_daytime",
                       "CValueExpr": "0",
-                      "CValue": "1",
+                      "CValue": "0",
                       "Parent": {
                         "$ref": "105"
                       },
@@ -4045,7 +4045,7 @@
                   {
                     "$id": "360",
                     "$type": "WhenPlugin.When.LoopWhile, WhenPlugin",
-                    "iPredicateValue": "1",
+                    "iPredicateValue": "0",
                     "Predicate": "keep_going",
                     "Parent": {
                       "$ref": "357"
@@ -4212,7 +4212,7 @@
                         {
                           "$id": "381",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                          "iPredicateValue": "1",
+                          "iPredicateValue": "0",
                           "Predicate": "get_flats_when_daytime",
                           "Condition": null,
                           "Instructions": {
@@ -4249,7 +4249,7 @@
                                         "Hours": 17,
                                         "Minutes": 56,
                                         "MinutesOffset": 0,
-                                        "Seconds": 3,
+                                        "Seconds": 20,
                                         "SelectedProvider": {
                                           "$id": "388",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunsetProvider, NINA.Sequencer"
@@ -4629,7 +4629,7 @@
                                         "Hours": 17,
                                         "Minutes": 56,
                                         "MinutesOffset": 0,
-                                        "Seconds": 3,
+                                        "Seconds": 20,
                                         "SelectedProvider": {
                                           "$ref": "388"
                                         },
@@ -4810,7 +4810,7 @@
                         {
                           "$id": "455",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                          "iPredicateValue": "1",
+                          "iPredicateValue": "0",
                           "Predicate": "get_flats_when_evening",
                           "Condition": null,
                           "Instructions": {
@@ -4847,7 +4847,7 @@
                                         "Hours": 18,
                                         "Minutes": 50,
                                         "MinutesOffset": -2,
-                                        "Seconds": 28,
+                                        "Seconds": 47,
                                         "SelectedProvider": {
                                           "$id": "462",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
@@ -4925,7 +4925,7 @@
                                         "Hours": 17,
                                         "Minutes": 11,
                                         "MinutesOffset": -45,
-                                        "Seconds": 3,
+                                        "Seconds": 20,
                                         "SelectedProvider": {
                                           "$ref": "388"
                                         },
@@ -4989,7 +4989,7 @@
                                         "Hours": 18,
                                         "Minutes": 11,
                                         "MinutesOffset": 15,
-                                        "Seconds": 3,
+                                        "Seconds": 20,
                                         "SelectedProvider": {
                                           "$ref": "388"
                                         },
@@ -5177,9 +5177,9 @@
                           "$id": "497",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                           "Hours": 18,
-                          "Minutes": 21,
+                          "Minutes": 22,
                           "MinutesOffset": -60,
-                          "Seconds": 55,
+                          "Seconds": 15,
                           "SelectedProvider": {
                             "$id": "498",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.DuskProvider, NINA.Sequencer"
@@ -5220,7 +5220,7 @@
                           "Hours": 6,
                           "Minutes": 49,
                           "MinutesOffset": 1,
-                          "Seconds": 3,
+                          "Seconds": 41,
                           "SelectedProvider": {
                             "$id": "503",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -5332,7 +5332,7 @@
                                 "Hours": 18,
                                 "Minutes": 52,
                                 "MinutesOffset": 0,
-                                "Seconds": 28,
+                                "Seconds": 47,
                                 "SelectedProvider": {
                                   "$ref": "462"
                                 },
@@ -5977,7 +5977,7 @@
                                 {
                                   "$id": "599",
                                   "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                                  "iPredicateValue": "0",
+                                  "iPredicateValue": "1",
                                   "Predicate": "CloudCover >= 75",
                                   "Condition": null,
                                   "Instructions": {
@@ -6029,7 +6029,7 @@
                                 {
                                   "$id": "605",
                                   "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                                  "iPredicateValue": "0",
+                                  "iPredicateValue": "1",
                                   "Predicate": "RainRate > 0",
                                   "Condition": null,
                                   "Instructions": {
@@ -6185,7 +6185,7 @@
                                 {
                                   "$id": "623",
                                   "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                                  "iPredicateValue": "1",
+                                  "iPredicateValue": "0",
                                   "Predicate": "get_flats_when_unsafe",
                                   "Condition": null,
                                   "Instructions": {
@@ -6229,7 +6229,7 @@
                                                 "Hours": 6,
                                                 "Minutes": 48,
                                                 "MinutesOffset": 0,
-                                                "Seconds": 3,
+                                                "Seconds": 41,
                                                 "SelectedProvider": {
                                                   "$ref": "503"
                                                 },
@@ -6447,7 +6447,7 @@
                                                 "Hours": 6,
                                                 "Minutes": 48,
                                                 "MinutesOffset": 0,
-                                                "Seconds": 3,
+                                                "Seconds": 41,
                                                 "SelectedProvider": {
                                                   "$ref": "503"
                                                 },
@@ -6897,7 +6897,7 @@
                         {
                           "$id": "707",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                          "iPredicateValue": "1",
+                          "iPredicateValue": "0",
                           "Predicate": "get_flats_when_morning",
                           "Condition": null,
                           "Instructions": {
@@ -6932,9 +6932,9 @@
                                         "$id": "713",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                         "Hours": 7,
-                                        "Minutes": 24,
+                                        "Minutes": 25,
                                         "MinutesOffset": -20,
-                                        "Seconds": 41,
+                                        "Seconds": 20,
                                         "SelectedProvider": {
                                           "$id": "714",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
@@ -7012,7 +7012,7 @@
                                         "Hours": 6,
                                         "Minutes": 48,
                                         "MinutesOffset": 0,
-                                        "Seconds": 3,
+                                        "Seconds": 41,
                                         "SelectedProvider": {
                                           "$ref": "503"
                                         },
@@ -7217,7 +7217,7 @@
                         {
                           "$id": "745",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                          "iPredicateValue": "1",
+                          "iPredicateValue": "0",
                           "Predicate": "not (get_darks and get_darks_when_daytime) ",
                           "Condition": null,
                           "Instructions": {
@@ -7835,9 +7835,9 @@
                                         "$id": "818",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                         "Hours": 7,
-                                        "Minutes": 39,
+                                        "Minutes": 40,
                                         "MinutesOffset": -5,
-                                        "Seconds": 41,
+                                        "Seconds": 20,
                                         "SelectedProvider": {
                                           "$ref": "714"
                                         },
@@ -8009,9 +8009,9 @@
                           "$id": "837",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                           "Hours": 7,
-                          "Minutes": 44,
+                          "Minutes": 45,
                           "MinutesOffset": 0,
-                          "Seconds": 41,
+                          "Seconds": 20,
                           "SelectedProvider": {
                             "$ref": "714"
                           },
@@ -8036,7 +8036,7 @@
                           "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                           "Variable": "cycles_completed",
                           "CValueExpr": "cycles_completed + 1",
-                          "CValue": "1",
+                          "CValue": "",
                           "Parent": {
                             "$ref": "802"
                           },

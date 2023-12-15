@@ -462,7 +462,36 @@
               },
               {
                 "$id": "56",
-                "$type": "NINA.Sequencer.SequenceItem.Telescope.ParkScope, NINA.Sequencer",
+                "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
+                "TemplateName": "park scope",
+                "Condition": null,
+                "Instructions": {
+                  "$id": "57",
+                  "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
+                  "Strategy": {
+                    "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+                  },
+                  "Name": null,
+                  "Conditions": {
+                    "$id": "58",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                    "$values": []
+                  },
+                  "IsExpanded": true,
+                  "Items": {
+                    "$id": "59",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                    "$values": []
+                  },
+                  "Triggers": {
+                    "$id": "60",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                    "$values": []
+                  },
+                  "Parent": null,
+                  "ErrorBehavior": 0,
+                  "Attempts": 1
+                },
                 "Parent": {
                   "$ref": "5"
                 },
@@ -470,7 +499,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "57",
+                "$id": "61",
                 "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                 "Text": "This flat panel turns on its light when power is applied so we need to turn it off. We do it  twice because when power is applied the light turns on but reports it is off. It actually seems to turn off the first try but we're being cautious and trying to make sure it is really off.",
                 "Parent": {
@@ -480,7 +509,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "58",
+                "$id": "62",
                 "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                 "OnOff": false,
                 "Parent": {
@@ -490,7 +519,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "59",
+                "$id": "63",
                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTimeSpan, NINA.Sequencer",
                 "Time": 10,
                 "Parent": {
@@ -500,7 +529,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "60",
+                "$id": "64",
                 "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                 "OnOff": false,
                 "Parent": {
@@ -510,7 +539,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "61",
+                "$id": "65",
                 "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                 "Variable": "power_is_on",
                 "CValueExpr": "1",
@@ -522,7 +551,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "62",
+                "$id": "66",
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
                 "Text": "power on complete",
                 "Parent": {
@@ -534,7 +563,7 @@
             ]
           },
           "Triggers": {
-            "$id": "63",
+            "$id": "67",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -553,7 +582,7 @@
     ]
   },
   "Triggers": {
-    "$id": "64",
+    "$id": "68",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

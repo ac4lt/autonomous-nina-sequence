@@ -45,10 +45,6 @@ To use the automatic dark collection features you either need a camera with a ph
 
 If you want the sequence to be able to turn equipment power on or off then you either need an ASCOM switch driver or an external script that can turn the switches on or off.
 
-## Equipment That Probably Won't (Yet) Work Well With This Sequence
-
-**Rotators can be problematic** with this sequence as it currently stand in November 2023 unless your flats can work regardless of rotator position. If you can use a flat from rotator angle "a" with a light froame taken at some different angle "b" and get a good calibration then it will be fine but if not then this sequence is not currently a good choice for you. Eventually, the Target Scheduler author is planning to add flat support that will handle rotation but until that happens this sequence works best at a fixed rotation angle.
-
 ## Installation
 
 Make sure NINA and all the required plugins are installed and configured.

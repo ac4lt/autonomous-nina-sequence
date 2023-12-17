@@ -74,7 +74,7 @@
         "$id": "10",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_bb_bin1_darks and actual_bb_dark1_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_bb_bin1_darks and actual_bb_dark1_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "11",
@@ -151,7 +151,7 @@
         "$id": "18",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_bb_bin1_bias and actual_bb_bias1_count < DESIRED_BIAS_COUNT",
+        "Predicate": "get_bb_bin1_bias and actual_bb_bias1_count < desired_bias_count",
         "Condition": null,
         "Instructions": {
           "$id": "19",
@@ -280,7 +280,7 @@
         "$id": "32",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_nb_bin1_darks and actual_nb_dark1_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_nb_bin1_darks and actual_nb_dark1_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "33",
@@ -354,7 +354,7 @@
         "$id": "39",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_nb_bin1_bias and actual_nb_bias1_count < DESIRED_BIAS_COUNT",
+        "Predicate": "get_nb_bin1_bias and actual_nb_bias1_count < desired_bias_count",
         "Condition": null,
         "Instructions": {
           "$id": "40",
@@ -480,7 +480,7 @@
         "$id": "52",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_bb_bin2_darks and actual_bb_dark2_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_bb_bin2_darks and actual_bb_dark2_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "53",
@@ -557,7 +557,7 @@
         "$id": "60",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_bb_bin2_bias and actual_bb_bias2_count < DESIRED_BIAS_COUNT",
+        "Predicate": "get_bb_bin2_bias and actual_bb_bias2_count < desired_bias_count",
         "Condition": null,
         "Instructions": {
           "$id": "61",
@@ -686,7 +686,7 @@
         "$id": "74",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_l1_flat_darks and actual_l1_flat_dark_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_l1_flat_darks and actual_l1_flat_dark_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "75",
@@ -887,7 +887,7 @@
         "$id": "96",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_r1_flat_darks and actual_r1_flat_dark_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_r1_flat_darks and actual_r1_flat_dark_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "97",
@@ -1088,7 +1088,7 @@
         "$id": "118",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_g1_flat_darks and actual_g1_flat_dark_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_g1_flat_darks and actual_g1_flat_dark_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "119",
@@ -1289,7 +1289,7 @@
         "$id": "140",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_b1_flat_darks and actual_b1_flat_dark_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_b1_flat_darks and actual_b1_flat_dark_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "141",
@@ -1500,7 +1500,7 @@
         "$id": "163",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_r2_flat_darks and actual_r2_flat_dark_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_r2_flat_darks and actual_r2_flat_dark_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "164",
@@ -1701,7 +1701,7 @@
         "$id": "185",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_g2_flat_darks and actual_g2_flat_dark_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_g2_flat_darks and actual_g2_flat_dark_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "186",
@@ -1902,7 +1902,7 @@
         "$id": "207",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_b2_flat_darks and actual_b2_flat_dark_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_b2_flat_darks and actual_b2_flat_dark_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "208",
@@ -2113,7 +2113,7 @@
         "$id": "230",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_h1_flat_darks and actual_h1_flat_dark_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_h1_flat_darks and actual_h1_flat_dark_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "231",
@@ -2314,7 +2314,7 @@
         "$id": "252",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_s1_flat_darks and actual_s1_flat_dark_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_s1_flat_darks and actual_s1_flat_dark_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "253",
@@ -2515,7 +2515,7 @@
         "$id": "274",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "get_o1_flat_darks and actual_o1_flat_dark_count < DESIRED_DARK_COUNT",
+        "Predicate": "get_o1_flat_darks and actual_o1_flat_dark_count < desired_dark_count",
         "Condition": null,
         "Instructions": {
           "$id": "275",
@@ -2726,7 +2726,7 @@
         "$id": "297",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "iPredicateValue": "0",
-        "Predicate": "(not get_bb_bin1_bias or actual_bb_bias1_count >= DESIRED_BIAS_COUNT) and (not get_bb_bin2_bias or actual_bb_bias2_count >= DESIRED_BIAS_COUNT) and (not get_bb_bin1_darks or actual_bb_dark1_count >= DESIRED_DARK_COUNT) and (not get_bb_bin2_darks or actual_bb_dark2_count >= DESIRED_DARK_COUNT) and (not get_nb_bin1_darks or actual_nb_dark1_count >= DESIRED_DARK_COUNT) and (not get_l1_flat_darks or actual_l1_flat_dark_count >= DESIRED_DARK_COUNT) and (not get_r1_flat_darks or actual_r1_flat_dark_count >= DESIRED_DARK_COUNT) and (not get_g1_flat_darks or actual_g1_flat_dark_count >= DESIRED_DARK_COUNT) and (not get_b1_flat_darks or actual_b1_flat_dark_count >= DESIRED_DARK_COUNT) and (not get_r2_flat_darks or actual_r2_flat_dark_count >= DESIRED_DARK_COUNT) and (not get_g2_flat_darks or actual_g2_flat_dark_count >= DESIRED_DARK_COUNT) and (not get_b2_flat_darks or actual_b2_flat_dark_count >= DESIRED_DARK_COUNT) and (not get_h1_flat_darks or actual_h1_flat_dark_count >= DESIRED_DARK_COUNT) and (not get_s1_flat_darks or actual_s1_flat_dark_count >= DESIRED_DARK_COUNT) and (not get_o1_flat_darks or actual_o1_flat_dark_count >= DESIRED_DARK_COUNT)",
+        "Predicate": "(not get_bb_bin1_bias or actual_bb_bias1_count >= desired_bias_count) and (not get_bb_bin2_bias or actual_bb_bias2_count >= desired_bias_count) and (not get_bb_bin1_darks or actual_bb_dark1_count >= desired_dark_count) and (not get_bb_bin2_darks or actual_bb_dark2_count >= desired_dark_count) and (not get_nb_bin1_darks or actual_nb_dark1_count >= desired_dark_count) and (not get_l1_flat_darks or actual_l1_flat_dark_count >= desired_dark_count) and (not get_r1_flat_darks or actual_r1_flat_dark_count >= desired_dark_count) and (not get_g1_flat_darks or actual_g1_flat_dark_count >= desired_dark_count) and (not get_b1_flat_darks or actual_b1_flat_dark_count >= desired_dark_count) and (not get_r2_flat_darks or actual_r2_flat_dark_count >= desired_dark_count) and (not get_g2_flat_darks or actual_g2_flat_dark_count >= desired_dark_count) and (not get_b2_flat_darks or actual_b2_flat_dark_count >= desired_dark_count) and (not get_h1_flat_darks or actual_h1_flat_dark_count >= desired_dark_count) and (not get_s1_flat_darks or actual_s1_flat_dark_count >= desired_dark_count) and (not get_o1_flat_darks or actual_o1_flat_dark_count >= desired_dark_count)",
         "Condition": null,
         "Instructions": {
           "$id": "298",

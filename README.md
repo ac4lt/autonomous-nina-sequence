@@ -12,8 +12,8 @@ Although intended for permanent setups in an observatory, the sequence currently
  While NINA 3 is in early release as of November 2023, it has proved quite stable for me. However, as of this pont in time, it should be considered beta software at best. *Be aware that it is a rapidly mvoing project and that problems likely will occur*.
  
  ## NINA Plugin Minimum Version Requirements
-- Target Scheduler (4.1.0.9)
-- Scheduler Powerups (3.1.16.35)
+- Target Scheduler (4.1.1.3)
+- Scheduler Powerups (3.11.0.6)
 - Connector plugin (2.0.2.1)
 - Discord Alerts (2.2.0.0) [^1]
 - Smart Meridian Flip (2.0.0.0) [^2]

@@ -12,8 +12,8 @@ Although intended for permanent setups in an observatory, the sequence currently
  While NINA 3 is in early release as of November 2023, it has proved quite stable for me. However, as of this pont in time, it should be considered beta software at best. *Be aware that it is a rapidly mvoing project and that problems likely will occur*.
  
  ## NINA Plugin Minimum Version Requirements
-- Target Scheduler (4.1.0.9)
-- Scheduler Powerups (3.1.16.35)
+- Target Scheduler (4.1.1.3)
+- Scheduler Powerups (3.11.0.6)
 - Connector plugin (2.0.2.1)
 - Discord Alerts (2.2.0.0) [^1]
 - Smart Meridian Flip (2.0.0.0) [^2]
@@ -44,10 +44,6 @@ To use the automatic dark collection features you either need a camera with a ph
 ## Equipment Requirements If Power Management Is Needed
 
 If you want the sequence to be able to turn equipment power on or off then you either need an ASCOM switch driver or an external script that can turn the switches on or off.
-
-## Equipment That Probably Won't (Yet) Work Well With This Sequence
-
-**Rotators can be problematic** with this sequence as it currently stand in November 2023 unless your flats can work regardless of rotator position. If you can use a flat from rotator angle "a" with a light froame taken at some different angle "b" and get a good calibration then it will be fine but if not then this sequence is not currently a good choice for you. Eventually, the Target Scheduler author is planning to add flat support that will handle rotation but until that happens this sequence works best at a fixed rotation angle.
 
 ## Installation
 

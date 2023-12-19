@@ -9,10 +9,10 @@ Although intended for permanent setups in an observatory, the sequence currently
 
 - NINA 3
 
- While NINA 3 is in early release as of November 2023, it has proved quite stable for me. However, as of this pont in time, it should be considered beta software at best. *Be aware that it is a rapidly mvoing project and that problems likely will occur*.
+Use beta 3 or higher. 
  
  ## NINA Plugin Minimum Version Requirements
-- Target Scheduler (4.1.1.3)
+- Target Scheduler (4.1.2.0)
 - Scheduler Powerups (3.11.0.6)
 - Connector plugin (2.0.2.1)
 - Discord Alerts (2.2.0.0) [^1]

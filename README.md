@@ -13,7 +13,7 @@ Use beta 3 or higher.
  
  ## NINA Plugin Minimum Version Requirements
 - Target Scheduler (4.1.2.0)
-- Scheduler Powerups (3.11.0.6)
+- Scheduler Powerups (3.11.0.10)
 - Connector plugin (2.0.2.1)
 - Discord Alerts (2.2.0.0) [^1]
 - Smart Meridian Flip (2.0.0.0) [^2]

@@ -105,7 +105,7 @@
             {
               "$id": "15",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous v0.14.3 started",
+              "Text": "Autonomous v0.14.4 started",
               "Parent": {
                 "$ref": "11"
               },
@@ -129,7 +129,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "need_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -163,7 +163,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -275,7 +275,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "desired_camera_temperature",
-              "Definition": "",
+              "Definition": "-25",
               "Parent": {
                 "$ref": "11"
               },
@@ -289,7 +289,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "bb_bin1_exposure_time",
-              "Definition": "",
+              "Definition": "900",
               "Parent": {
                 "$ref": "11"
               },
@@ -303,7 +303,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "nb_bin1_exposure_time",
-              "Definition": "",
+              "Definition": "900",
               "Parent": {
                 "$ref": "11"
               },
@@ -317,7 +317,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "bb_bin2_exposure_time",
-              "Definition": "",
+              "Definition": "600",
               "Parent": {
                 "$ref": "11"
               },
@@ -331,7 +331,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_bb_bin1_bias",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -345,7 +345,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_bb_bin2_bias",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -359,7 +359,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_bb_bin1_darks",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -373,7 +373,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_bb_bin2_darks",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -387,7 +387,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_nb_bin1_bias",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -401,7 +401,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_nb_bin1_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -415,7 +415,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_darks_when_unsafe",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -429,7 +429,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_darks_when_daytime",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -443,7 +443,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_flats_when_daytime",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -457,7 +457,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_flats_when_evening",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -471,7 +471,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_flats_when_unsafe",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -485,7 +485,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_flats_when_morning",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -499,7 +499,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_l1_flat_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -513,7 +513,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_r1_flat_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -527,7 +527,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_g1_flat_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -541,7 +541,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_b1_flat_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -555,7 +555,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_r2_flat_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -569,7 +569,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_g2_flat_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -583,7 +583,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_b2_flat_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -597,7 +597,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_h1_flat_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -611,7 +611,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_s1_flat_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -625,7 +625,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "get_o1_flat_darks",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -649,7 +649,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "bb_bin1_gain",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -663,7 +663,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "bb_bin2_gain",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -677,7 +677,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "nb_bin1_gain",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -691,7 +691,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "bb_bin1_offset",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -705,7 +705,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "bb_bin2_offset",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -719,7 +719,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "nb_bin1_offset",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -743,7 +743,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "desired_dark_count",
-              "Definition": "",
+              "Definition": "25",
               "Parent": {
                 "$ref": "11"
               },
@@ -757,7 +757,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "desired_bias_count",
-              "Definition": "",
+              "Definition": "100",
               "Parent": {
                 "$ref": "11"
               },
@@ -781,7 +781,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "has_flat_panel_cover",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -805,7 +805,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "in_shared_observatory",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -1289,7 +1289,7 @@
                       "Variable": null,
                       "OValueExpr": null,
                       "Identifier": "bb_bin1_gain",
-                      "Definition": "",
+                      "Definition": "0",
                       "Parent": {
                         "$ref": "71"
                       },
@@ -1303,7 +1303,7 @@
                       "Variable": null,
                       "OValueExpr": null,
                       "Identifier": "bb_bin2_gain",
-                      "Definition": "",
+                      "Definition": "0",
                       "Parent": {
                         "$ref": "71"
                       },
@@ -1317,7 +1317,7 @@
                       "Variable": null,
                       "OValueExpr": null,
                       "Identifier": "nb_bin1_gain",
-                      "Definition": "",
+                      "Definition": "0",
                       "Parent": {
                         "$ref": "71"
                       },
@@ -1331,7 +1331,7 @@
                       "Variable": null,
                       "OValueExpr": null,
                       "Identifier": "bb_bin1_offset",
-                      "Definition": "",
+                      "Definition": "0",
                       "Parent": {
                         "$ref": "71"
                       },
@@ -1345,7 +1345,7 @@
                       "Variable": null,
                       "OValueExpr": null,
                       "Identifier": "bb_bin2_offset",
-                      "Definition": "",
+                      "Definition": "0",
                       "Parent": {
                         "$ref": "71"
                       },
@@ -1359,7 +1359,7 @@
                       "Variable": null,
                       "OValueExpr": null,
                       "Identifier": "nb_bin1_offset",
-                      "Definition": "",
+                      "Definition": "0",
                       "Parent": {
                         "$ref": "71"
                       },
@@ -4703,7 +4703,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "power_is_on",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4727,7 +4727,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "keep_going",
-              "Definition": "",
+              "Definition": "1",
               "Parent": {
                 "$ref": "11"
               },
@@ -4751,7 +4751,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_bb_dark1_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4765,7 +4765,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_nb_dark1_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4779,7 +4779,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_bb_dark2_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4793,7 +4793,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_bb_bias1_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4807,7 +4807,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_bb_bias2_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4821,7 +4821,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_nb_bias1_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4845,7 +4845,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_l1_flat_dark_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4859,7 +4859,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_r1_flat_dark_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4873,7 +4873,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_g1_flat_dark_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4887,7 +4887,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_b1_flat_dark_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4901,7 +4901,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_r2_flat_dark_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4915,7 +4915,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_g2_flat_dark_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4929,7 +4929,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_b2_flat_dark_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4943,7 +4943,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_h1_flat_dark_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4957,7 +4957,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_s1_flat_dark_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4971,7 +4971,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "actual_o1_flat_dark_count",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -4995,7 +4995,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "cycles_completed",
-              "Definition": "",
+              "Definition": "0",
               "Parent": {
                 "$ref": "11"
               },
@@ -5476,9 +5476,9 @@
                                 "$id": "589",
                                 "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                 "Hours": 16,
-                                "Minutes": 24,
+                                "Minutes": 14,
                                 "MinutesOffset": -45,
-                                "Seconds": 27,
+                                "Seconds": 8,
                                 "SelectedProvider": {
                                   "$id": "590",
                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunsetProvider, NINA.Sequencer"
@@ -5489,7 +5489,7 @@
                               }
                             ]
                           },
-                          "IsExpanded": true,
+                          "IsExpanded": false,
                           "Items": {
                             "$id": "591",
                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -5506,7 +5506,7 @@
                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                   "$values": []
                                 },
-                                "IsExpanded": false,
+                                "IsExpanded": true,
                                 "Items": {
                                   "$id": "594",
                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -5553,10 +5553,10 @@
                                                   {
                                                     "$id": "602",
                                                     "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                    "Hours": 17,
-                                                    "Minutes": 9,
+                                                    "Hours": 16,
+                                                    "Minutes": 59,
                                                     "MinutesOffset": 0,
-                                                    "Seconds": 27,
+                                                    "Seconds": 8,
                                                     "SelectedProvider": {
                                                       "$ref": "590"
                                                     },
@@ -5949,10 +5949,10 @@
                                                   {
                                                     "$id": "651",
                                                     "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                    "Hours": 17,
-                                                    "Minutes": 9,
+                                                    "Hours": 16,
+                                                    "Minutes": 59,
                                                     "MinutesOffset": 0,
-                                                    "Seconds": 27,
+                                                    "Seconds": 8,
                                                     "SelectedProvider": {
                                                       "$ref": "590"
                                                     },
@@ -6392,12 +6392,12 @@
                                             "$id": "707",
                                             "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
                                             "RAHours": 19,
-                                            "RAMinutes": 24,
-                                            "RASeconds": 5.97611,
+                                            "RAMinutes": 27,
+                                            "RASeconds": 13.26604,
                                             "NegativeDec": true,
-                                            "DecDegrees": -22,
-                                            "DecMinutes": 1,
-                                            "DecSeconds": 57.25671
+                                            "DecDegrees": -21,
+                                            "DecMinutes": 55,
+                                            "DecSeconds": 39.17064
                                           },
                                           "Offset": -12.0,
                                           "Comparator": 1
@@ -6427,9 +6427,9 @@
                                         "$id": "710",
                                         "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                                         "Hours": 16,
-                                        "Minutes": 24,
+                                        "Minutes": 14,
                                         "MinutesOffset": -45,
-                                        "Seconds": 27,
+                                        "Seconds": 8,
                                         "SelectedProvider": {
                                           "$ref": "590"
                                         },
@@ -6497,12 +6497,12 @@
                                             "$id": "719",
                                             "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
                                             "RAHours": 19,
-                                            "RAMinutes": 24,
-                                            "RASeconds": 5.98053,
+                                            "RAMinutes": 27,
+                                            "RASeconds": 13.27298,
                                             "NegativeDec": true,
-                                            "DecDegrees": -22,
-                                            "DecMinutes": 1,
-                                            "DecSeconds": 57.24792
+                                            "DecDegrees": -21,
+                                            "DecMinutes": 55,
+                                            "DecSeconds": 39.15583
                                           },
                                           "Offset": -6.0,
                                           "Comparator": 3
@@ -6686,9 +6686,9 @@
                           "$id": "738",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                           "Hours": 17,
-                          "Minutes": 44,
+                          "Minutes": 31,
                           "MinutesOffset": -60,
-                          "Seconds": 14,
+                          "Seconds": 15,
                           "SelectedProvider": {
                             "$id": "739",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.DuskProvider, NINA.Sequencer"
@@ -6727,9 +6727,9 @@
                           "$id": "743",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                           "Hours": 6,
-                          "Minutes": 30,
+                          "Minutes": 11,
                           "MinutesOffset": 1,
-                          "Seconds": 55,
+                          "Seconds": 20,
                           "SelectedProvider": {
                             "$id": "744",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -6838,10 +6838,10 @@
                               {
                                 "$id": "758",
                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                "Hours": 18,
-                                "Minutes": 12,
+                                "Hours": 17,
+                                "Minutes": 59,
                                 "MinutesOffset": 0,
-                                "Seconds": 1,
+                                "Seconds": 57,
                                 "SelectedProvider": {
                                   "$id": "759",
                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
@@ -7553,7 +7553,7 @@
                           "IfExpr": {
                             "$id": "849",
                             "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                            "Expression": "IsSafe",
+                            "Expression": "not IsSafe",
                             "Type": null
                           },
                           "Condition": null,
@@ -7586,7 +7586,7 @@
                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                     "$values": []
                                   },
-                                  "IsExpanded": false,
+                                  "IsExpanded": true,
                                   "Items": {
                                     "$id": "855",
                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -7942,9 +7942,9 @@
                                                             "$id": "902",
                                                             "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                                             "Hours": 6,
-                                                            "Minutes": 29,
+                                                            "Minutes": 10,
                                                             "MinutesOffset": 0,
-                                                            "Seconds": 55,
+                                                            "Seconds": 20,
                                                             "SelectedProvider": {
                                                               "$ref": "744"
                                                             },
@@ -8165,9 +8165,9 @@
                                                             "$id": "929",
                                                             "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                                             "Hours": 6,
-                                                            "Minutes": 29,
+                                                            "Minutes": 10,
                                                             "MinutesOffset": 0,
-                                                            "Seconds": 55,
+                                                            "Seconds": 20,
                                                             "SelectedProvider": {
                                                               "$ref": "744"
                                                             },
@@ -8854,10 +8854,10 @@
                                       {
                                         "$id": "1012",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 7,
-                                        "Minutes": 12,
+                                        "Hours": 6,
+                                        "Minutes": 51,
                                         "MinutesOffset": -20,
-                                        "Seconds": 44,
+                                        "Seconds": 11,
                                         "SelectedProvider": {
                                           "$id": "1013",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
@@ -8961,9 +8961,9 @@
                                                 "$id": "1027",
                                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                                                 "Hours": 6,
-                                                "Minutes": 29,
+                                                "Minutes": 10,
                                                 "MinutesOffset": 0,
-                                                "Seconds": 55,
+                                                "Seconds": 20,
                                                 "SelectedProvider": {
                                                   "$ref": "744"
                                                 },
@@ -9912,9 +9912,9 @@
                                         "$id": "1140",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                         "Hours": 7,
-                                        "Minutes": 27,
+                                        "Minutes": 6,
                                         "MinutesOffset": -5,
-                                        "Seconds": 44,
+                                        "Seconds": 11,
                                         "SelectedProvider": {
                                           "$ref": "1013"
                                         },
@@ -10091,9 +10091,9 @@
                           "$id": "1160",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                           "Hours": 7,
-                          "Minutes": 32,
+                          "Minutes": 11,
                           "MinutesOffset": 0,
-                          "Seconds": 44,
+                          "Seconds": 11,
                           "SelectedProvider": {
                             "$ref": "1013"
                           },

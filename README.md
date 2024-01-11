@@ -9,11 +9,11 @@ Although intended for permanent setups in an observatory, the sequence currently
 
 - NINA 3
 
-Use beta 3 or higher. 
+Use beta 5 or higher. 
  
  ## NINA Plugin Minimum Version Requirements
 - Target Scheduler (4.2.0.0)
-- Scheduler Powerups (3.11.1.0)
+- Scheduler Powerups (3.12.0.2)
 - Connector plugin (2.0.2.1)
 - Discord Alerts (2.2.0.0) [^1]
 - Smart Meridian Flip (2.0.0.0) [^2]

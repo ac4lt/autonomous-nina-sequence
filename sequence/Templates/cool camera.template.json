@@ -18,53 +18,70 @@
       {
         "$id": "4",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-        "iPredicateValue": "0",
-        "Predicate": "SensorTemp > desired_camera_temperature",
+        "Predicate": null,
+        "IfExpr": {
+          "$id": "5",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "SensorTemp > desired_camera_temperature",
+          "Type": null
+        },
         "Condition": null,
         "Instructions": {
-          "$id": "5",
+          "$id": "6",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "6",
+            "$id": "7",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "7",
+            "$id": "8",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "8",
-                "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                "Text": "cooling camera",
-                "Parent": {
-                  "$ref": "5"
-                },
-                "ErrorBehavior": 0,
-                "Attempts": 1
-              },
-              {
                 "$id": "9",
-                "$type": "WhenPlugin.When.CoolCamera, WhenPlugin",
-                "TemperatureExpr": "desired_camera_temperature",
-                "DurationExpr": "10",
+                "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
+                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" cooling camers to {desired_camera_temperature}",
                 "Parent": {
-                  "$ref": "5"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
                 "$id": "10",
+                "$type": "WhenPlugin.When.CoolCamera, WhenPlugin",
+                "TempExpr": {
+                  "$id": "11",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "desired_camera_temperature",
+                  "Type": null
+                },
+                "DurExpr": {
+                  "$id": "12",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "10",
+                  "Type": null
+                },
+                "TemperatureExpr": null,
+                "DurationExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "13",
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
                 "Text": "camera cooling cycle complete",
                 "Parent": {
-                  "$ref": "5"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -72,7 +89,7 @@
             ]
           },
           "Triggers": {
-            "$id": "11",
+            "$id": "14",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -91,7 +108,7 @@
     ]
   },
   "Triggers": {
-    "$id": "12",
+    "$id": "15",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

@@ -80,16 +80,30 @@
                       "Parent": {
                         "$ref": "11"
                       }
+                    },
+                    {
+                      "$id": "14",
+                      "$type": "WhenPlugin.When.LoopWhile, WhenPlugin",
+                      "Predicate": null,
+                      "PredicateExpr": {
+                        "$id": "15",
+                        "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                        "Expression": "RoofStatus == RoofOpen",
+                        "Type": null
+                      },
+                      "Parent": {
+                        "$ref": "11"
+                      }
                     }
                   ]
                 },
                 "IsExpanded": true,
                 "Items": {
-                  "$id": "14",
+                  "$id": "16",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "15",
+                      "$id": "17",
                       "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTimeSpan, NINA.Sequencer",
                       "Time": 60,
                       "Parent": {
@@ -101,7 +115,7 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "16",
+                  "$id": "18",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
@@ -112,7 +126,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "17",
+                "$id": "19",
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
                 "Text": "roof has closed",
                 "Parent": {
@@ -124,7 +138,7 @@
             ]
           },
           "Triggers": {
-            "$id": "18",
+            "$id": "20",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -143,7 +157,7 @@
     ]
   },
   "Triggers": {
-    "$id": "19",
+    "$id": "21",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

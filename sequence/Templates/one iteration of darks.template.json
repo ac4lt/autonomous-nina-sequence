@@ -101,7 +101,7 @@
               {
                 "$id": "15",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" broadband bin1 darks remaining: {actual_bb_dark1_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" broadband bin1 darks remaining: {actual_bb_dark1_count}",
                 "Parent": {
                   "$ref": "12"
                 },
@@ -213,7 +213,7 @@
               {
                 "$id": "29",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" broadband bin1 bias remaining: {actual_bb_bias1_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" broadband bin1 bias remaining: {actual_bb_bias1_count}",
                 "Parent": {
                   "$ref": "26"
                 },
@@ -382,7 +382,7 @@
               {
                 "$id": "50",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" narrowband bin1 darks remaining: {actual_nb_dark1_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" narrowband bin1 darks remaining: {actual_nb_dark1_count}",
                 "Parent": {
                   "$ref": "47"
                 },
@@ -491,7 +491,7 @@
               {
                 "$id": "63",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" narrowband bin1 bias remaining: {actual_nb_bias1_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" narrowband bin1 bias remaining: {actual_nb_bias1_count}",
                 "Parent": {
                   "$ref": "60"
                 },
@@ -657,7 +657,7 @@
               {
                 "$id": "83",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" broadband bin2 darks remaining: {actual_bb_dark2_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" broadband bin2 darks remaining: {actual_bb_dark2_count}",
                 "Parent": {
                   "$ref": "80"
                 },
@@ -769,7 +769,7 @@
               {
                 "$id": "97",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" broadband bin2 bias remaining: {actual_bb_bias2_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" broadband bin2 bias remaining: {actual_bb_bias2_count}",
                 "Parent": {
                   "$ref": "94"
                 },
@@ -938,7 +938,7 @@
               {
                 "$id": "118",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" broadband L bin 1 flat darks remaining: {actual_l1_flat_dark_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" broadband L bin 1 flat darks remaining: {actual_l1_flat_dark_count}",
                 "Parent": {
                   "$ref": "115"
                 },
@@ -1184,7 +1184,7 @@
               {
                 "$id": "148",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" broadband R bin 1 flat darks remaining: {actual_r1_flat_dark_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" broadband R bin 1 flat darks remaining: {actual_r1_flat_dark_count}",
                 "Parent": {
                   "$ref": "145"
                 },
@@ -1430,7 +1430,7 @@
               {
                 "$id": "178",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" broadband G bin 1 flat darks remaining: {actual_g1_flat_dark_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" broadband G bin 1 flat darks remaining: {actual_g1_flat_dark_count}",
                 "Parent": {
                   "$ref": "175"
                 },
@@ -1676,7 +1676,7 @@
               {
                 "$id": "208",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" broadband B bin 1 flat darks remaining: {actual_b1_flat_dark_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" broadband B bin 1 flat darks remaining: {actual_b1_flat_dark_count}",
                 "Parent": {
                   "$ref": "205"
                 },
@@ -1932,7 +1932,7 @@
               {
                 "$id": "239",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" broadband R bin 2 flat darks remaining: {actual_r2_flat_dark_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" broadband R bin 2 flat darks remaining: {actual_r2_flat_dark_count}",
                 "Parent": {
                   "$ref": "236"
                 },
@@ -2178,7 +2178,7 @@
               {
                 "$id": "269",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" broadband G bin 2 flat darks remaining: {actual_g2_flat_dark_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" broadband G bin 2 flat darks remaining: {actual_g2_flat_dark_count}",
                 "Parent": {
                   "$ref": "266"
                 },
@@ -2424,7 +2424,7 @@
               {
                 "$id": "299",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" broadband B bin 2 flat darks remaining: {actual_b2_flat_dark_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" broadband B bin 2 flat darks remaining: {actual_b2_flat_dark_count}",
                 "Parent": {
                   "$ref": "296"
                 },
@@ -2680,7 +2680,7 @@
               {
                 "$id": "330",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" narrowband H bin 1 flat darks remaining: {actual_h1_flat_dark_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" narrowband H bin 1 flat darks remaining: {actual_h1_flat_dark_count}",
                 "Parent": {
                   "$ref": "327"
                 },
@@ -2926,7 +2926,7 @@
               {
                 "$id": "360",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" narrowband S bin 1 flat darks remaining: {actual_s1_flat_dark_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" narrowband S bin 1 flat darks remaining: {actual_s1_flat_dark_count}",
                 "Parent": {
                   "$ref": "357"
                 },
@@ -3172,7 +3172,7 @@
               {
                 "$id": "390",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" narrowband O bin 1 flat darks remaining: {actual_o1_flat_dark_count}",
+                "Script": "\"C:\\AutnomousScripts\\SendToDiscord.bat\" narrowband O bin 1 flat darks remaining: {actual_o1_flat_dark_count}",
                 "Parent": {
                   "$ref": "387"
                 },

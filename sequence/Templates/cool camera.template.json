@@ -46,7 +46,7 @@
               {
                 "$id": "9",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\Users\\jjk\\Documents\\N.I.N.A\\Scripts\\SendToDiscord.bat\" cooling camers to {desired_camera_temperature}",
+                "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\"  cooling camers to {desired_camera_temperature}",
                 "Parent": {
                   "$ref": "6"
                 },

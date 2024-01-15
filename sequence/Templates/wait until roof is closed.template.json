@@ -32,7 +32,7 @@
         "IfExpr": {
           "$id": "6",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "IsSafe",
+          "Expression": "RoofStatus == RoofOpen",
           "Type": null
         },
         "Condition": null,
@@ -76,17 +76,10 @@
                   "$values": [
                     {
                       "$id": "13",
-                      "$type": "NINA.Sequencer.Conditions.SafetyMonitorCondition, NINA.Sequencer",
-                      "Parent": {
-                        "$ref": "11"
-                      }
-                    },
-                    {
-                      "$id": "14",
                       "$type": "WhenPlugin.When.LoopWhile, WhenPlugin",
                       "Predicate": null,
                       "PredicateExpr": {
-                        "$id": "15",
+                        "$id": "14",
                         "$type": "WhenPlugin.When.Expr, WhenPlugin",
                         "Expression": "RoofStatus == RoofOpen",
                         "Type": null
@@ -99,11 +92,11 @@
                 },
                 "IsExpanded": true,
                 "Items": {
-                  "$id": "16",
+                  "$id": "15",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": [
                     {
-                      "$id": "17",
+                      "$id": "16",
                       "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTimeSpan, NINA.Sequencer",
                       "Time": 60,
                       "Parent": {
@@ -115,7 +108,7 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "18",
+                  "$id": "17",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
@@ -126,7 +119,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "19",
+                "$id": "18",
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
                 "Text": "roof has closed",
                 "Parent": {
@@ -138,7 +131,7 @@
             ]
           },
           "Triggers": {
-            "$id": "20",
+            "$id": "19",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -157,7 +150,7 @@
     ]
   },
   "Triggers": {
-    "$id": "21",
+    "$id": "20",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

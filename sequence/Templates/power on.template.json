@@ -17,48 +17,48 @@
     "$values": [
       {
         "$id": "4",
-        "$type": "NINA.Sequencer.SequenceItem.Utility.ExternalScript, NINA.Sequencer",
-        "Script": "\"C:\\AutonomousScripts\\startup.bat\"",
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "5",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
         "Predicate": null,
         "IfExpr": {
-          "$id": "6",
+          "$id": "5",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "not power_is_on",
           "Type": null
         },
         "Condition": null,
         "Instructions": {
-          "$id": "7",
+          "$id": "6",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "8",
+            "$id": "7",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "9",
+            "$id": "8",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "10",
+                "$id": "9",
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
                 "Text": "turning power on",
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "10",
+                "$type": "NINA.Sequencer.SequenceItem.Utility.ExternalScript, NINA.Sequencer",
+                "Script": "\"C:\\AutonomousScripts\\startup.bat\"",
+                "Parent": {
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -141,13 +141,13 @@
                     "$values": []
                   },
                   "Parent": {
-                    "$ref": "7"
+                    "$ref": "6"
                   },
                   "ErrorBehavior": 0,
                   "Attempts": 1
                 },
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -217,13 +217,13 @@
                     "$values": []
                   },
                   "Parent": {
-                    "$ref": "7"
+                    "$ref": "6"
                   },
                   "ErrorBehavior": 0,
                   "Attempts": 1
                 },
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -263,13 +263,13 @@
                     "$values": []
                   },
                   "Parent": {
-                    "$ref": "7"
+                    "$ref": "6"
                   },
                   "ErrorBehavior": 0,
                   "Attempts": 1
                 },
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -309,13 +309,13 @@
                     "$values": []
                   },
                   "Parent": {
-                    "$ref": "7"
+                    "$ref": "6"
                   },
                   "ErrorBehavior": 0,
                   "Attempts": 1
                 },
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -355,13 +355,13 @@
                     "$values": []
                   },
                   "Parent": {
-                    "$ref": "7"
+                    "$ref": "6"
                   },
                   "ErrorBehavior": 0,
                   "Attempts": 1
                 },
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -411,13 +411,13 @@
                     "$values": []
                   },
                   "Parent": {
-                    "$ref": "7"
+                    "$ref": "6"
                   },
                   "ErrorBehavior": 0,
                   "Attempts": 1
                 },
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -461,13 +461,13 @@
                     "$values": []
                   },
                   "Parent": {
-                    "$ref": "7"
+                    "$ref": "6"
                   },
                   "ErrorBehavior": 0,
                   "Attempts": 1
                 },
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -505,7 +505,7 @@
                   "Attempts": 1
                 },
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -515,7 +515,7 @@
                 "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                 "Text": "This flat panel turns on its light when power is applied so we need to turn it off. We do it  twice because when power is applied the light turns on but reports it is off. It actually seems to turn off the first try but we're being cautious and trying to make sure it is really off.",
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -525,7 +525,7 @@
                 "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                 "OnOff": false,
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -535,7 +535,7 @@
                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTimeSpan, NINA.Sequencer",
                 "Time": 10,
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -545,7 +545,7 @@
                 "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                 "OnOff": false,
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -562,7 +562,7 @@
                 "Variable": "power_is_on",
                 "CValueExpr": null,
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -572,7 +572,7 @@
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
                 "Text": "power on complete",
                 "Parent": {
-                  "$ref": "7"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1

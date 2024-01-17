@@ -95,7 +95,7 @@
             {
               "$id": "14",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous v0.19.0-alpha.3 started",
+              "Text": "Autonomous v0.19.0-alpha.4 started",
               "Parent": {
                 "$ref": "11"
               },
@@ -6393,11 +6393,11 @@
                                             "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
                                             "RAHours": 19,
                                             "RAMinutes": 54,
-                                            "RASeconds": 11.80396,
+                                            "RASeconds": 12.2228,
                                             "NegativeDec": true,
                                             "DecDegrees": -20,
                                             "DecMinutes": 50,
-                                            "DecSeconds": 54.94575
+                                            "DecSeconds": 53.79359
                                           },
                                           "Offset": -12.0,
                                           "Comparator": 1
@@ -6498,11 +6498,11 @@
                                             "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
                                             "RAHours": 19,
                                             "RAMinutes": 54,
-                                            "RASeconds": 11.79883,
+                                            "RASeconds": 12.2333,
                                             "NegativeDec": true,
                                             "DecDegrees": -20,
                                             "DecMinutes": 50,
-                                            "DecSeconds": 54.95986
+                                            "DecSeconds": 53.76471
                                           },
                                           "Offset": -6.0,
                                           "Comparator": 3
@@ -8408,8 +8408,8 @@
                                               },
                                               {
                                                 "$id": "960",
-                                                "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                                                "Text": "conditions are now safe",
+                                                "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
+                                                "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\" conditions are now safe: cloud cover: {CloudCover}%, rain rate: {RainRate} mm/h, humidity: {Humidity}%",
                                                 "Parent": {
                                                   "$ref": "946"
                                                 },

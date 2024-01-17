@@ -95,7 +95,7 @@
             {
               "$id": "14",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous v0.19.0-alpha.2 started",
+              "Text": "Autonomous v0.19.0-alpha.3 started",
               "Parent": {
                 "$ref": "11"
               },
@@ -1130,7 +1130,7 @@
                 "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                 "$values": []
               },
-              "IsExpanded": true,
+              "IsExpanded": false,
               "Items": {
                 "$id": "95",
                 "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -6393,11 +6393,11 @@
                                             "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
                                             "RAHours": 19,
                                             "RAMinutes": 54,
-                                            "RASeconds": 9.90441,
+                                            "RASeconds": 11.80396,
                                             "NegativeDec": true,
                                             "DecDegrees": -20,
-                                            "DecMinutes": 51,
-                                            "DecSeconds": 0.17347
+                                            "DecMinutes": 50,
+                                            "DecSeconds": 54.94575
                                           },
                                           "Offset": -12.0,
                                           "Comparator": 1
@@ -6498,11 +6498,11 @@
                                             "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
                                             "RAHours": 19,
                                             "RAMinutes": 54,
-                                            "RASeconds": 9.91286,
+                                            "RASeconds": 11.79883,
                                             "NegativeDec": true,
                                             "DecDegrees": -20,
-                                            "DecMinutes": 51,
-                                            "DecSeconds": 0.15021
+                                            "DecMinutes": 50,
+                                            "DecSeconds": 54.95986
                                           },
                                           "Offset": -6.0,
                                           "Comparator": 3
@@ -7632,7 +7632,7 @@
                                       {
                                         "$id": "863",
                                         "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                                        "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\" unsafe conditions: cloud cover: {CloudCover}, rain rate: {RainRate}, humidity: {Humidity}",
+                                        "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\" unsafe conditions: cloud cover: {CloudCover}%, rain rate: {RainRate} mm/h, humidity: {Humidity}%",
                                         "Parent": {
                                           "$ref": "855"
                                         },
@@ -7679,7 +7679,7 @@
                                             }
                                           ]
                                         },
-                                        "IsExpanded": false,
+                                        "IsExpanded": true,
                                         "Items": {
                                           "$id": "869",
                                           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",

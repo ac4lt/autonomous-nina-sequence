@@ -13,7 +13,7 @@ Use beta 5 or higher.
  
  ## NINA Plugin Minimum Version Requirements
 - Target Scheduler (4.2.0.0)
-- Scheduler Powerups (3.12.2.0)
+- Scheduler Powerups (3.12.3.3)
 - Connector plugin (2.0.2.2)
 - Discord Alerts (2.2.0.0) [^1]
 - Smart Meridian Flip (2.0.0.0) [^2]
@@ -50,6 +50,13 @@ If you want the sequence to be able to turn equipment power on or off then you e
 Make sure NINA and all the required plugins are installed and configured.
 
 NINA stores its sequences in JSON format. The sequence is made up of a collection of JSON files that are in the "sequence" subdirectory when you unzipped the release. Copy the contents of that sequence directory into your NINA sequence directory (by default it is the "N.I.N.A" directory in the Documents directory.
+
+### Scripts
+
+The sequence expects to find three scripts in c:\AutonomousScripts. These must exist though they do not need to do anything. The three scripts are:
+- startup.bat - this gets called before connecting to any equipment and can be used to turn on power in a non-ASCOM way
+- shutdown.bat - this gets called after disconnecting from the equipment and can be used to turn off power in a non-ASCOM way.
+- SendToDiscord.bat - this gets called at various places to send more complex messages to Discord since the Discord Alerts plugin can't send messages formatted with Sequencer Powerups variables.
 
 ## Wiki
 

@@ -38,7 +38,7 @@
       {
         "$id": "6",
         "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-        "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\" temperature: {Temperature}%",
+        "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\" temperature: {Temperature}℃",
         "Parent": {
           "$ref": "1"
         },
@@ -58,7 +58,7 @@
       {
         "$id": "8",
         "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-        "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\" wind speed: {WindSpeed}%",
+        "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\" wind speed: {WindSpeed} m/s",
         "Parent": {
           "$ref": "1"
         },
@@ -68,7 +68,7 @@
       {
         "$id": "9",
         "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-        "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\" wind gust: {WindGust}%",
+        "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\" wind gust: {WindGust} m/s",
         "Parent": {
           "$ref": "1"
         },

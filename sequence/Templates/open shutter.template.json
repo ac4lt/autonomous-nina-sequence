@@ -22,7 +22,7 @@
         "IfExpr": {
           "$id": "5",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "not in_shared_observatory and RoofStatus == RoofNotOpen",
+          "Expression": "IsSafe and not in_shared_observatory and RoofStatus == RoofNotOpen",
           "Type": null
         },
         "Condition": null,

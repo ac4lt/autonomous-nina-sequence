@@ -95,7 +95,7 @@
             {
               "$id": "14",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous v0.21.2 started",
+              "Text": "Autonomous v0.21.0 started",
               "Parent": {
                 "$ref": "11"
               },
@@ -7028,11 +7028,11 @@
                                             "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
                                             "RAHours": 23,
                                             "RAMinutes": 47,
-                                            "RASeconds": 44.00086,
+                                            "RASeconds": 44.31481,
                                             "NegativeDec": true,
                                             "DecDegrees": -1,
                                             "DecMinutes": 19,
-                                            "DecSeconds": 49.59889
+                                            "DecSeconds": 47.5369
                                           },
                                           "Offset": -12.0,
                                           "Comparator": 1
@@ -7133,11 +7133,11 @@
                                             "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
                                             "RAHours": 23,
                                             "RAMinutes": 47,
-                                            "RASeconds": 44.00362,
+                                            "RASeconds": 44.31769,
                                             "NegativeDec": true,
                                             "DecDegrees": -1,
                                             "DecMinutes": 19,
-                                            "DecSeconds": 49.58078
+                                            "DecSeconds": 47.51799
                                           },
                                           "Offset": -6.0,
                                           "Comparator": 3
@@ -8486,11 +8486,11 @@
                                                           "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
                                                           "RAHours": 23,
                                                           "RAMinutes": 47,
-                                                          "RASeconds": 44.00362,
+                                                          "RASeconds": 44.3177,
                                                           "NegativeDec": true,
                                                           "DecDegrees": -1,
                                                           "DecMinutes": 19,
-                                                          "DecSeconds": 49.58075
+                                                          "DecSeconds": 47.51796
                                                         },
                                                         "Offset": -18.0,
                                                         "Comparator": 3

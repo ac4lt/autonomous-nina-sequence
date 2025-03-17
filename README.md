@@ -7,21 +7,17 @@ Although intended for permanent setups in an observatory, the sequence currently
 
 ## Software Prerequisites
 
-- NINA 3
-
-Use RC 5 or higher. 
+- NINA 3.2
  
  ## NINA Plugin Minimum Version Requirements
-- Target Scheduler (4.3.5.0)
-- Scheduler Powerups (3.13.3.4)
-- Connector plugin (2.0.2.2)
+- Target Scheduler (4.9.1.0)
+- Sequencer Powerups (3.26.0.1)
+- Connector plugin (2.1.0.0)
 - Discord Alerts (2.2.0.0) [^1]
-- Smart Meridian Flip (2.0.0.0) [^2]
-- Astro-Physics Tools (2.0.0.0) [^3]
+- Astro-Physics Tools (2.3.2.1) [^2]
 
 [^1]: You could replace the instructions that send notifications to Discord with another alerting plugin (like **Ground Station**) or remove those instructions if notifications are not needed.
-[^2]: If you don't plan to take advantage of the **Smert Meridian Flip** plugin then you can replace the **Smart Meridian Flip** trigger with the standard NINA **Meridian Flip** trigger. Or create a configuration file for Smart Meridian Flip that flips at a fixed time (e.g. 10 minutes past the meridian) for each declination.
-[^3]: The sequence only uses the plugin to start he APCC program.
+[^2]: The sequence only uses the plugin to start he APCC program.
 
 The first three plugins are initegral to the structure of the sequence. The others are particular to the way the teams using the sequence are using NINA. While the instuctions from Smart Mridian Flip and Astro-Physics Tools are confined to specific spots and not numerous, the Discord Alerts instructions are used throughout the sequence. While it is definitely possible to remove them or replace them with instructions from another notification plugin, it would be fairly tedious to do.
 

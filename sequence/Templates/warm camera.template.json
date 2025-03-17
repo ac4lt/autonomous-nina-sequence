@@ -18,63 +18,67 @@
       {
         "$id": "4",
         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-        "iPredicateValue": "0",
-        "Predicate": "power_is_on",
+        "Predicate": null,
+        "IfExpr": {
+          "$id": "5",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "power_is_on",
+          "Type": null
+        },
         "Condition": null,
         "Instructions": {
-          "$id": "5",
+          "$id": "6",
           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": "If",
           "Conditions": {
-            "$id": "6",
+            "$id": "7",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "7",
+            "$id": "8",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": [
               {
-                "$id": "8",
+                "$id": "9",
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
                 "Text": "warming camera",
                 "Parent": {
-                  "$ref": "5"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
-                "$id": "9",
+                "$id": "10",
                 "$type": "WhenPlugin.When.IfThenElse, WhenPlugin",
-                "iPredicateValue": "0",
                 "ElseInstructions": {
-                  "$id": "10",
+                  "$id": "11",
                   "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                   "Strategy": {
                     "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                   },
                   "Name": "If/Then/Else",
                   "Conditions": {
-                    "$id": "11",
+                    "$id": "12",
                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                     "$values": []
                   },
                   "IsExpanded": true,
                   "Items": {
-                    "$id": "12",
+                    "$id": "13",
                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                     "$values": [
                       {
-                        "$id": "13",
+                        "$id": "14",
                         "$type": "NINA.Sequencer.SequenceItem.Camera.WarmCamera, NINA.Sequencer",
                         "Duration": 10.0,
                         "Parent": {
-                          "$ref": "10"
+                          "$ref": "11"
                         },
                         "ErrorBehavior": 0,
                         "Attempts": 1
@@ -82,52 +86,58 @@
                     ]
                   },
                   "Triggers": {
-                    "$id": "14",
+                    "$id": "15",
                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                     "$values": []
                   },
                   "Parent": {
-                    "$ref": "5"
+                    "$ref": "6"
                   },
                   "ErrorBehavior": 0,
                   "Attempts": 1
                 },
-                "Predicate": "THIS_OBSERVATORY == SRO_PW14 or THIS_OBSERVATORY == DSOC_CERAVOLO or THIS_OBSERVATORY == DSOC_AP305 or THIS_OBSERVATORY == DOSC_AP175_ML16200",
+                "Predicate": null,
+                "IfExpr": {
+                  "$id": "16",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "THIS_OBSERVATORY == SRO_PW14 or THIS_OBSERVATORY == DSOC_CERAVOLO or THIS_OBSERVATORY == DSOC_AP305 or THIS_OBSERVATORY == DSOC_AP175_ML16200",
+                  "Type": null
+                },
                 "Condition": null,
                 "Instructions": {
-                  "$id": "15",
+                  "$id": "17",
                   "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                   "Strategy": {
                     "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                   },
                   "Name": "If/Then/Else",
                   "Conditions": {
-                    "$id": "16",
+                    "$id": "18",
                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                     "$values": []
                   },
                   "IsExpanded": true,
                   "Items": {
-                    "$id": "17",
+                    "$id": "19",
                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                     "$values": [
                       {
-                        "$id": "18",
+                        "$id": "20",
                         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-                        "Text": "We are warming by basically faking the driver into turning off the cooler and then waiting 10 minutes because the warm caemra instruction hangs on the fli driver",
+                        "Text": "There is a bug with NINA using the FLI ASCOM driver where warming the camera gets stuck so we're faking it by setting the temp to 20C. (23 Dec 2024)",
                         "Parent": {
-                          "$ref": "15"
+                          "$ref": "17"
                         },
                         "ErrorBehavior": 0,
                         "Attempts": 1
                       },
                       {
-                        "$id": "19",
+                        "$id": "21",
                         "$type": "NINA.Sequencer.SequenceItem.Camera.CoolCamera, NINA.Sequencer",
                         "Temperature": 20.0,
                         "Duration": 10.0,
                         "Parent": {
-                          "$ref": "15"
+                          "$ref": "17"
                         },
                         "ErrorBehavior": 0,
                         "Attempts": 1
@@ -135,28 +145,28 @@
                     ]
                   },
                   "Triggers": {
-                    "$id": "20",
+                    "$id": "22",
                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                     "$values": []
                   },
                   "Parent": {
-                    "$ref": "5"
+                    "$ref": "6"
                   },
                   "ErrorBehavior": 0,
                   "Attempts": 1
                 },
                 "Parent": {
-                  "$ref": "5"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
               },
               {
-                "$id": "21",
+                "$id": "23",
                 "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
                 "Text": "carmera warming cycle complete",
                 "Parent": {
-                  "$ref": "5"
+                  "$ref": "6"
                 },
                 "ErrorBehavior": 0,
                 "Attempts": 1
@@ -164,7 +174,7 @@
             ]
           },
           "Triggers": {
-            "$id": "22",
+            "$id": "24",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -183,7 +193,7 @@
     ]
   },
   "Triggers": {
-    "$id": "23",
+    "$id": "25",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

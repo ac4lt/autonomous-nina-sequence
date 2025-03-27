@@ -95,7 +95,7 @@
             {
               "$id": "14",
               "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-              "Text": "Autonomous v0.23.3 started",
+              "Text": "Autonomous v0.23.4 started",
               "Parent": {
                 "$ref": "11"
               },
@@ -6852,9 +6852,9 @@
                                 "$id": "776",
                                 "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                 "Hours": 18,
-                                "Minutes": 29,
+                                "Minutes": 30,
                                 "MinutesOffset": -45,
-                                "Seconds": 25,
+                                "Seconds": 18,
                                 "SelectedProvider": {
                                   "$id": "777",
                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunsetProvider, NINA.Sequencer"
@@ -6930,9 +6930,9 @@
                                                     "$id": "789",
                                                     "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                                     "Hours": 19,
-                                                    "Minutes": 14,
+                                                    "Minutes": 15,
                                                     "MinutesOffset": 0,
-                                                    "Seconds": 25,
+                                                    "Seconds": 18,
                                                     "SelectedProvider": {
                                                       "$ref": "777"
                                                     },
@@ -7333,9 +7333,9 @@
                                                     "$id": "839",
                                                     "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                                     "Hours": 19,
-                                                    "Minutes": 14,
+                                                    "Minutes": 15,
                                                     "MinutesOffset": 0,
-                                                    "Seconds": 25,
+                                                    "Seconds": 18,
                                                     "SelectedProvider": {
                                                       "$ref": "777"
                                                     },
@@ -7818,9 +7818,9 @@
                                         "$id": "898",
                                         "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                                         "Hours": 18,
-                                        "Minutes": 29,
+                                        "Minutes": 30,
                                         "MinutesOffset": -45,
-                                        "Seconds": 25,
+                                        "Seconds": 18,
                                         "SelectedProvider": {
                                           "$ref": "777"
                                         },
@@ -8077,9 +8077,9 @@
                           "$id": "926",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                           "Hours": 19,
-                          "Minutes": 43,
+                          "Minutes": 44,
                           "MinutesOffset": -60,
-                          "Seconds": 20,
+                          "Seconds": 22,
                           "SelectedProvider": {
                             "$id": "927",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.DuskProvider, NINA.Sequencer"
@@ -8118,9 +8118,9 @@
                           "$id": "931",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                           "Hours": 5,
-                          "Minutes": 54,
+                          "Minutes": 53,
                           "MinutesOffset": 1,
-                          "Seconds": 48,
+                          "Seconds": 15,
                           "SelectedProvider": {
                             "$id": "932",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -8230,9 +8230,9 @@
                                 "$id": "946",
                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                                 "Hours": 20,
-                                "Minutes": 12,
+                                "Minutes": 13,
                                 "MinutesOffset": 0,
-                                "Seconds": 9,
+                                "Seconds": 7,
                                 "SelectedProvider": {
                                   "$id": "947",
                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
@@ -9146,9 +9146,9 @@
                                         "$id": "1064",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                         "Hours": 20,
-                                        "Minutes": 43,
+                                        "Minutes": 44,
                                         "MinutesOffset": 0,
-                                        "Seconds": 20,
+                                        "Seconds": 22,
                                         "SelectedProvider": {
                                           "$ref": "927"
                                         },
@@ -9184,9 +9184,9 @@
                                         "$id": "1068",
                                         "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                                         "Hours": 20,
-                                        "Minutes": 43,
+                                        "Minutes": 44,
                                         "MinutesOffset": 0,
-                                        "Seconds": 20,
+                                        "Seconds": 22,
                                         "SelectedProvider": {
                                           "$ref": "927"
                                         },
@@ -9315,9 +9315,9 @@
                                                               "$id": "1087",
                                                               "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                                               "Hours": 5,
-                                                              "Minutes": 53,
+                                                              "Minutes": 52,
                                                               "MinutesOffset": 0,
-                                                              "Seconds": 48,
+                                                              "Seconds": 15,
                                                               "SelectedProvider": {
                                                                 "$ref": "932"
                                                               },
@@ -9545,9 +9545,9 @@
                                                               "$id": "1115",
                                                               "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                                               "Hours": 5,
-                                                              "Minutes": 53,
+                                                              "Minutes": 52,
                                                               "MinutesOffset": 0,
-                                                              "Seconds": 48,
+                                                              "Seconds": 15,
                                                               "SelectedProvider": {
                                                                 "$ref": "932"
                                                               },
@@ -10341,9 +10341,9 @@
                                         "$id": "1210",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                         "Hours": 6,
-                                        "Minutes": 31,
+                                        "Minutes": 30,
                                         "MinutesOffset": -20,
-                                        "Seconds": 33,
+                                        "Seconds": 3,
                                         "SelectedProvider": {
                                           "$id": "1211",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
@@ -10515,9 +10515,9 @@
                                                 "$id": "1234",
                                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                                                 "Hours": 5,
-                                                "Minutes": 53,
+                                                "Minutes": 52,
                                                 "MinutesOffset": 0,
-                                                "Seconds": 48,
+                                                "Seconds": 15,
                                                 "SelectedProvider": {
                                                   "$ref": "932"
                                                 },
@@ -11630,9 +11630,9 @@
                                         "$id": "1365",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                         "Hours": 6,
-                                        "Minutes": 46,
+                                        "Minutes": 45,
                                         "MinutesOffset": -5,
-                                        "Seconds": 33,
+                                        "Seconds": 3,
                                         "SelectedProvider": {
                                           "$ref": "1211"
                                         },
@@ -11809,9 +11809,9 @@
                           "$id": "1385",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                           "Hours": 6,
-                          "Minutes": 51,
+                          "Minutes": 50,
                           "MinutesOffset": 0,
-                          "Seconds": 33,
+                          "Seconds": 3,
                           "SelectedProvider": {
                             "$ref": "1211"
                           },

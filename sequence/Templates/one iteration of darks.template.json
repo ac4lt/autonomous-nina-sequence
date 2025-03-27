@@ -22,21 +22,21 @@
           "$id": "5",
           "$type": "NINA.Core.Model.Equipment.FilterInfo, NINA.Core",
           "_name": "s2",
-          "_focusOffset": -10,
+          "_focusOffset": -58,
           "_position": 6,
-          "_autoFocusExposureTime": 13.0,
+          "_autoFocusExposureTime": 10.0,
           "_autoFocusFilter": false,
           "FlatWizardFilterSettings": {
             "$id": "6",
             "$type": "NINA.Core.Model.Equipment.FlatWizardFilterSettings, NINA.Core",
             "FlatWizardMode": 0,
             "HistogramMeanTarget": 0.5,
-            "HistogramTolerance": 0.05,
-            "MaxFlatExposureTime": 30.0,
-            "MinFlatExposureTime": 10.0,
+            "HistogramTolerance": 0.02,
+            "MaxFlatExposureTime": 60.0,
+            "MinFlatExposureTime": 40.0,
             "MaxAbsoluteFlatDeviceBrightness": 255,
-            "MinAbsoluteFlatDeviceBrightness": 1,
-            "Gain": -1,
+            "MinAbsoluteFlatDeviceBrightness": 90,
+            "Gain": 2750,
             "Offset": -1,
             "Binning": {
               "$id": "7",
@@ -48,10 +48,10 @@
           "_autoFocusBinning": {
             "$id": "8",
             "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
-            "X": 1,
-            "Y": 1
+            "X": 4,
+            "Y": 4
           },
-          "_autoFocusGain": -1,
+          "_autoFocusGain": 2750,
           "_autoFocusOffset": -1
         },
         "Parent": {
@@ -78,7 +78,7 @@
           "$id": "11",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_bb_bin1_darks and actual_bb_dark1_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -105,7 +105,7 @@
                   "$id": "16",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "bb_bin1_exposure_time",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "GExpr": {
                   "$id": "17",
@@ -130,6 +130,7 @@
                 },
                 "ImageType": "DARK",
                 "ExposureCount": 0,
+                "ROI": 100.0,
                 "Parent": {
                   "$ref": "12"
                 },
@@ -143,7 +144,7 @@
                   "$id": "21",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_bb_dark1_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_bb_dark1_count",
                 "CValueExpr": null,
@@ -190,7 +191,7 @@
           "$id": "25",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_bb_bin1_bias and actual_bb_bias1_count < desired_bias_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -253,7 +254,7 @@
                         "$id": "35",
                         "$type": "WhenPlugin.When.Expr, WhenPlugin",
                         "Expression": "0",
-                        "Type": null
+                        "Type": "Any"
                       },
                       "GExpr": {
                         "$id": "36",
@@ -278,6 +279,7 @@
                       },
                       "ImageType": "BIAS",
                       "ExposureCount": 0,
+                      "ROI": 100.0,
                       "Parent": {
                         "$ref": "29"
                       },
@@ -302,7 +304,7 @@
                   "$id": "41",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_bb_bias1_count + 5",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_bb_bias1_count",
                 "CValueExpr": null,
@@ -359,7 +361,7 @@
           "$id": "46",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_nb_bin1_darks and actual_nb_dark1_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -386,7 +388,7 @@
                   "$id": "51",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "nb_bin1_exposure_time",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "GExpr": {
                   "$id": "52",
@@ -408,6 +410,7 @@
                 },
                 "ImageType": "DARK",
                 "ExposureCount": 0,
+                "ROI": 100.0,
                 "Parent": {
                   "$ref": "47"
                 },
@@ -421,7 +424,7 @@
                   "$id": "55",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_nb_dark1_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_nb_dark1_count",
                 "CValueExpr": null,
@@ -434,7 +437,7 @@
               {
                 "$id": "56",
                 "$type": "WhenPlugin.When.ExternalScript, WhenPlugin",
-                "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\" narrowband bin1 darks completed {actual_nb_dark1_count} {desired_dark_count}",
+                "Script": "\"C:\\AutonomousScripts\\SendToDiscord.bat\" narrowband bin1 darks completed {actual_nb_dark1_count} of {desired_dark_count}",
                 "Parent": {
                   "$ref": "47"
                 },
@@ -468,7 +471,7 @@
           "$id": "59",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_nb_bin1_bias and actual_nb_bias1_count < desired_bias_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -531,7 +534,7 @@
                         "$id": "69",
                         "$type": "WhenPlugin.When.Expr, WhenPlugin",
                         "Expression": "0",
-                        "Type": null
+                        "Type": "Any"
                       },
                       "GExpr": {
                         "$id": "70",
@@ -553,6 +556,7 @@
                       },
                       "ImageType": "BIAS",
                       "ExposureCount": 0,
+                      "ROI": 100.0,
                       "Parent": {
                         "$ref": "63"
                       },
@@ -577,7 +581,7 @@
                   "$id": "74",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_nb_bias1_count + 5",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_nb_bias1_count",
                 "CValueExpr": null,
@@ -634,7 +638,7 @@
           "$id": "79",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_bb_bin2_darks and actual_bb_dark2_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -661,7 +665,7 @@
                   "$id": "84",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "bin2_exposure_time",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "GExpr": {
                   "$id": "85",
@@ -686,6 +690,7 @@
                 },
                 "ImageType": "DARK",
                 "ExposureCount": 0,
+                "ROI": 100.0,
                 "Parent": {
                   "$ref": "80"
                 },
@@ -699,7 +704,7 @@
                   "$id": "89",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_bb_dark2_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_bb_dark2_count",
                 "CValueExpr": null,
@@ -746,7 +751,7 @@
           "$id": "93",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_bb_bin2_bias and actual_bb_bias2_count < desired_bias_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -809,7 +814,7 @@
                         "$id": "103",
                         "$type": "WhenPlugin.When.Expr, WhenPlugin",
                         "Expression": "0",
-                        "Type": null
+                        "Type": "Any"
                       },
                       "GExpr": {
                         "$id": "104",
@@ -834,6 +839,7 @@
                       },
                       "ImageType": "BIAS",
                       "ExposureCount": 0,
+                      "ROI": 100.0,
                       "Parent": {
                         "$ref": "97"
                       },
@@ -858,7 +864,7 @@
                   "$id": "109",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_bb_bias2_count + 5",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_bb_bias2_count",
                 "CValueExpr": null,
@@ -915,7 +921,7 @@
           "$id": "114",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_l1_flat_darks and actual_l1_flat_dark_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -1043,7 +1049,7 @@
                               "$id": "132",
                               "$type": "WhenPlugin.When.Expr, WhenPlugin",
                               "Expression": "0",
-                              "Type": null
+                              "Type": "Any"
                             },
                             "GExpr": {
                               "$id": "133",
@@ -1068,6 +1074,7 @@
                             },
                             "ImageType": "DARK",
                             "ExposureCount": 0,
+                            "ROI": 100.0,
                             "Parent": {
                               "$ref": "127"
                             },
@@ -1114,7 +1121,7 @@
                   "$id": "140",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_l1_flat_dark_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_l1_flat_dark_count",
                 "CValueExpr": null,
@@ -1161,7 +1168,7 @@
           "$id": "144",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_r1_flat_darks and actual_r1_flat_dark_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -1289,7 +1296,7 @@
                               "$id": "162",
                               "$type": "WhenPlugin.When.Expr, WhenPlugin",
                               "Expression": "0",
-                              "Type": null
+                              "Type": "Any"
                             },
                             "GExpr": {
                               "$id": "163",
@@ -1314,6 +1321,7 @@
                             },
                             "ImageType": "DARK",
                             "ExposureCount": 0,
+                            "ROI": 100.0,
                             "Parent": {
                               "$ref": "157"
                             },
@@ -1360,7 +1368,7 @@
                   "$id": "170",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_r1_flat_dark_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_r1_flat_dark_count",
                 "CValueExpr": null,
@@ -1407,7 +1415,7 @@
           "$id": "174",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_g1_flat_darks and actual_g1_flat_dark_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -1535,7 +1543,7 @@
                               "$id": "192",
                               "$type": "WhenPlugin.When.Expr, WhenPlugin",
                               "Expression": "0",
-                              "Type": null
+                              "Type": "Any"
                             },
                             "GExpr": {
                               "$id": "193",
@@ -1560,6 +1568,7 @@
                             },
                             "ImageType": "DARK",
                             "ExposureCount": 0,
+                            "ROI": 100.0,
                             "Parent": {
                               "$ref": "187"
                             },
@@ -1606,7 +1615,7 @@
                   "$id": "200",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_g1_flat_dark_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_g1_flat_dark_count",
                 "CValueExpr": null,
@@ -1653,7 +1662,7 @@
           "$id": "204",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_b1_flat_darks and actual_b1_flat_dark_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -1781,7 +1790,7 @@
                               "$id": "222",
                               "$type": "WhenPlugin.When.Expr, WhenPlugin",
                               "Expression": "0",
-                              "Type": null
+                              "Type": "Any"
                             },
                             "GExpr": {
                               "$id": "223",
@@ -1806,6 +1815,7 @@
                             },
                             "ImageType": "DARK",
                             "ExposureCount": 0,
+                            "ROI": 100.0,
                             "Parent": {
                               "$ref": "217"
                             },
@@ -1852,7 +1862,7 @@
                   "$id": "230",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_b1_flat_dark_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_b1_flat_dark_count",
                 "CValueExpr": null,
@@ -1909,7 +1919,7 @@
           "$id": "235",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_r2_flat_darks and actual_r2_flat_dark_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -2037,7 +2047,7 @@
                               "$id": "253",
                               "$type": "WhenPlugin.When.Expr, WhenPlugin",
                               "Expression": "0",
-                              "Type": null
+                              "Type": "Any"
                             },
                             "GExpr": {
                               "$id": "254",
@@ -2062,6 +2072,7 @@
                             },
                             "ImageType": "DARK",
                             "ExposureCount": 0,
+                            "ROI": 100.0,
                             "Parent": {
                               "$ref": "248"
                             },
@@ -2108,7 +2119,7 @@
                   "$id": "261",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_r2_flat_dark_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_r2_flat_dark_count",
                 "CValueExpr": null,
@@ -2155,7 +2166,7 @@
           "$id": "265",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_g2_flat_darks and actual_g2_flat_dark_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -2283,7 +2294,7 @@
                               "$id": "283",
                               "$type": "WhenPlugin.When.Expr, WhenPlugin",
                               "Expression": "0",
-                              "Type": null
+                              "Type": "Any"
                             },
                             "GExpr": {
                               "$id": "284",
@@ -2308,6 +2319,7 @@
                             },
                             "ImageType": "DARK",
                             "ExposureCount": 0,
+                            "ROI": 100.0,
                             "Parent": {
                               "$ref": "278"
                             },
@@ -2354,7 +2366,7 @@
                   "$id": "291",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_g2_flat_dark_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_g2_flat_dark_count",
                 "CValueExpr": null,
@@ -2401,7 +2413,7 @@
           "$id": "295",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_b2_flat_darks and actual_b2_flat_dark_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -2529,7 +2541,7 @@
                               "$id": "313",
                               "$type": "WhenPlugin.When.Expr, WhenPlugin",
                               "Expression": "0",
-                              "Type": null
+                              "Type": "Any"
                             },
                             "GExpr": {
                               "$id": "314",
@@ -2554,6 +2566,7 @@
                             },
                             "ImageType": "DARK",
                             "ExposureCount": 0,
+                            "ROI": 100.0,
                             "Parent": {
                               "$ref": "308"
                             },
@@ -2600,7 +2613,7 @@
                   "$id": "321",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_b2_flat_dark_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_b2_flat_dark_count",
                 "CValueExpr": null,
@@ -2657,7 +2670,7 @@
           "$id": "326",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_h1_flat_darks and actual_h1_flat_dark_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -2785,7 +2798,7 @@
                               "$id": "344",
                               "$type": "WhenPlugin.When.Expr, WhenPlugin",
                               "Expression": "0",
-                              "Type": null
+                              "Type": "Any"
                             },
                             "GExpr": {
                               "$id": "345",
@@ -2810,6 +2823,7 @@
                             },
                             "ImageType": "DARK",
                             "ExposureCount": 0,
+                            "ROI": 100.0,
                             "Parent": {
                               "$ref": "339"
                             },
@@ -2856,7 +2870,7 @@
                   "$id": "352",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_h1_flat_dark_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_h1_flat_dark_count",
                 "CValueExpr": null,
@@ -2903,7 +2917,7 @@
           "$id": "356",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_s1_flat_darks and actual_s1_flat_dark_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -3031,7 +3045,7 @@
                               "$id": "374",
                               "$type": "WhenPlugin.When.Expr, WhenPlugin",
                               "Expression": "0",
-                              "Type": null
+                              "Type": "Any"
                             },
                             "GExpr": {
                               "$id": "375",
@@ -3056,6 +3070,7 @@
                             },
                             "ImageType": "DARK",
                             "ExposureCount": 0,
+                            "ROI": 100.0,
                             "Parent": {
                               "$ref": "369"
                             },
@@ -3102,7 +3117,7 @@
                   "$id": "382",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_s1_flat_dark_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_s1_flat_dark_count",
                 "CValueExpr": null,
@@ -3149,7 +3164,7 @@
           "$id": "386",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "get_o1_flat_darks and actual_o1_flat_dark_count < desired_dark_count",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -3277,7 +3292,7 @@
                               "$id": "404",
                               "$type": "WhenPlugin.When.Expr, WhenPlugin",
                               "Expression": "0",
-                              "Type": null
+                              "Type": "Any"
                             },
                             "GExpr": {
                               "$id": "405",
@@ -3302,6 +3317,7 @@
                             },
                             "ImageType": "DARK",
                             "ExposureCount": 0,
+                            "ROI": 100.0,
                             "Parent": {
                               "$ref": "399"
                             },
@@ -3348,7 +3364,7 @@
                   "$id": "412",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "actual_o1_flat_dark_count + 1",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_o1_flat_dark_count",
                 "CValueExpr": null,
@@ -3405,7 +3421,7 @@
           "$id": "417",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "(not get_bb_bin1_bias or actual_bb_bias1_count >= desired_bias_count) and (not get_bb_bin2_bias or actual_bb_bias2_count >= desired_bias_count) and (not get_bb_bin1_darks or actual_bb_dark1_count >= desired_dark_count) and (not get_bb_bin2_darks or actual_bb_dark2_count >= desired_dark_count) and (not get_nb_bin1_darks or actual_nb_dark1_count >= desired_dark_count) and (not get_l1_flat_darks or actual_l1_flat_dark_count >= desired_dark_count) and (not get_r1_flat_darks or actual_r1_flat_dark_count >= desired_dark_count) and (not get_g1_flat_darks or actual_g1_flat_dark_count >= desired_dark_count) and (not get_b1_flat_darks or actual_b1_flat_dark_count >= desired_dark_count) and (not get_r2_flat_darks or actual_r2_flat_dark_count >= desired_dark_count) and (not get_g2_flat_darks or actual_g2_flat_dark_count >= desired_dark_count) and (not get_b2_flat_darks or actual_b2_flat_dark_count >= desired_dark_count) and (not get_h1_flat_darks or actual_h1_flat_dark_count >= desired_dark_count) and (not get_s1_flat_darks or actual_s1_flat_dark_count >= desired_dark_count) and (not get_o1_flat_darks or actual_o1_flat_dark_count >= desired_dark_count)",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -3432,7 +3448,7 @@
                   "$id": "422",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_bb_dark1_count",
                 "CValueExpr": null,
@@ -3449,7 +3465,7 @@
                   "$id": "424",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_bb_bias1_count",
                 "CValueExpr": null,
@@ -3466,7 +3482,7 @@
                   "$id": "426",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_nb_dark1_count",
                 "CValueExpr": null,
@@ -3483,7 +3499,7 @@
                   "$id": "428",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_nb_bias1_count",
                 "CValueExpr": null,
@@ -3500,7 +3516,7 @@
                   "$id": "430",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_bb_dark2_count",
                 "CValueExpr": null,
@@ -3517,7 +3533,7 @@
                   "$id": "432",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_bb_bias2_count",
                 "CValueExpr": null,
@@ -3534,7 +3550,7 @@
                   "$id": "434",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_l1_flat_dark_count",
                 "CValueExpr": null,
@@ -3551,7 +3567,7 @@
                   "$id": "436",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_r1_flat_dark_count",
                 "CValueExpr": null,
@@ -3568,7 +3584,7 @@
                   "$id": "438",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_g1_flat_dark_count",
                 "CValueExpr": null,
@@ -3585,7 +3601,7 @@
                   "$id": "440",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_b1_flat_dark_count",
                 "CValueExpr": null,
@@ -3602,7 +3618,7 @@
                   "$id": "442",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_r2_flat_dark_count",
                 "CValueExpr": null,
@@ -3619,7 +3635,7 @@
                   "$id": "444",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_g2_flat_dark_count",
                 "CValueExpr": null,
@@ -3636,7 +3652,7 @@
                   "$id": "446",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_b2_flat_dark_count",
                 "CValueExpr": null,
@@ -3653,7 +3669,7 @@
                   "$id": "448",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_h1_flat_dark_count",
                 "CValueExpr": null,
@@ -3670,7 +3686,7 @@
                   "$id": "450",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_o1_flat_dark_count",
                 "CValueExpr": null,
@@ -3687,7 +3703,7 @@
                   "$id": "452",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "actual_s1_flat_dark_count",
                 "CValueExpr": null,
@@ -3724,7 +3740,7 @@
                   "$id": "456",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "0",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Variable": "get_darks",
                 "CValueExpr": null,

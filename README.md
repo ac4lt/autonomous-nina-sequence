@@ -13,13 +13,18 @@ Although intended for permanent setups in an observatory, the sequence currently
 - Target Scheduler (4.9.1.0)
 - Sequencer Powerups (3.26.0.1)
 - Connector plugin (2.1.0.0)
+- Livestack plugin (1.0.1.0)
 - Discord Alerts (2.2.0.0) [^1]
 - Astro-Physics Tools (2.3.2.1) [^2]
 
 [^1]: You could replace the instructions that send notifications to Discord with another alerting plugin (like **Ground Station**) or remove those instructions if notifications are not needed.
 [^2]: The sequence only uses the plugin to start he APCC program.
 
-The first three plugins are initegral to the structure of the sequence. The others are particular to the way the teams using the sequence are using NINA. While the instuctions from Smart Mridian Flip and Astro-Physics Tools are confined to specific spots and not numerous, the Discord Alerts instructions are used throughout the sequence. While it is definitely possible to remove them or replace them with instructions from another notification plugin, it would be fairly tedious to do.
+The first three plugins are initegral to the structure of the sequence. 
+
+The Livestack plugin is optional. The sequence will try to enable livestacking by default but you can disable that by setting the live_stack variable to 0.
+
+The others are particular to the way the teams using the sequence are using NINA. While the instuctions from Smart Mridian Flip and Astro-Physics Tools are confined to specific spots and not numerous, the Discord Alerts instructions are used throughout the sequence. While it is definitely possible to remove them or replace them with instructions from another notification plugin, it would be fairly tedious to do.
 
 You can run this sequence with only the first three plugins installed and NINA will skip over the instructions that it doesn't have the plugin for. However, if you plan to contribute changes back to this repository you must have alll required plugins installed for your changes to merge in properly.
 

@@ -10,7 +10,7 @@ Although intended for permanent setups in an observatory, the sequence currently
 - NINA 3.2
  
  ## NINA Plugin Minimum Version Requirements
-- Target Scheduler (4.9.1.0)
+- Target Scheduler (5.2.0.1)
 - Sequencer Powerups (3.26.0.1)
 - Connector plugin (2.1.0.0)
 - Livestack plugin (1.0.1.0)

@@ -30,7 +30,7 @@ You can run this sequence with only the first three plugins installed and NINA w
 
  ## Equipment Requirements (from NINA's equipment tab)
 
- - Camera (what's the point of astro-imaging withoout one!)
+ - Camera (what's the point of astro-imaging without one!)
  - Filter Wheel (if using a mono camera)
  - Telescope
  - Focuser

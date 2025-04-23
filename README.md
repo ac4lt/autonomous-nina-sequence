@@ -10,14 +10,14 @@ Although intended for permanent setups in an observatory, the sequence currently
 - NINA 3.2
  
  ## NINA Plugin Minimum Version Requirements
-- Target Scheduler (5.2.0.1)
+- Target Scheduler (5.4.0.0)
 - Sequencer Powerups (3.26.0.1)
 - Connector plugin (2.1.0.0)
 - Livestack plugin (1.0.1.0)
-- Discord Alerts (2.2.0.0) [^1]
+- Ground Station (3.0.0.108) [^1]
 - Astro-Physics Tools (2.3.2.1) [^2]
 
-[^1]: You could replace the instructions that send notifications to Discord with another alerting plugin (like **Ground Station**) or remove those instructions if notifications are not needed.
+[^1]: You could replace the instructions that send notifications to Discord with a different notification mechanism or remove if not needed.
 [^2]: The sequence only uses the plugin to start he APCC program.
 
 The first three plugins are initegral to the structure of the sequence. 

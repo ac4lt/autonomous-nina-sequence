@@ -98,7 +98,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.27.0\"",
+              "Definition": "\"0.27.1\"",
               "Parent": {
                 "$ref": "11"
               },
@@ -128,7 +128,7 @@
                     {
                       "$id": "19",
                       "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                      "Message": "Autonomous v{VERSION} started",
+                      "Message": "-------------------------------------\r\nAutonomous v{VERSION} started",
                       "EmbedTitle": "",
                       "EmbedText": "",
                       "EmbedEdgeColor": "#FF206694",
@@ -199,7 +199,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "need_darks",
-              "Definition": "0",
+              "Definition": "",
               "Parent": {
                 "$ref": "11"
               },
@@ -233,7 +233,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "live_stack",
-              "Definition": "1",
+              "Definition": "",
               "Parent": {
                 "$ref": "11"
               },
@@ -257,7 +257,7 @@
               "Variable": null,
               "OValueExpr": null,
               "Identifier": "cycles_completed",
-              "Definition": "0",
+              "Definition": "",
               "Parent": {
                 "$ref": "11"
               },
@@ -412,7 +412,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -426,7 +426,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin1_exposure_time",
-                    "Definition": "900",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -440,7 +440,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "nb_bin1_exposure_time",
-                    "Definition": "900",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -454,7 +454,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin2_exposure_time",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -468,7 +468,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_bb_bin1_bias",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -482,7 +482,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_bb_bin2_bias",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -496,7 +496,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_bb_bin1_darks",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -510,7 +510,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_bb_bin2_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -524,7 +524,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_nb_bin1_bias",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -538,7 +538,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_nb_bin1_darks",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -552,7 +552,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks_when_unsafe",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -566,7 +566,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks_when_daytime",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -580,7 +580,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_flats_when_daytime",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -594,7 +594,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_flats_when_evening",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -608,7 +608,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_flats_when_unsafe",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -622,7 +622,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_flats_when_morning",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -636,7 +636,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_l1_flat_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -650,7 +650,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_r1_flat_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -664,7 +664,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_g1_flat_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -678,7 +678,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_b1_flat_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -692,7 +692,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_r2_flat_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -706,7 +706,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_g2_flat_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -720,7 +720,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_b2_flat_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -734,7 +734,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_h1_flat_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -748,7 +748,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_s1_flat_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -762,7 +762,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_o1_flat_darks",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -786,7 +786,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin1_gain",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -800,7 +800,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin2_gain",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -814,7 +814,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "nb_bin1_gain",
-                    "Definition": "2750",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -828,7 +828,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin1_offset",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -842,7 +842,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin2_offset",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -856,7 +856,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "nb_bin1_offset",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -880,7 +880,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "desired_camera_temperature",
-                    "Definition": "-5",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -894,7 +894,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "has_flat_panel_cover",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -908,7 +908,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "in_shared_observatory",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -932,7 +932,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "power_is_on",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -956,7 +956,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "keep_going",
-                    "Definition": "1",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -980,7 +980,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_bb_dark1_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -994,7 +994,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_nb_dark1_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1008,7 +1008,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_bb_dark2_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1022,7 +1022,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_bb_bias1_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1036,7 +1036,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_bb_bias2_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1050,7 +1050,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_nb_bias1_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1074,7 +1074,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_l1_flat_dark_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1088,7 +1088,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_r1_flat_dark_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1102,7 +1102,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_g1_flat_dark_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1116,7 +1116,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_b1_flat_dark_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1130,7 +1130,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_r2_flat_dark_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1144,7 +1144,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_g2_flat_dark_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1158,7 +1158,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_b2_flat_dark_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1172,7 +1172,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_h1_flat_dark_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1186,7 +1186,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_s1_flat_dark_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1200,7 +1200,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_o1_flat_dark_count",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1224,7 +1224,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "desired_dark_count",
-                    "Definition": "25",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1238,7 +1238,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "desired_bias_count",
-                    "Definition": "100",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -1262,7 +1262,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "live_stacking_active",
-                    "Definition": "0",
+                    "Definition": "",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -3113,7 +3113,7 @@
                               "Expression": "0",
                               "Type": "Any"
                             },
-                            "Variable": "nb_bin2_offset",
+                            "Variable": "nb_bin1_offset",
                             "CValueExpr": null,
                             "Parent": {
                               "$ref": "263"
@@ -6917,8 +6917,7 @@
                               "$values": [
                                 {
                                   "$id": "782",
-                                  "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                                  "Text": "WARNING: flats have been requested but no flat windows are acrive. No flats will be collected.",
+                                  "$type": "NINA.Sequencer.SequenceItem.UnknownSequenceItem, NINA.Sequencer",
                                   "Parent": {
                                     "$ref": "779"
                                   },
@@ -7014,10 +7013,10 @@
                               {
                                 "$id": "792",
                                 "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                "Hours": 18,
-                                "Minutes": 54,
+                                "Hours": 19,
+                                "Minutes": 43,
                                 "MinutesOffset": -45,
-                                "Seconds": 15,
+                                "Seconds": 51,
                                 "SelectedProvider": {
                                   "$id": "793",
                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunsetProvider, NINA.Sequencer"
@@ -7092,10 +7091,10 @@
                                                   {
                                                     "$id": "805",
                                                     "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                    "Hours": 19,
-                                                    "Minutes": 39,
+                                                    "Hours": 20,
+                                                    "Minutes": 28,
                                                     "MinutesOffset": 0,
-                                                    "Seconds": 15,
+                                                    "Seconds": 51,
                                                     "SelectedProvider": {
                                                       "$ref": "793"
                                                     },
@@ -7505,10 +7504,10 @@
                                                   {
                                                     "$id": "855",
                                                     "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                    "Hours": 19,
-                                                    "Minutes": 39,
+                                                    "Hours": 20,
+                                                    "Minutes": 28,
                                                     "MinutesOffset": 0,
-                                                    "Seconds": 15,
+                                                    "Seconds": 51,
                                                     "SelectedProvider": {
                                                       "$ref": "793"
                                                     },
@@ -7996,10 +7995,10 @@
                                       {
                                         "$id": "914",
                                         "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                        "Hours": 18,
-                                        "Minutes": 54,
+                                        "Hours": 19,
+                                        "Minutes": 43,
                                         "MinutesOffset": -45,
-                                        "Seconds": 15,
+                                        "Seconds": 51,
                                         "SelectedProvider": {
                                           "$ref": "793"
                                         },
@@ -8269,9 +8268,9 @@
                           "$id": "942",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                           "Hours": 20,
-                          "Minutes": 15,
+                          "Minutes": 55,
                           "MinutesOffset": -60,
-                          "Seconds": 28,
+                          "Seconds": 59,
                           "SelectedProvider": {
                             "$id": "943",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.DuskProvider, NINA.Sequencer"
@@ -8309,10 +8308,10 @@
                         {
                           "$id": "947",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                          "Hours": 5,
-                          "Minutes": 11,
+                          "Hours": 6,
+                          "Minutes": 24,
                           "MinutesOffset": 1,
-                          "Seconds": 43,
+                          "Seconds": 36,
                           "SelectedProvider": {
                             "$id": "948",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -8424,10 +8423,10 @@
                               {
                                 "$id": "962",
                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                "Hours": 20,
-                                "Minutes": 40,
+                                "Hours": 21,
+                                "Minutes": 25,
                                 "MinutesOffset": 0,
-                                "Seconds": 37,
+                                "Seconds": 14,
                                 "SelectedProvider": {
                                   "$id": "963",
                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
@@ -8468,8 +8467,7 @@
                                     "$values": [
                                       {
                                         "$id": "969",
-                                        "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                                        "Text": "opening flat panel",
+                                        "$type": "NINA.Sequencer.SequenceItem.UnknownSequenceItem, NINA.Sequencer",
                                         "Parent": {
                                           "$ref": "966"
                                         },
@@ -9219,8 +9217,7 @@
                                     "$values": [
                                       {
                                         "$id": "1062",
-                                        "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                                        "Text": "starting autofocus ",
+                                        "$type": "NINA.Sequencer.SequenceItem.UnknownSequenceItem, NINA.Sequencer",
                                         "Parent": {
                                           "$ref": "1059"
                                         },
@@ -9238,8 +9235,7 @@
                                       },
                                       {
                                         "$id": "1064",
-                                        "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                                        "Text": "autofocus complete",
+                                        "$type": "NINA.Sequencer.SequenceItem.UnknownSequenceItem, NINA.Sequencer",
                                         "Parent": {
                                           "$ref": "1059"
                                         },
@@ -9563,9 +9559,9 @@
                                         "$id": "1106",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                         "Hours": 21,
-                                        "Minutes": 15,
+                                        "Minutes": 55,
                                         "MinutesOffset": 0,
-                                        "Seconds": 28,
+                                        "Seconds": 59,
                                         "SelectedProvider": {
                                           "$ref": "943"
                                         },
@@ -9604,9 +9600,9 @@
                                         "$id": "1110",
                                         "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                                         "Hours": 21,
-                                        "Minutes": 15,
+                                        "Minutes": 55,
                                         "MinutesOffset": 0,
-                                        "Seconds": 28,
+                                        "Seconds": 59,
                                         "SelectedProvider": {
                                           "$ref": "943"
                                         },
@@ -9737,10 +9733,10 @@
                                                             {
                                                               "$id": "1129",
                                                               "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                              "Hours": 5,
-                                                              "Minutes": 10,
+                                                              "Hours": 6,
+                                                              "Minutes": 23,
                                                               "MinutesOffset": 0,
-                                                              "Seconds": 43,
+                                                              "Seconds": 36,
                                                               "SelectedProvider": {
                                                                 "$ref": "948"
                                                               },
@@ -9977,10 +9973,10 @@
                                                             {
                                                               "$id": "1157",
                                                               "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                              "Hours": 5,
-                                                              "Minutes": 10,
+                                                              "Hours": 6,
+                                                              "Minutes": 23,
                                                               "MinutesOffset": 0,
-                                                              "Seconds": 43,
+                                                              "Seconds": 36,
                                                               "SelectedProvider": {
                                                                 "$ref": "948"
                                                               },
@@ -10277,8 +10273,7 @@
                                                             },
                                                             {
                                                               "$id": "1195",
-                                                              "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                                                              "Text": "darks have been requested",
+                                                              "$type": "NINA.Sequencer.SequenceItem.UnknownSequenceItem, NINA.Sequencer",
                                                               "Parent": {
                                                                 "$ref": "1188"
                                                               },
@@ -10776,10 +10771,10 @@
                                       {
                                         "$id": "1252",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 5,
-                                        "Minutes": 52,
+                                        "Hours": 6,
+                                        "Minutes": 59,
                                         "MinutesOffset": -20,
-                                        "Seconds": 8,
+                                        "Seconds": 57,
                                         "SelectedProvider": {
                                           "$id": "1253",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
@@ -10953,10 +10948,10 @@
                                               {
                                                 "$id": "1276",
                                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                                "Hours": 5,
-                                                "Minutes": 10,
+                                                "Hours": 6,
+                                                "Minutes": 23,
                                                 "MinutesOffset": 0,
-                                                "Seconds": 43,
+                                                "Seconds": 36,
                                                 "SelectedProvider": {
                                                   "$ref": "948"
                                                 },
@@ -12084,10 +12079,10 @@
                                       {
                                         "$id": "1407",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 6,
-                                        "Minutes": 7,
+                                        "Hours": 7,
+                                        "Minutes": 14,
                                         "MinutesOffset": -5,
-                                        "Seconds": 8,
+                                        "Seconds": 57,
                                         "SelectedProvider": {
                                           "$ref": "1253"
                                         },
@@ -12266,10 +12261,10 @@
                         {
                           "$id": "1427",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                          "Hours": 6,
-                          "Minutes": 12,
+                          "Hours": 7,
+                          "Minutes": 19,
                           "MinutesOffset": 0,
-                          "Seconds": 8,
+                          "Seconds": 57,
                           "SelectedProvider": {
                             "$ref": "1253"
                           },
@@ -12329,7 +12324,7 @@
                                 {
                                   "$id": "1435",
                                   "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                  "Message": "cycles completed: {cycles_completed}",
+                                  "Message": "cycles completed: {cycles_completed}\r\n----------------------",
                                   "EmbedTitle": "",
                                   "EmbedText": "",
                                   "EmbedEdgeColor": "#FF206694",

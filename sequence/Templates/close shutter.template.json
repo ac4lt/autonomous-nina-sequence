@@ -23,7 +23,7 @@
           "$id": "5",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "power_is_on and not in_shared_observatory and RoofStatus == RoofOpen",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -51,7 +51,7 @@
                   "$id": "10",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "THIS_OBSERVATORY == CARAPOOEE",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Condition": null,
                 "Instructions": {
@@ -121,8 +121,11 @@
               },
               {
                 "$id": "18",
-                "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                "Text": "closing the shutter",
+                "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                "Message": "closing the shutter",
+                "EmbedTitle": "",
+                "EmbedText": "",
+                "EmbedEdgeColor": "#FF206694",
                 "Parent": {
                   "$ref": "6"
                 },
@@ -140,8 +143,11 @@
               },
               {
                 "$id": "20",
-                "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                "Text": "shutter is closed",
+                "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                "Message": "shutter is closed",
+                "EmbedTitle": "",
+                "EmbedText": "",
+                "EmbedEdgeColor": "#FF206694",
                 "Parent": {
                   "$ref": "6"
                 },

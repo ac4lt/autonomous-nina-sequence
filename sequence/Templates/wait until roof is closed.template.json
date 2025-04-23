@@ -33,7 +33,7 @@
           "$id": "6",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "RoofStatus == RoofOpen",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -55,8 +55,11 @@
             "$values": [
               {
                 "$id": "10",
-                "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                "Text": "waiting for the roof to close",
+                "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                "Message": "waiting for the roof to close",
+                "EmbedTitle": "",
+                "EmbedText": "",
+                "EmbedEdgeColor": "#FF206694",
                 "Parent": {
                   "$ref": "7"
                 },
@@ -82,7 +85,7 @@
                         "$id": "14",
                         "$type": "WhenPlugin.When.Expr, WhenPlugin",
                         "Expression": "RoofStatus == RoofOpen",
-                        "Type": null
+                        "Type": "Any"
                       },
                       "Parent": {
                         "$ref": "11"
@@ -98,7 +101,7 @@
                     {
                       "$id": "16",
                       "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTimeSpan, NINA.Sequencer",
-                      "Time": 60,
+                      "Time": 60.0,
                       "Parent": {
                         "$ref": "11"
                       },
@@ -120,8 +123,11 @@
               },
               {
                 "$id": "18",
-                "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                "Text": "roof has closed",
+                "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                "Message": "roof has closed",
+                "EmbedTitle": "",
+                "EmbedText": "",
+                "EmbedEdgeColor": "#FF206694",
                 "Parent": {
                   "$ref": "7"
                 },

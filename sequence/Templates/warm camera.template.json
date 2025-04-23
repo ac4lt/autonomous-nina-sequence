@@ -23,7 +23,7 @@
           "$id": "5",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "power_is_on",
-          "Type": null
+          "Type": "Any"
         },
         "Condition": null,
         "Instructions": {
@@ -101,7 +101,7 @@
                   "$id": "16",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
                   "Expression": "THIS_OBSERVATORY == SRO_PW14 or THIS_OBSERVATORY == DSOC_CERAVOLO or THIS_OBSERVATORY == DSOC_AP305 or THIS_OBSERVATORY == DSOC_AP175_ML16200",
-                  "Type": null
+                  "Type": "Any"
                 },
                 "Condition": null,
                 "Instructions": {
@@ -163,8 +163,11 @@
               },
               {
                 "$id": "23",
-                "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                "Text": "carmera warming cycle complete",
+                "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                "Message": "camera warming complete",
+                "EmbedTitle": "",
+                "EmbedText": "",
+                "EmbedEdgeColor": "#FF206694",
                 "Parent": {
                   "$ref": "6"
                 },

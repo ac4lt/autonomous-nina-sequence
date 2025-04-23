@@ -1,0 +1,1459 @@
+{
+  "$id": "1",
+  "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
+  "Strategy": {
+    "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+  },
+  "Name": "Take Trained Flats",
+  "Conditions": {
+    "$id": "2",
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+    "$values": []
+  },
+  "IsExpanded": true,
+  "Items": {
+    "$id": "3",
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+    "$values": [
+      {
+        "$id": "4",
+        "$type": "NINA.Sequencer.SequenceItem.Switch.SetSwitchValue, NINA.Sequencer",
+        "Value": 1.0,
+        "SwitchIndex": 4,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "5",
+        "$type": "NINA.Sequencer.SequenceItem.Switch.SetSwitchValue, NINA.Sequencer",
+        "Value": 1.0,
+        "SwitchIndex": 3,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "6",
+        "$type": "NINA.Plugins.Connector.Instructions.ConnectEquipment, NINA.Plugins.Connector",
+        "SelectedDevice": "Camera",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "7",
+        "$type": "NINA.Plugins.Connector.Instructions.ConnectEquipment, NINA.Plugins.Connector",
+        "SelectedDevice": "Filter Wheel",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "8",
+        "$type": "NINA.Plugins.Connector.Instructions.ConnectEquipment, NINA.Plugins.Connector",
+        "SelectedDevice": "Focuser",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "9",
+        "$type": "NINA.Plugins.Connector.Instructions.ConnectEquipment, NINA.Plugins.Connector",
+        "SelectedDevice": "Flat Panel",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "10",
+        "$type": "WhenPlugin.When.CoolCamera, WhenPlugin",
+        "TempExpr": {
+          "$id": "11",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "",
+          "Type": null
+        },
+        "DurExpr": {
+          "$id": "12",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "10",
+          "Type": null
+        },
+        "TemperatureExpr": null,
+        "DurationExpr": null,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "13",
+        "$type": "NINA.Sequencer.SequenceItem.FlatDevice.TrainedFlatExposure, NINA.Sequencer",
+        "ErrorBehavior": 0,
+        "Attempts": 1,
+        "KeepPanelClosed": false,
+        "Strategy": {
+          "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+        },
+        "Name": "Trained Flat Exposure",
+        "Conditions": {
+          "$id": "14",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "IsExpanded": false,
+        "Items": {
+          "$id": "15",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+          "$values": [
+            {
+              "$id": "16",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "13"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "17",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": true,
+              "Parent": {
+                "$ref": "13"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "18",
+              "$type": "NINA.Sequencer.SequenceItem.FilterWheel.SwitchFilter, NINA.Sequencer",
+              "Filter": {
+                "$id": "19",
+                "$type": "NINA.Core.Model.Equipment.FilterInfo, NINA.Core",
+                "_name": "lum",
+                "_focusOffset": 0,
+                "_position": 0,
+                "_autoFocusExposureTime": -1.0,
+                "_autoFocusFilter": true,
+                "FlatWizardFilterSettings": {
+                  "$id": "20",
+                  "$type": "NINA.Core.Model.Equipment.FlatWizardFilterSettings, NINA.Core",
+                  "FlatWizardMode": 0,
+                  "HistogramMeanTarget": 0.5,
+                  "HistogramTolerance": 0.2,
+                  "MaxFlatExposureTime": 6.0,
+                  "MinFlatExposureTime": 3.0,
+                  "MaxAbsoluteFlatDeviceBrightness": 255,
+                  "MinAbsoluteFlatDeviceBrightness": 0,
+                  "Gain": -1,
+                  "Offset": -1,
+                  "Binning": {
+                    "$id": "21",
+                    "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                    "X": 1,
+                    "Y": 1
+                  }
+                },
+                "_autoFocusBinning": {
+                  "$id": "22",
+                  "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                  "X": 2,
+                  "Y": 2
+                },
+                "_autoFocusGain": -1,
+                "_autoFocusOffset": -1
+              },
+              "Parent": {
+                "$ref": "13"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "23",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
+              "Brightness": 0,
+              "Parent": {
+                "$ref": "13"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "24",
+              "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
+              "Strategy": {
+                "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+              },
+              "Name": null,
+              "Conditions": {
+                "$id": "25",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "26",
+                    "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
+                    "CompletedIterations": 0,
+                    "Iterations": 8,
+                    "Parent": {
+                      "$ref": "24"
+                    }
+                  }
+                ]
+              },
+              "IsExpanded": true,
+              "Items": {
+                "$id": "27",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "28",
+                    "$type": "NINA.Sequencer.SequenceItem.Imaging.TakeExposure, NINA.Sequencer",
+                    "ExposureTime": 0.0,
+                    "Gain": -1,
+                    "Offset": -1,
+                    "Binning": {
+                      "$id": "29",
+                      "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                      "X": 1,
+                      "Y": 1
+                    },
+                    "ImageType": "FLAT",
+                    "ExposureCount": 0,
+                    "Parent": {
+                      "$ref": "24"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  }
+                ]
+              },
+              "Triggers": {
+                "$id": "30",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                "$values": []
+              },
+              "Parent": {
+                "$ref": "13"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "31",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": false,
+              "Parent": {
+                "$ref": "13"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "32",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "13"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            }
+          ]
+        },
+        "Triggers": {
+          "$id": "33",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "Parent": {
+          "$ref": "1"
+        }
+      },
+      {
+        "$id": "34",
+        "$type": "NINA.Sequencer.SequenceItem.FlatDevice.TrainedFlatExposure, NINA.Sequencer",
+        "ErrorBehavior": 0,
+        "Attempts": 1,
+        "KeepPanelClosed": false,
+        "Strategy": {
+          "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+        },
+        "Name": "Trained Flat Exposure",
+        "Conditions": {
+          "$id": "35",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "IsExpanded": false,
+        "Items": {
+          "$id": "36",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+          "$values": [
+            {
+              "$id": "37",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "34"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "38",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": true,
+              "Parent": {
+                "$ref": "34"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "39",
+              "$type": "NINA.Sequencer.SequenceItem.FilterWheel.SwitchFilter, NINA.Sequencer",
+              "Filter": {
+                "$id": "40",
+                "$type": "NINA.Core.Model.Equipment.FilterInfo, NINA.Core",
+                "_name": "red",
+                "_focusOffset": -17,
+                "_position": 1,
+                "_autoFocusExposureTime": 6.0,
+                "_autoFocusFilter": false,
+                "FlatWizardFilterSettings": {
+                  "$id": "41",
+                  "$type": "NINA.Core.Model.Equipment.FlatWizardFilterSettings, NINA.Core",
+                  "FlatWizardMode": 0,
+                  "HistogramMeanTarget": 0.5,
+                  "HistogramTolerance": 0.1,
+                  "MaxFlatExposureTime": 6.0,
+                  "MinFlatExposureTime": 3.0,
+                  "MaxAbsoluteFlatDeviceBrightness": 255,
+                  "MinAbsoluteFlatDeviceBrightness": 0,
+                  "Gain": -1,
+                  "Offset": -1,
+                  "Binning": {
+                    "$id": "42",
+                    "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                    "X": 2,
+                    "Y": 2
+                  }
+                },
+                "_autoFocusBinning": {
+                  "$id": "43",
+                  "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                  "X": 2,
+                  "Y": 2
+                },
+                "_autoFocusGain": -1,
+                "_autoFocusOffset": -1
+              },
+              "Parent": {
+                "$ref": "34"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "44",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
+              "Brightness": 0,
+              "Parent": {
+                "$ref": "34"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "45",
+              "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
+              "Strategy": {
+                "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+              },
+              "Name": null,
+              "Conditions": {
+                "$id": "46",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "47",
+                    "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
+                    "CompletedIterations": 0,
+                    "Iterations": 8,
+                    "Parent": {
+                      "$ref": "45"
+                    }
+                  }
+                ]
+              },
+              "IsExpanded": true,
+              "Items": {
+                "$id": "48",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "49",
+                    "$type": "NINA.Sequencer.SequenceItem.Imaging.TakeExposure, NINA.Sequencer",
+                    "ExposureTime": 0.0,
+                    "Gain": -1,
+                    "Offset": -1,
+                    "Binning": {
+                      "$id": "50",
+                      "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                      "X": 2,
+                      "Y": 2
+                    },
+                    "ImageType": "FLAT",
+                    "ExposureCount": 0,
+                    "Parent": {
+                      "$ref": "45"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  }
+                ]
+              },
+              "Triggers": {
+                "$id": "51",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                "$values": []
+              },
+              "Parent": {
+                "$ref": "34"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "52",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": false,
+              "Parent": {
+                "$ref": "34"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "53",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "34"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            }
+          ]
+        },
+        "Triggers": {
+          "$id": "54",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "Parent": {
+          "$ref": "1"
+        }
+      },
+      {
+        "$id": "55",
+        "$type": "NINA.Sequencer.SequenceItem.FlatDevice.TrainedFlatExposure, NINA.Sequencer",
+        "ErrorBehavior": 0,
+        "Attempts": 1,
+        "KeepPanelClosed": false,
+        "Strategy": {
+          "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+        },
+        "Name": "Trained Flat Exposure",
+        "Conditions": {
+          "$id": "56",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "IsExpanded": false,
+        "Items": {
+          "$id": "57",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+          "$values": [
+            {
+              "$id": "58",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "55"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "59",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": true,
+              "Parent": {
+                "$ref": "55"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "60",
+              "$type": "NINA.Sequencer.SequenceItem.FilterWheel.SwitchFilter, NINA.Sequencer",
+              "Filter": {
+                "$id": "61",
+                "$type": "NINA.Core.Model.Equipment.FilterInfo, NINA.Core",
+                "_name": "green",
+                "_focusOffset": -15,
+                "_position": 2,
+                "_autoFocusExposureTime": 6.0,
+                "_autoFocusFilter": false,
+                "FlatWizardFilterSettings": {
+                  "$id": "62",
+                  "$type": "NINA.Core.Model.Equipment.FlatWizardFilterSettings, NINA.Core",
+                  "FlatWizardMode": 0,
+                  "HistogramMeanTarget": 0.5,
+                  "HistogramTolerance": 0.02,
+                  "MaxFlatExposureTime": 80.0,
+                  "MinFlatExposureTime": 25.0,
+                  "MaxAbsoluteFlatDeviceBrightness": 255,
+                  "MinAbsoluteFlatDeviceBrightness": 90,
+                  "Gain": -1,
+                  "Offset": -1,
+                  "Binning": {
+                    "$id": "63",
+                    "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                    "X": 1,
+                    "Y": 1
+                  }
+                },
+                "_autoFocusBinning": {
+                  "$id": "64",
+                  "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                  "X": 2,
+                  "Y": 2
+                },
+                "_autoFocusGain": -1,
+                "_autoFocusOffset": -1
+              },
+              "Parent": {
+                "$ref": "55"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "65",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
+              "Brightness": 0,
+              "Parent": {
+                "$ref": "55"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "66",
+              "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
+              "Strategy": {
+                "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+              },
+              "Name": null,
+              "Conditions": {
+                "$id": "67",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "68",
+                    "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
+                    "CompletedIterations": 0,
+                    "Iterations": 8,
+                    "Parent": {
+                      "$ref": "66"
+                    }
+                  }
+                ]
+              },
+              "IsExpanded": true,
+              "Items": {
+                "$id": "69",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "70",
+                    "$type": "NINA.Sequencer.SequenceItem.Imaging.TakeExposure, NINA.Sequencer",
+                    "ExposureTime": 0.0,
+                    "Gain": -1,
+                    "Offset": -1,
+                    "Binning": {
+                      "$ref": "50"
+                    },
+                    "ImageType": "FLAT",
+                    "ExposureCount": 0,
+                    "Parent": {
+                      "$ref": "66"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  }
+                ]
+              },
+              "Triggers": {
+                "$id": "71",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                "$values": []
+              },
+              "Parent": {
+                "$ref": "55"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "72",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": false,
+              "Parent": {
+                "$ref": "55"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "73",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "55"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            }
+          ]
+        },
+        "Triggers": {
+          "$id": "74",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "Parent": {
+          "$ref": "1"
+        }
+      },
+      {
+        "$id": "75",
+        "$type": "NINA.Sequencer.SequenceItem.FlatDevice.TrainedFlatExposure, NINA.Sequencer",
+        "ErrorBehavior": 0,
+        "Attempts": 1,
+        "KeepPanelClosed": false,
+        "Strategy": {
+          "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+        },
+        "Name": "Trained Flat Exposure",
+        "Conditions": {
+          "$id": "76",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "IsExpanded": false,
+        "Items": {
+          "$id": "77",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+          "$values": [
+            {
+              "$id": "78",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "75"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "79",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": true,
+              "Parent": {
+                "$ref": "75"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "80",
+              "$type": "NINA.Sequencer.SequenceItem.FilterWheel.SwitchFilter, NINA.Sequencer",
+              "Filter": {
+                "$id": "81",
+                "$type": "NINA.Core.Model.Equipment.FilterInfo, NINA.Core",
+                "_name": "blue",
+                "_focusOffset": 2,
+                "_position": 3,
+                "_autoFocusExposureTime": 6.0,
+                "_autoFocusFilter": false,
+                "FlatWizardFilterSettings": {
+                  "$id": "82",
+                  "$type": "NINA.Core.Model.Equipment.FlatWizardFilterSettings, NINA.Core",
+                  "FlatWizardMode": 0,
+                  "HistogramMeanTarget": 0.5,
+                  "HistogramTolerance": 0.02,
+                  "MaxFlatExposureTime": 80.0,
+                  "MinFlatExposureTime": 25.0,
+                  "MaxAbsoluteFlatDeviceBrightness": 255,
+                  "MinAbsoluteFlatDeviceBrightness": 90,
+                  "Gain": -1,
+                  "Offset": -1,
+                  "Binning": {
+                    "$id": "83",
+                    "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                    "X": 1,
+                    "Y": 1
+                  }
+                },
+                "_autoFocusBinning": {
+                  "$id": "84",
+                  "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                  "X": 2,
+                  "Y": 2
+                },
+                "_autoFocusGain": -1,
+                "_autoFocusOffset": -1
+              },
+              "Parent": {
+                "$ref": "75"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "85",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
+              "Brightness": 0,
+              "Parent": {
+                "$ref": "75"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "86",
+              "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
+              "Strategy": {
+                "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+              },
+              "Name": null,
+              "Conditions": {
+                "$id": "87",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "88",
+                    "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
+                    "CompletedIterations": 0,
+                    "Iterations": 8,
+                    "Parent": {
+                      "$ref": "86"
+                    }
+                  }
+                ]
+              },
+              "IsExpanded": true,
+              "Items": {
+                "$id": "89",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "90",
+                    "$type": "NINA.Sequencer.SequenceItem.Imaging.TakeExposure, NINA.Sequencer",
+                    "ExposureTime": 0.0,
+                    "Gain": -1,
+                    "Offset": -1,
+                    "Binning": {
+                      "$ref": "50"
+                    },
+                    "ImageType": "FLAT",
+                    "ExposureCount": 0,
+                    "Parent": {
+                      "$ref": "86"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  }
+                ]
+              },
+              "Triggers": {
+                "$id": "91",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                "$values": []
+              },
+              "Parent": {
+                "$ref": "75"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "92",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": false,
+              "Parent": {
+                "$ref": "75"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "93",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "75"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            }
+          ]
+        },
+        "Triggers": {
+          "$id": "94",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "Parent": {
+          "$ref": "1"
+        }
+      },
+      {
+        "$id": "95",
+        "$type": "NINA.Sequencer.SequenceItem.FlatDevice.TrainedFlatExposure, NINA.Sequencer",
+        "ErrorBehavior": 0,
+        "Attempts": 1,
+        "KeepPanelClosed": false,
+        "Strategy": {
+          "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+        },
+        "Name": "Trained Flat Exposure",
+        "Conditions": {
+          "$id": "96",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "IsExpanded": false,
+        "Items": {
+          "$id": "97",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+          "$values": [
+            {
+              "$id": "98",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "95"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "99",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": true,
+              "Parent": {
+                "$ref": "95"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "100",
+              "$type": "NINA.Sequencer.SequenceItem.FilterWheel.SwitchFilter, NINA.Sequencer",
+              "Filter": {
+                "$id": "101",
+                "$type": "NINA.Core.Model.Equipment.FilterInfo, NINA.Core",
+                "_name": "o3",
+                "_focusOffset": -55,
+                "_position": 4,
+                "_autoFocusExposureTime": 30.0,
+                "_autoFocusFilter": false,
+                "FlatWizardFilterSettings": {
+                  "$id": "102",
+                  "$type": "NINA.Core.Model.Equipment.FlatWizardFilterSettings, NINA.Core",
+                  "FlatWizardMode": 0,
+                  "HistogramMeanTarget": 0.5,
+                  "HistogramTolerance": 0.1,
+                  "MaxFlatExposureTime": 60.0,
+                  "MinFlatExposureTime": 5.0,
+                  "MaxAbsoluteFlatDeviceBrightness": 255,
+                  "MinAbsoluteFlatDeviceBrightness": 1,
+                  "Gain": -1,
+                  "Offset": -1,
+                  "Binning": {
+                    "$id": "103",
+                    "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                    "X": 1,
+                    "Y": 1
+                  }
+                },
+                "_autoFocusBinning": {
+                  "$id": "104",
+                  "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                  "X": 2,
+                  "Y": 2
+                },
+                "_autoFocusGain": -1,
+                "_autoFocusOffset": -1
+              },
+              "Parent": {
+                "$ref": "95"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "105",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
+              "Brightness": 0,
+              "Parent": {
+                "$ref": "95"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "106",
+              "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
+              "Strategy": {
+                "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+              },
+              "Name": null,
+              "Conditions": {
+                "$id": "107",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "108",
+                    "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
+                    "CompletedIterations": 0,
+                    "Iterations": 8,
+                    "Parent": {
+                      "$ref": "106"
+                    }
+                  }
+                ]
+              },
+              "IsExpanded": true,
+              "Items": {
+                "$id": "109",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "110",
+                    "$type": "NINA.Sequencer.SequenceItem.Imaging.TakeExposure, NINA.Sequencer",
+                    "ExposureTime": 0.0,
+                    "Gain": -1,
+                    "Offset": -1,
+                    "Binning": {
+                      "$ref": "29"
+                    },
+                    "ImageType": "FLAT",
+                    "ExposureCount": 0,
+                    "Parent": {
+                      "$ref": "106"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  }
+                ]
+              },
+              "Triggers": {
+                "$id": "111",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                "$values": []
+              },
+              "Parent": {
+                "$ref": "95"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "112",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": false,
+              "Parent": {
+                "$ref": "95"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "113",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "95"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            }
+          ]
+        },
+        "Triggers": {
+          "$id": "114",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "Parent": {
+          "$ref": "1"
+        }
+      },
+      {
+        "$id": "115",
+        "$type": "NINA.Sequencer.SequenceItem.FlatDevice.TrainedFlatExposure, NINA.Sequencer",
+        "ErrorBehavior": 0,
+        "Attempts": 1,
+        "KeepPanelClosed": false,
+        "Strategy": {
+          "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+        },
+        "Name": "Trained Flat Exposure",
+        "Conditions": {
+          "$id": "116",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "IsExpanded": false,
+        "Items": {
+          "$id": "117",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+          "$values": [
+            {
+              "$id": "118",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "115"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "119",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": true,
+              "Parent": {
+                "$ref": "115"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "120",
+              "$type": "NINA.Sequencer.SequenceItem.FilterWheel.SwitchFilter, NINA.Sequencer",
+              "Filter": {
+                "$id": "121",
+                "$type": "NINA.Core.Model.Equipment.FilterInfo, NINA.Core",
+                "_name": "ha",
+                "_focusOffset": -20,
+                "_position": 5,
+                "_autoFocusExposureTime": 30.0,
+                "_autoFocusFilter": false,
+                "FlatWizardFilterSettings": {
+                  "$id": "122",
+                  "$type": "NINA.Core.Model.Equipment.FlatWizardFilterSettings, NINA.Core",
+                  "FlatWizardMode": 0,
+                  "HistogramMeanTarget": 0.5,
+                  "HistogramTolerance": 0.02,
+                  "MaxFlatExposureTime": 80.0,
+                  "MinFlatExposureTime": 25.0,
+                  "MaxAbsoluteFlatDeviceBrightness": 255,
+                  "MinAbsoluteFlatDeviceBrightness": 90,
+                  "Gain": -1,
+                  "Offset": -1,
+                  "Binning": {
+                    "$id": "123",
+                    "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                    "X": 1,
+                    "Y": 1
+                  }
+                },
+                "_autoFocusBinning": {
+                  "$id": "124",
+                  "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                  "X": 2,
+                  "Y": 2
+                },
+                "_autoFocusGain": -1,
+                "_autoFocusOffset": -1
+              },
+              "Parent": {
+                "$ref": "115"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "125",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
+              "Brightness": 0,
+              "Parent": {
+                "$ref": "115"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "126",
+              "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
+              "Strategy": {
+                "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+              },
+              "Name": null,
+              "Conditions": {
+                "$id": "127",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "128",
+                    "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
+                    "CompletedIterations": 0,
+                    "Iterations": 8,
+                    "Parent": {
+                      "$ref": "126"
+                    }
+                  }
+                ]
+              },
+              "IsExpanded": true,
+              "Items": {
+                "$id": "129",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "130",
+                    "$type": "NINA.Sequencer.SequenceItem.Imaging.TakeExposure, NINA.Sequencer",
+                    "ExposureTime": 0.0,
+                    "Gain": -1,
+                    "Offset": -1,
+                    "Binning": {
+                      "$ref": "29"
+                    },
+                    "ImageType": "FLAT",
+                    "ExposureCount": 0,
+                    "Parent": {
+                      "$ref": "126"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  }
+                ]
+              },
+              "Triggers": {
+                "$id": "131",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                "$values": []
+              },
+              "Parent": {
+                "$ref": "115"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "132",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": false,
+              "Parent": {
+                "$ref": "115"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "133",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "115"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            }
+          ]
+        },
+        "Triggers": {
+          "$id": "134",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "Parent": {
+          "$ref": "1"
+        }
+      },
+      {
+        "$id": "135",
+        "$type": "NINA.Sequencer.SequenceItem.FlatDevice.TrainedFlatExposure, NINA.Sequencer",
+        "ErrorBehavior": 0,
+        "Attempts": 1,
+        "KeepPanelClosed": false,
+        "Strategy": {
+          "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+        },
+        "Name": "Trained Flat Exposure",
+        "Conditions": {
+          "$id": "136",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "IsExpanded": false,
+        "Items": {
+          "$id": "137",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+          "$values": [
+            {
+              "$id": "138",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.CloseCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "135"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "139",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": true,
+              "Parent": {
+                "$ref": "135"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "140",
+              "$type": "NINA.Sequencer.SequenceItem.FilterWheel.SwitchFilter, NINA.Sequencer",
+              "Filter": {
+                "$id": "141",
+                "$type": "NINA.Core.Model.Equipment.FilterInfo, NINA.Core",
+                "_name": "s2",
+                "_focusOffset": -81,
+                "_position": 6,
+                "_autoFocusExposureTime": 30.0,
+                "_autoFocusFilter": false,
+                "FlatWizardFilterSettings": {
+                  "$id": "142",
+                  "$type": "NINA.Core.Model.Equipment.FlatWizardFilterSettings, NINA.Core",
+                  "FlatWizardMode": 0,
+                  "HistogramMeanTarget": 0.5,
+                  "HistogramTolerance": 0.02,
+                  "MaxFlatExposureTime": 80.0,
+                  "MinFlatExposureTime": 25.0,
+                  "MaxAbsoluteFlatDeviceBrightness": 255,
+                  "MinAbsoluteFlatDeviceBrightness": 90,
+                  "Gain": -1,
+                  "Offset": -1,
+                  "Binning": {
+                    "$id": "143",
+                    "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                    "X": 1,
+                    "Y": 1
+                  }
+                },
+                "_autoFocusBinning": {
+                  "$id": "144",
+                  "$type": "NINA.Core.Model.Equipment.BinningMode, NINA.Core",
+                  "X": 2,
+                  "Y": 2
+                },
+                "_autoFocusGain": -1,
+                "_autoFocusOffset": -1
+              },
+              "Parent": {
+                "$ref": "135"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "145",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.SetBrightness, NINA.Sequencer",
+              "Brightness": 0,
+              "Parent": {
+                "$ref": "135"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "146",
+              "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
+              "Strategy": {
+                "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+              },
+              "Name": null,
+              "Conditions": {
+                "$id": "147",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "148",
+                    "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
+                    "CompletedIterations": 0,
+                    "Iterations": 8,
+                    "Parent": {
+                      "$ref": "146"
+                    }
+                  }
+                ]
+              },
+              "IsExpanded": true,
+              "Items": {
+                "$id": "149",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                "$values": [
+                  {
+                    "$id": "150",
+                    "$type": "NINA.Sequencer.SequenceItem.Imaging.TakeExposure, NINA.Sequencer",
+                    "ExposureTime": 0.0,
+                    "Gain": -1,
+                    "Offset": -1,
+                    "Binning": {
+                      "$ref": "29"
+                    },
+                    "ImageType": "FLAT",
+                    "ExposureCount": 0,
+                    "Parent": {
+                      "$ref": "146"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  }
+                ]
+              },
+              "Triggers": {
+                "$id": "151",
+                "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                "$values": []
+              },
+              "Parent": {
+                "$ref": "135"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "152",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+              "OnOff": false,
+              "Parent": {
+                "$ref": "135"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            },
+            {
+              "$id": "153",
+              "$type": "NINA.Sequencer.SequenceItem.FlatDevice.OpenCover, NINA.Sequencer",
+              "Parent": {
+                "$ref": "135"
+              },
+              "ErrorBehavior": 0,
+              "Attempts": 1
+            }
+          ]
+        },
+        "Triggers": {
+          "$id": "154",
+          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+          "$values": []
+        },
+        "Parent": {
+          "$ref": "1"
+        }
+      },
+      {
+        "$id": "155",
+        "$type": "NINA.Sequencer.SequenceItem.Camera.CoolCamera, NINA.Sequencer",
+        "Temperature": 20.0,
+        "Duration": 10.0,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "156",
+        "$type": "NINA.Plugins.Connector.Instructions.DisconnectEquipment, NINA.Plugins.Connector",
+        "SelectedDevice": "Camera",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "157",
+        "$type": "NINA.Plugins.Connector.Instructions.DisconnectEquipment, NINA.Plugins.Connector",
+        "SelectedDevice": "Focuser",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "158",
+        "$type": "NINA.Plugins.Connector.Instructions.DisconnectEquipment, NINA.Plugins.Connector",
+        "SelectedDevice": "Focuser",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "159",
+        "$type": "NINA.Plugins.Connector.Instructions.DisconnectEquipment, NINA.Plugins.Connector",
+        "SelectedDevice": "Flat Panel",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "160",
+        "$type": "NINA.Sequencer.SequenceItem.Switch.SetSwitchValue, NINA.Sequencer",
+        "Value": 0.0,
+        "SwitchIndex": 4,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "161",
+        "$type": "NINA.Sequencer.SequenceItem.Switch.SetSwitchValue, NINA.Sequencer",
+        "Value": 0.0,
+        "SwitchIndex": 3,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      }
+    ]
+  },
+  "Triggers": {
+    "$id": "162",
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+    "$values": []
+  },
+  "Parent": null,
+  "ErrorBehavior": 0,
+  "Attempts": 1
+}

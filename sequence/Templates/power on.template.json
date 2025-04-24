@@ -46,7 +46,7 @@
               {
                 "$id": "9",
                 "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                "Message": "turning power on",
+                "Message": "power on started",
                 "EmbedTitle": "",
                 "EmbedText": "",
                 "EmbedEdgeColor": "#FF206694",

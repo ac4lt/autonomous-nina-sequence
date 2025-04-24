@@ -16,10 +16,11 @@ Although intended for permanent setups in an observatory, the sequence currently
 - Livestack plugin (1.0.1.0)
 - Ground Station (3.0.0.108) [^1]
 - Astro-Physics Tools (2.3.2.1) [^2]
+- 10 Micron Tools (3.0.0.9) [^3]
 
 [^1]: You could replace the instructions that send notifications to Discord with a different notification mechanism or remove if not needed.
 [^2]: The sequence only uses the plugin to start he APCC program.
-
+[^3]: The sequence uses this to shut down the 10 micron mount
 The first three plugins are initegral to the structure of the sequence. 
 
 The Livestack plugin is optional. The sequence will try to enable livestacking by default but you can disable that by setting the live_stack variable to 0.

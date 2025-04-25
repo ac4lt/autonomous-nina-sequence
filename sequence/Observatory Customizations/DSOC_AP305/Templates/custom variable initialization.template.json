@@ -41,7 +41,7 @@
         "Expr": {
           "$id": "7",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "-15",
+          "Expression": "-25",
           "Type": "Any"
         },
         "Variable": "desired_camera_temperature",

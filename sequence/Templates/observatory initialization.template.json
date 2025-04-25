@@ -1,0 +1,5250 @@
+{
+  "$id": "1",
+  "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
+  "Strategy": {
+    "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+  },
+  "Name": "observatory initialization",
+  "Conditions": {
+    "$id": "2",
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+    "$values": []
+  },
+  "IsExpanded": true,
+  "Items": {
+    "$id": "3",
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+    "$values": [
+      {
+        "$id": "4",
+        "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+        "Predicate": null,
+        "IfExpr": {
+          "$id": "5",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "THIS_OBSERVATORY == SRO_PW14",
+          "Type": "Any"
+        },
+        "Condition": null,
+        "Instructions": {
+          "$id": "6",
+          "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+          "Strategy": {
+            "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+          },
+          "Name": "If",
+          "Conditions": {
+            "$id": "7",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "IsExpanded": true,
+          "Items": {
+            "$id": "8",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+            "$values": [
+              {
+                "$id": "9",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "10",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "-25",
+                  "Type": "Any"
+                },
+                "Variable": "desired_camera_temperature",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "11",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "12",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "13",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "14",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "15",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "16",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "17",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "18",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "19",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "20",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "21",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "22",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "23",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "24",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "900",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "25",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "26",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "900",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "27",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "28",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "29",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "30",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "31",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "32",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "33",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "34",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "35",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "36",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_evening",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "37",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "38",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "39",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "40",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_morning",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "41",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "42",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_l1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "43",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "44",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "45",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "46",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "47",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "48",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "49",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "50",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "51",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "52",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "53",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "54",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "55",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "56",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_h1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "57",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "58",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_s1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "59",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "60",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_o1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "61",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "62",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "63",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "64",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "65",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "66",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "67",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "68",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "69",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "70",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "71",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "72",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "73",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "74",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "has_flat_panel_cover",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "75",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "76",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "in_shared_observatory",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "6"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              }
+            ]
+          },
+          "Triggers": {
+            "$id": "77",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "Parent": {
+            "$ref": "1"
+          },
+          "ErrorBehavior": 0,
+          "Attempts": 1
+        },
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "78",
+        "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+        "Predicate": null,
+        "IfExpr": {
+          "$id": "79",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "THIS_OBSERVATORY == DSOC_CERAVOLO",
+          "Type": "Any"
+        },
+        "Condition": null,
+        "Instructions": {
+          "$id": "80",
+          "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+          "Strategy": {
+            "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+          },
+          "Name": "If",
+          "Conditions": {
+            "$id": "81",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "IsExpanded": true,
+          "Items": {
+            "$id": "82",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+            "$values": [
+              {
+                "$id": "83",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "84",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "-25",
+                  "Type": "Any"
+                },
+                "Variable": "desired_camera_temperature",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "85",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "86",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "87",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "88",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "89",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "90",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "91",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "92",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "93",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "94",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "95",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "96",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "97",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "98",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "99",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "100",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "101",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "102",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "103",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "104",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "105",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "106",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "107",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "108",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "109",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "110",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_evening",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "111",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "112",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "113",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "114",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_morning",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "115",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "116",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_l1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "117",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "118",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "119",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "120",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "121",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "122",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "123",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "124",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "125",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "126",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "127",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "128",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "129",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "130",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_h1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "131",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "132",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_s1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "133",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "134",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_o1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "135",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "136",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "137",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "138",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "139",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "140",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "141",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "142",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "143",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "144",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "145",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "146",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "147",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "148",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "has_flat_panel_cover",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "149",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "150",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "in_shared_observatory",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "80"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              }
+            ]
+          },
+          "Triggers": {
+            "$id": "151",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "Parent": {
+            "$ref": "1"
+          },
+          "ErrorBehavior": 0,
+          "Attempts": 1
+        },
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "152",
+        "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+        "Predicate": null,
+        "IfExpr": {
+          "$id": "153",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "THIS_OBSERVATORY == DSOC_AP305",
+          "Type": "Any"
+        },
+        "Condition": null,
+        "Instructions": {
+          "$id": "154",
+          "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+          "Strategy": {
+            "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+          },
+          "Name": "If",
+          "Conditions": {
+            "$id": "155",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "IsExpanded": true,
+          "Items": {
+            "$id": "156",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+            "$values": [
+              {
+                "$id": "157",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "158",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "-15",
+                  "Type": "Any"
+                },
+                "Variable": "desired_camera_temperature",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "159",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "160",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "161",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "162",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "163",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "164",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "165",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "166",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "167",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "168",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "169",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "170",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "171",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "172",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "173",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "174",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "175",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "176",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "177",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "178",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "179",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "180",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "181",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "182",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "183",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "184",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_evening",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "185",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "186",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "187",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "188",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_morning",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "189",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "190",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_l1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "191",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "192",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "193",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "194",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "195",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "196",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "197",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "198",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "199",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "200",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "201",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "202",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "203",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "204",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_h1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "205",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "206",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_s1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "207",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "208",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_o1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "209",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "210",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "211",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "212",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "213",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "214",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "215",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "216",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "217",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "218",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "219",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "220",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "221",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "222",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "has_flat_panel_cover",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "223",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "224",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "in_shared_observatory",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "154"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              }
+            ]
+          },
+          "Triggers": {
+            "$id": "225",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "Parent": {
+            "$ref": "1"
+          },
+          "ErrorBehavior": 0,
+          "Attempts": 1
+        },
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "226",
+        "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+        "Predicate": null,
+        "IfExpr": {
+          "$id": "227",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "THIS_OBSERVATORY == DSOC_AP175_ML16200",
+          "Type": "Any"
+        },
+        "Condition": null,
+        "Instructions": {
+          "$id": "228",
+          "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+          "Strategy": {
+            "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+          },
+          "Name": "If",
+          "Conditions": {
+            "$id": "229",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "IsExpanded": true,
+          "Items": {
+            "$id": "230",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+            "$values": [
+              {
+                "$id": "231",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "232",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "-25",
+                  "Type": "Any"
+                },
+                "Variable": "desired_camera_temperature",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "233",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "234",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "235",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "236",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "237",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "238",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "239",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "240",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "241",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "242",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "243",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "244",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "245",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "246",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "247",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "248",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "249",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "250",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "251",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "252",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "253",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "254",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "255",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "256",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "257",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "258",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_evening",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "259",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "260",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "261",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "262",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_morning",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "263",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "264",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "265",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "266",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "267",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "268",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "269",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "270",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "271",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "272",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "273",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "274",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "275",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "276",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_h1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "277",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "278",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_s1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "279",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "280",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_o1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "281",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "282",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_l1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "283",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "284",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "285",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "286",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "287",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "288",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "289",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "290",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "291",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "292",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "293",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "294",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "295",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "296",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "has_flat_panel_cover",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "297",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "298",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "in_shared_observatory",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "228"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              }
+            ]
+          },
+          "Triggers": {
+            "$id": "299",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "Parent": {
+            "$ref": "1"
+          },
+          "ErrorBehavior": 0,
+          "Attempts": 1
+        },
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "300",
+        "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+        "Predicate": null,
+        "IfExpr": {
+          "$id": "301",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "THIS_OBSERVATORY == DSOC_AT60_ASI2600",
+          "Type": "Any"
+        },
+        "Condition": null,
+        "Instructions": {
+          "$id": "302",
+          "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+          "Strategy": {
+            "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+          },
+          "Name": "If",
+          "Conditions": {
+            "$id": "303",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "IsExpanded": true,
+          "Items": {
+            "$id": "304",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+            "$values": [
+              {
+                "$id": "305",
+                "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+                "Predicate": null,
+                "IfExpr": {
+                  "$id": "306",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "Temperature < 5",
+                  "Type": "Any"
+                },
+                "Condition": null,
+                "Instructions": {
+                  "$id": "307",
+                  "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+                  "Strategy": {
+                    "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+                  },
+                  "Name": "If",
+                  "Conditions": {
+                    "$id": "308",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                    "$values": []
+                  },
+                  "IsExpanded": true,
+                  "Items": {
+                    "$id": "309",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                    "$values": [
+                      {
+                        "$id": "310",
+                        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                        "Expr": {
+                          "$id": "311",
+                          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                          "Expression": "-15",
+                          "Type": "Any"
+                        },
+                        "Variable": "desired_camera_temperature",
+                        "CValueExpr": null,
+                        "Parent": {
+                          "$ref": "307"
+                        },
+                        "ErrorBehavior": 0,
+                        "Attempts": 1
+                      }
+                    ]
+                  },
+                  "Triggers": {
+                    "$id": "312",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                    "$values": []
+                  },
+                  "Parent": {
+                    "$ref": "302"
+                  },
+                  "ErrorBehavior": 0,
+                  "Attempts": 1
+                },
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "313",
+                "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+                "Predicate": null,
+                "IfExpr": {
+                  "$id": "314",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "Temperature >= 5",
+                  "Type": "Any"
+                },
+                "Condition": null,
+                "Instructions": {
+                  "$id": "315",
+                  "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+                  "Strategy": {
+                    "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+                  },
+                  "Name": "If",
+                  "Conditions": {
+                    "$id": "316",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                    "$values": []
+                  },
+                  "IsExpanded": true,
+                  "Items": {
+                    "$id": "317",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                    "$values": [
+                      {
+                        "$id": "318",
+                        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                        "Expr": {
+                          "$id": "319",
+                          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                          "Expression": "-5",
+                          "Type": "Any"
+                        },
+                        "Variable": "desired_camera_temperature",
+                        "CValueExpr": null,
+                        "Parent": {
+                          "$ref": "315"
+                        },
+                        "ErrorBehavior": 0,
+                        "Attempts": 1
+                      }
+                    ]
+                  },
+                  "Triggers": {
+                    "$id": "320",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                    "$values": []
+                  },
+                  "Parent": {
+                    "$ref": "302"
+                  },
+                  "ErrorBehavior": 0,
+                  "Attempts": 1
+                },
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "321",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "322",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "323",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "324",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "325",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "326",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "327",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "328",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "329",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "330",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "331",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "332",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "333",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "334",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "335",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "336",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "337",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "338",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "339",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "340",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "341",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "342",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "343",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "344",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "345",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "346",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_evening",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "347",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "348",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "349",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "350",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_morning",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "351",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "352",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_l1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "353",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "354",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "355",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "356",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "357",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "358",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "359",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "360",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "361",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "362",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "363",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "364",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "365",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "366",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_h1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "367",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "368",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_s1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "369",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "370",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_o1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "371",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "372",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "373",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "374",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "375",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "376",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "100",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "377",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "378",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "50",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "379",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "380",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "50",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "381",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "382",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "50",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "383",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "384",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "has_flat_panel_cover",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "385",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "386",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "in_shared_observatory",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "302"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              }
+            ]
+          },
+          "Triggers": {
+            "$id": "387",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "Parent": {
+            "$ref": "1"
+          },
+          "ErrorBehavior": 0,
+          "Attempts": 1
+        },
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "388",
+        "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+        "Predicate": null,
+        "IfExpr": {
+          "$id": "389",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "THIS_OBSERVATORY == MAURERTOWN_TOA130",
+          "Type": "Any"
+        },
+        "Condition": null,
+        "Instructions": {
+          "$id": "390",
+          "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+          "Strategy": {
+            "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+          },
+          "Name": "If",
+          "Conditions": {
+            "$id": "391",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "IsExpanded": true,
+          "Items": {
+            "$id": "392",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+            "$values": [
+              {
+                "$id": "393",
+                "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+                "Predicate": null,
+                "IfExpr": {
+                  "$id": "394",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "Temperature < 5",
+                  "Type": "Any"
+                },
+                "Condition": null,
+                "Instructions": {
+                  "$id": "395",
+                  "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+                  "Strategy": {
+                    "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+                  },
+                  "Name": "If",
+                  "Conditions": {
+                    "$id": "396",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                    "$values": []
+                  },
+                  "IsExpanded": true,
+                  "Items": {
+                    "$id": "397",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                    "$values": [
+                      {
+                        "$id": "398",
+                        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                        "Expr": {
+                          "$id": "399",
+                          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                          "Expression": "-15",
+                          "Type": "Any"
+                        },
+                        "Variable": "desired_camera_temperature",
+                        "CValueExpr": null,
+                        "Parent": {
+                          "$ref": "395"
+                        },
+                        "ErrorBehavior": 0,
+                        "Attempts": 1
+                      }
+                    ]
+                  },
+                  "Triggers": {
+                    "$id": "400",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                    "$values": []
+                  },
+                  "Parent": {
+                    "$ref": "390"
+                  },
+                  "ErrorBehavior": 0,
+                  "Attempts": 1
+                },
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "401",
+                "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+                "Predicate": null,
+                "IfExpr": {
+                  "$id": "402",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "Temperature >= 5",
+                  "Type": "Any"
+                },
+                "Condition": null,
+                "Instructions": {
+                  "$id": "403",
+                  "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+                  "Strategy": {
+                    "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+                  },
+                  "Name": "If",
+                  "Conditions": {
+                    "$id": "404",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                    "$values": []
+                  },
+                  "IsExpanded": true,
+                  "Items": {
+                    "$id": "405",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                    "$values": [
+                      {
+                        "$id": "406",
+                        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                        "Expr": {
+                          "$id": "407",
+                          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                          "Expression": "-5",
+                          "Type": "Any"
+                        },
+                        "Variable": "desired_camera_temperature",
+                        "CValueExpr": null,
+                        "Parent": {
+                          "$ref": "403"
+                        },
+                        "ErrorBehavior": 0,
+                        "Attempts": 1
+                      }
+                    ]
+                  },
+                  "Triggers": {
+                    "$id": "408",
+                    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                    "$values": []
+                  },
+                  "Parent": {
+                    "$ref": "390"
+                  },
+                  "ErrorBehavior": 0,
+                  "Attempts": 1
+                },
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "409",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "410",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "411",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "412",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "413",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "414",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "415",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "416",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "417",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "418",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "419",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "420",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "421",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "422",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "423",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "424",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "425",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "426",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "427",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "428",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "429",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "430",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "431",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "432",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "433",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "434",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_evening",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "435",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "436",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "437",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "438",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_morning",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "439",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "440",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_l1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "441",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "442",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_r1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "443",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "444",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_g1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "445",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "446",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_b1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "447",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "448",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "449",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "450",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "451",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "452",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "453",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "454",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_h1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "455",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "456",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_s1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "457",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "458",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_o1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "459",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "460",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "461",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "462",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "463",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "464",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "100",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "465",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "466",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "50",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "467",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "468",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "50",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "469",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "470",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "50",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "471",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "472",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "has_flat_panel_cover",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "473",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "474",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "in_shared_observatory",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "390"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              }
+            ]
+          },
+          "Triggers": {
+            "$id": "475",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "Parent": {
+            "$ref": "1"
+          },
+          "ErrorBehavior": 0,
+          "Attempts": 1
+        },
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "476",
+        "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+        "Predicate": null,
+        "IfExpr": {
+          "$id": "477",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "THIS_OBSERVATORY == CARAPOOEE",
+          "Type": "Any"
+        },
+        "Condition": null,
+        "Instructions": {
+          "$id": "478",
+          "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+          "Strategy": {
+            "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+          },
+          "Name": "If",
+          "Conditions": {
+            "$id": "479",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "IsExpanded": true,
+          "Items": {
+            "$id": "480",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+            "$values": [
+              {
+                "$id": "481",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "482",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "-30",
+                  "Type": "Any"
+                },
+                "Variable": "desired_camera_temperature",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "483",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "484",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "485",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "486",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "487",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "488",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "489",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "490",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "491",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "492",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "493",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "494",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "495",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "496",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "600",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "497",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "498",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1200",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "499",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "500",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "380",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "501",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "502",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "503",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "504",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "505",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "506",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "507",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "508",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_evening",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "509",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "510",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "511",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "512",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_morning",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "513",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "514",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_l1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "515",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "516",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "517",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "518",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "519",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "520",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "521",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "522",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "523",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "524",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "525",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "526",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "527",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "528",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_h1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "529",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "530",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_s1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "531",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "532",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_o1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "533",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "534",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "535",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "536",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "537",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "538",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "539",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "540",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "541",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "542",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "543",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "544",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "545",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "546",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "has_flat_panel_cover",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "547",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "548",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "in_shared_observatory",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "478"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              }
+            ]
+          },
+          "Triggers": {
+            "$id": "549",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "Parent": {
+            "$ref": "1"
+          },
+          "ErrorBehavior": 0,
+          "Attempts": 1
+        },
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "550",
+        "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
+        "Predicate": null,
+        "IfExpr": {
+          "$id": "551",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "THIS_OBSERVATORY == SRO_PW14_C3",
+          "Type": "Any"
+        },
+        "Condition": null,
+        "Instructions": {
+          "$id": "552",
+          "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+          "Strategy": {
+            "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+          },
+          "Name": "If",
+          "Conditions": {
+            "$id": "553",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "IsExpanded": true,
+          "Items": {
+            "$id": "554",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+            "$values": [
+              {
+                "$id": "555",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "556",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "-5",
+                  "Type": "Any"
+                },
+                "Variable": "desired_camera_temperature",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "557",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "558",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "559",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "560",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "561",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "562",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "563",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "564",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_bb_bin2_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "565",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "566",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_bias",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "567",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "568",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_nb_bin1_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "569",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "570",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "900",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "571",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "572",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "900",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "573",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "574",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_exposure_time",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "575",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "576",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "577",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "578",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_darks_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "579",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "580",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_daytime",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "581",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "582",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_evening",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "583",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "584",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_unsafe",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "585",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "586",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "get_flats_when_morning",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "587",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "588",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_l1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "589",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "590",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "591",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "592",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "593",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "594",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "595",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "596",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_r2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "597",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "598",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_g2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "599",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "600",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_b2_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "601",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "602",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_h1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "603",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "604",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_s1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "605",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "606",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "get_o1_flat_darks",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "607",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "608",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "609",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "610",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "611",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "612",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "2750",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_gain",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "613",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "614",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "615",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "616",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "bb_bin2_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "617",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "618",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "nb_bin1_offset",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "619",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "620",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "0",
+                  "Type": "Any"
+                },
+                "Variable": "has_flat_panel_cover",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              },
+              {
+                "$id": "621",
+                "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+                "Expr": {
+                  "$id": "622",
+                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                  "Expression": "1",
+                  "Type": "Any"
+                },
+                "Variable": "in_shared_observatory",
+                "CValueExpr": null,
+                "Parent": {
+                  "$ref": "552"
+                },
+                "ErrorBehavior": 0,
+                "Attempts": 1
+              }
+            ]
+          },
+          "Triggers": {
+            "$id": "623",
+            "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+            "$values": []
+          },
+          "Parent": {
+            "$ref": "1"
+          },
+          "ErrorBehavior": 0,
+          "Attempts": 1
+        },
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      }
+    ]
+  },
+  "Triggers": {
+    "$id": "624",
+    "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+    "$values": []
+  },
+  "Parent": null,
+  "ErrorBehavior": 0,
+  "Attempts": 1
+}

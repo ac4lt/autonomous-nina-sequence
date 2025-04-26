@@ -45,71 +45,33 @@
             "$values": [
               {
                 "$id": "9",
-                "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
-                "Predicate": null,
-                "IfExpr": {
-                  "$id": "10",
-                  "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                  "Expression": "THIS_OBSERVATORY == CARAPOOEE",
-                  "Type": "Any"
-                },
+                "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
+                "TemplateName": "custom close shutter",
                 "Condition": null,
                 "Instructions": {
-                  "$id": "11",
-                  "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
+                  "$id": "10",
+                  "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                   "Strategy": {
                     "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                   },
-                  "Name": "If",
+                  "Name": null,
                   "Conditions": {
-                    "$id": "12",
+                    "$id": "11",
                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                     "$values": []
                   },
                   "IsExpanded": true,
                   "Items": {
-                    "$id": "13",
+                    "$id": "12",
                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
-                    "$values": [
-                      {
-                        "$id": "14",
-                        "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                        "Text": "homing the dome",
-                        "Parent": {
-                          "$ref": "11"
-                        },
-                        "ErrorBehavior": 0,
-                        "Attempts": 1
-                      },
-                      {
-                        "$id": "15",
-                        "$type": "NINA.Sequencer.SequenceItem.Dome.FindHomeDome, NINA.Sequencer",
-                        "Parent": {
-                          "$ref": "11"
-                        },
-                        "ErrorBehavior": 0,
-                        "Attempts": 1
-                      },
-                      {
-                        "$id": "16",
-                        "$type": "NINA.DiscordAlert.DiscordAlertSequenceItems.DiscordMessageInstruction, Discord Alert",
-                        "Text": "dome should now be in home position",
-                        "Parent": {
-                          "$ref": "11"
-                        },
-                        "ErrorBehavior": 0,
-                        "Attempts": 1
-                      }
-                    ]
+                    "$values": []
                   },
                   "Triggers": {
-                    "$id": "17",
+                    "$id": "13",
                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                     "$values": []
                   },
-                  "Parent": {
-                    "$ref": "6"
-                  },
+                  "Parent": null,
                   "ErrorBehavior": 0,
                   "Attempts": 1
                 },
@@ -120,7 +82,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "18",
+                "$id": "14",
                 "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
                 "Message": "closing the shutter",
                 "EmbedTitle": "",
@@ -133,7 +95,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "19",
+                "$id": "15",
                 "$type": "NINA.Sequencer.SequenceItem.Dome.CloseDomeShutter, NINA.Sequencer",
                 "Parent": {
                   "$ref": "6"
@@ -142,7 +104,7 @@
                 "Attempts": 1
               },
               {
-                "$id": "20",
+                "$id": "16",
                 "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
                 "Message": "shutter is closed",
                 "EmbedTitle": "",
@@ -157,7 +119,7 @@
             ]
           },
           "Triggers": {
-            "$id": "21",
+            "$id": "17",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
@@ -176,7 +138,7 @@
     ]
   },
   "Triggers": {
-    "$id": "22",
+    "$id": "18",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

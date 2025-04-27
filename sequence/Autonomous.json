@@ -98,7 +98,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.33.3\"",
+              "Definition": "\"0.33.4\"",
               "Parent": {
                 "$ref": "11"
               },

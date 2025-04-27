@@ -9,8 +9,6 @@ Although intended for permanent setups in an observatory, the sequence currently
 
 Beginning with this release, the sequence has been restructured. Instead of there being IF instructions sprinkled throughout to handle differences for different observatories there are a series of templates with names starting with "custom". These are intended to be supplied by each user for their own configuration. With the exception of the "custom warm camera" template the supplied custom templates are empty and do nothing. You can customize them for your own needs. You can refer to the supplied custom observatory implementations that are in the release zip file for examples.
 
-The location for the external scripts has also changed. Rather than being hard coded to the C drive it is now in the %UserProfile%\Documents\N.I.N.A\AutonomousScripts instead of C:\AutonomousScripts. Now the script directory lives in the same directory as the NINA sequences making it a bit more self-contained and obvious where things are.
-
 This has some advantages. It no longer requires users to install plugins they don't need like Astro-Physics Tools or 10 Micron Tools. It also makes the sequence smaller and (a little) easier to understand. It also provides clearly marked spots for customization where the user can do what is needed wtihout worrying about how to pick up changes in the sequence going forward.
 
 ## Software Prerequisites
@@ -59,7 +57,7 @@ NINA stores its sequences in JSON format. The sequence is made up of a collectio
 
 ### Scripts
 
-The sequence expects to find three scripts in %UserProfile%\Documents\AutonomousScripts. These must exist though they do not need to do anything. The three scripts are:
+The sequence expects to find three scripts in C:\AutonomousScripts. These must exist though they do not need to do anything. The three scripts are:
 - startup.bat - this gets called before connecting to any equipment and can be used to turn on power in a non-ASCOM way
 - shutdown.bat - this gets called after disconnecting from the equipment and can be used to turn off power in a non-ASCOM way.
 

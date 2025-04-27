@@ -5,6 +5,14 @@ The main audience for this sequence is those who are running a permanent setup i
 
 Although intended for permanent setups in an observatory, the sequence currently runs in two commercial observatories where the sequence does not control the roof so the sequence doesn't currently do that. However, it should not be difficult to modify it to support ASCOM DOME operation.
 
+## Structural Change at revision 0.33.0.0
+
+Beginning with this release, the sequence has been restructured. Instead of there being IF instructions sprinkled throughout to handle differences for different observatories there are a series of templates with names starting with "custom". These are intended to be supplied by each user for their own configuration. With the exception of the "custom warm camera" template the supplied custom templates are empty and do nothing. You can customize them for your own needs. You can refer to the supplied custom observatory implementations that are in the release zip file for examples.
+
+The location for the external scripts has also changed. Rather than being hard coded to the C drive it is now in the %UserProfile%\Documents\N.I.N.A\AutonomousScripts instead of C:\AutonomousScripts. Now the script directory lives in the same directory as the NINA sequences making it a bit more self-contained and obvious where things are.
+
+This has some advantages. It no longer requires users to install plugins they don't need like Astro-Physics Tools or 10 Micron Tools. It also makes the sequence smaller and (a little) easier to understand. It also provides clearly marked spots for customization where the user can do what is needed wtihout worrying about how to pick up changes in the sequence going forward.
+
 ## Software Prerequisites
 
 - NINA 3.2
@@ -15,12 +23,8 @@ Although intended for permanent setups in an observatory, the sequence currently
 - Connector plugin (2.1.0.0)
 - Livestack plugin (1.0.1.0)
 - Ground Station (3.0.0.108) [^1]
-- Astro-Physics Tools (2.3.2.1) [^2]
-- 10 Micron Tools (3.0.0.9) [^3]
 
 [^1]: You could replace the instructions that send notifications to Discord with a different notification mechanism or remove if not needed.
-[^2]: The sequence only uses the plugin to start he APCC program.
-[^3]: The sequence uses this to shut down the 10 micron mount
 The first three plugins are initegral to the structure of the sequence. 
 
 The Livestack plugin is optional. The sequence will try to enable livestacking by default but you can disable that by setting the live_stack variable to 0.
@@ -55,10 +59,9 @@ NINA stores its sequences in JSON format. The sequence is made up of a collectio
 
 ### Scripts
 
-The sequence expects to find three scripts in c:\AutonomousScripts. These must exist though they do not need to do anything. The three scripts are:
+The sequence expects to find three scripts in %UserProfile%\Documents\AutonomousScripts. These must exist though they do not need to do anything. The three scripts are:
 - startup.bat - this gets called before connecting to any equipment and can be used to turn on power in a non-ASCOM way
 - shutdown.bat - this gets called after disconnecting from the equipment and can be used to turn off power in a non-ASCOM way.
-- SendToDiscord.bat - this gets called at various places to send more complex messages to Discord since the Discord Alerts plugin can't send messages formatted with Sequencer Powerups variables.
 
 ## Wiki
 

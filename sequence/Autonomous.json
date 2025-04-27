@@ -6170,7 +6170,7 @@
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
-                    "IsExpanded": false,
+                    "IsExpanded": true,
                     "Items": {
                       "$id": "705",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -6380,7 +6380,7 @@
                                 {
                                   "$id": "733",
                                   "$type": "NINA.Sequencer.SequenceItem.Utility.ExternalScript, NINA.Sequencer",
-                                  "Script": "\"%UserProfile%\\Documents\\N.I.N.A\\AutonomousScripts\\shutdown.bat\"",
+                                  "Script": "\"c:\\AutonomousScripts\\shutdown.bat\"",
                                   "Parent": {
                                     "$ref": "718"
                                   },

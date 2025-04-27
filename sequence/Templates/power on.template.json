@@ -97,7 +97,7 @@
               {
                 "$id": "15",
                 "$type": "NINA.Sequencer.SequenceItem.Utility.ExternalScript, NINA.Sequencer",
-                "Script": "%UserProfile%\\Documents\\N.I.N.A\\AutonomousScripts\\startup.bat",
+                "Script": "c:\\AutonomousScripts\\startup.bat",
                 "Parent": {
                   "$ref": "6"
                 },

@@ -322,7 +322,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "run_continuously",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "32"
                     },
@@ -6518,7 +6518,7 @@
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
-                    "IsExpanded": false,
+                    "IsExpanded": true,
                     "Items": {
                       "$id": "753",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -6932,7 +6932,7 @@
                           "IfExpr": {
                             "$id": "803",
                             "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                            "Expression": "not RUN_CONTINUOUSLY",
+                            "Expression": "not run_continuously",
                             "Type": null
                           },
                           "Condition": null,

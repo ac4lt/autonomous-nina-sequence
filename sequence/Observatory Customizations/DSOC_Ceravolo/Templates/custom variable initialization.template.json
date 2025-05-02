@@ -577,7 +577,7 @@
         "Expr": {
           "$id": "69",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "1",
           "Type": "Any"
         },
         "Variable": "get_flats_when_daytime",

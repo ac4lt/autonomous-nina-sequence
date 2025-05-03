@@ -98,7 +98,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.34.1\"",
+              "Definition": "\"0.34.2\"",
               "Parent": {
                 "$ref": "11"
               },
@@ -184,109 +184,109 @@
             },
             {
               "$id": "25",
-              "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-              "Text": "---------- Set need_darks to 1 to have the sequence get darks at the next available window",
-              "Parent": {
-                "$ref": "11"
-              },
-              "ErrorBehavior": 0,
-              "Attempts": 1
-            },
-            {
-              "$id": "26",
-              "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-              "OriginalDefinition": "0",
-              "Variable": null,
-              "OValueExpr": null,
-              "Identifier": "need_darks",
-              "Definition": "0",
-              "Parent": {
-                "$ref": "11"
-              },
-              "ErrorBehavior": 0,
-              "Attempts": 1
-            },
-            {
-              "$id": "27",
-              "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-              "Text": "---------- The variable below is used to control whether we live stack. Set it to 1 for live stacking and 0 to disable live stacking ----------",
-              "Parent": {
-                "$ref": "11"
-              },
-              "ErrorBehavior": 0,
-              "Attempts": 1
-            },
-            {
-              "$id": "28",
-              "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-              "Text": "---------- This variable is only checked at the start of a target. you can't enable or disable in the middle of a target currently ----------",
-              "Parent": {
-                "$ref": "11"
-              },
-              "ErrorBehavior": 0,
-              "Attempts": 1
-            },
-            {
-              "$id": "29",
-              "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-              "OriginalDefinition": "1",
-              "Variable": null,
-              "OValueExpr": null,
-              "Identifier": "live_stack",
-              "Definition": "1",
-              "Parent": {
-                "$ref": "11"
-              },
-              "ErrorBehavior": 0,
-              "Attempts": 1
-            },
-            {
-              "$id": "30",
-              "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-              "Text": "---------- The cycles_completed variable counts the number of nights the sequence has run ----------",
-              "Parent": {
-                "$ref": "11"
-              },
-              "ErrorBehavior": 0,
-              "Attempts": 1
-            },
-            {
-              "$id": "31",
-              "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-              "OriginalDefinition": "0",
-              "Variable": null,
-              "OValueExpr": null,
-              "Identifier": "cycles_completed",
-              "Definition": "0",
-              "Parent": {
-                "$ref": "11"
-              },
-              "ErrorBehavior": 0,
-              "Attempts": 1
-            },
-            {
-              "$id": "32",
               "$type": "WhenPlugin.When.CVContainer, WhenPlugin",
               "Strategy": {
                 "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
               },
               "Name": "initialization",
               "Conditions": {
-                "$id": "33",
+                "$id": "26",
                 "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                 "$values": []
               },
               "IsExpanded": true,
               "Items": {
-                "$id": "34",
+                "$id": "27",
                 "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                 "$values": [
                   {
+                    "$id": "28",
+                    "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+                    "Text": "---------- Set need_darks to 1 to have the sequence get darks at the next available window",
+                    "Parent": {
+                      "$ref": "25"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  },
+                  {
+                    "$id": "29",
+                    "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
+                    "OriginalDefinition": "0",
+                    "Variable": null,
+                    "OValueExpr": null,
+                    "Identifier": "need_darks",
+                    "Definition": "0",
+                    "Parent": {
+                      "$ref": "25"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  },
+                  {
+                    "$id": "30",
+                    "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+                    "Text": "---------- The variable below is used to control whether we live stack. Set it to 1 for live stacking and 0 to disable live stacking ----------",
+                    "Parent": {
+                      "$ref": "25"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  },
+                  {
+                    "$id": "31",
+                    "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+                    "Text": "---------- This variable is only checked at the start of a target. you can't enable or disable in the middle of a target currently ----------",
+                    "Parent": {
+                      "$ref": "25"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  },
+                  {
+                    "$id": "32",
+                    "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
+                    "OriginalDefinition": "1",
+                    "Variable": null,
+                    "OValueExpr": null,
+                    "Identifier": "live_stack",
+                    "Definition": "1",
+                    "Parent": {
+                      "$ref": "25"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  },
+                  {
+                    "$id": "33",
+                    "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+                    "Text": "---------- The cycles_completed variable counts the number of nights the sequence has run ----------",
+                    "Parent": {
+                      "$ref": "25"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  },
+                  {
+                    "$id": "34",
+                    "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
+                    "OriginalDefinition": "0",
+                    "Variable": null,
+                    "OValueExpr": null,
+                    "Identifier": "cycles_completed",
+                    "Definition": "1",
+                    "Parent": {
+                      "$ref": "25"
+                    },
+                    "ErrorBehavior": 0,
+                    "Attempts": 1
+                  },
+                  {
                     "$id": "35",
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-                    "Text": "-------------------- This section defines all the observatories --------------------",
+                    "Text": "-------------------- This section defines observatory name --------------------",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -300,7 +300,7 @@
                     "Identifier": "observatory",
                     "Definition": "'SRO PW14 C3'",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -310,7 +310,7 @@
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                     "Text": "--------------------- run_continuously is used to decide whether to run for one night or many nights ------------------",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -324,7 +324,7 @@
                     "Identifier": "run_continuously",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -334,7 +334,7 @@
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                     "Text": "--------------------- The variables in the following sections should be set to control whether you want to get calibration frames and what time time windows are available to use --------------------",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -348,7 +348,7 @@
                     "Identifier": "get_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -362,7 +362,7 @@
                     "Identifier": "bb_bin1_exposure_time",
                     "Definition": "900",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -376,7 +376,7 @@
                     "Identifier": "nb_bin1_exposure_time",
                     "Definition": "900",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -390,7 +390,7 @@
                     "Identifier": "bb_bin2_exposure_time",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -404,7 +404,7 @@
                     "Identifier": "get_bb_bin1_bias",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -418,7 +418,7 @@
                     "Identifier": "get_bb_bin2_bias",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -432,7 +432,7 @@
                     "Identifier": "get_bb_bin1_darks",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -446,7 +446,7 @@
                     "Identifier": "get_bb_bin2_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -460,7 +460,7 @@
                     "Identifier": "get_nb_bin1_bias",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -474,7 +474,7 @@
                     "Identifier": "get_nb_bin1_darks",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -488,7 +488,7 @@
                     "Identifier": "get_darks_when_unsafe",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -502,7 +502,7 @@
                     "Identifier": "get_darks_when_daytime",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -516,7 +516,7 @@
                     "Identifier": "get_flats_when_daytime",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -530,7 +530,7 @@
                     "Identifier": "get_flats_when_evening",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -544,7 +544,7 @@
                     "Identifier": "get_flats_when_unsafe",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -558,7 +558,7 @@
                     "Identifier": "get_flats_when_morning",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -572,7 +572,7 @@
                     "Identifier": "get_l1_flat_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -586,7 +586,7 @@
                     "Identifier": "get_r1_flat_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -600,7 +600,7 @@
                     "Identifier": "get_g1_flat_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -614,7 +614,7 @@
                     "Identifier": "get_b1_flat_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -628,7 +628,7 @@
                     "Identifier": "get_r2_flat_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -642,7 +642,7 @@
                     "Identifier": "get_g2_flat_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -656,7 +656,7 @@
                     "Identifier": "get_b2_flat_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -670,7 +670,7 @@
                     "Identifier": "get_h1_flat_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -684,7 +684,7 @@
                     "Identifier": "get_s1_flat_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -698,7 +698,7 @@
                     "Identifier": "get_o1_flat_darks",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -708,7 +708,7 @@
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                     "Text": "---------- These variables are for tracking gain and offset desired for CMOS cameras ------",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -722,7 +722,7 @@
                     "Identifier": "bb_bin1_gain",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -736,7 +736,7 @@
                     "Identifier": "bb_bin2_gain",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -750,7 +750,7 @@
                     "Identifier": "nb_bin1_gain",
                     "Definition": "2750",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -764,7 +764,7 @@
                     "Identifier": "bb_bin1_offset",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -778,7 +778,7 @@
                     "Identifier": "bb_bin2_offset",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -792,7 +792,7 @@
                     "Identifier": "nb_bin1_offset",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -802,7 +802,7 @@
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                     "Text": "---------- observatory specific equipment related variables",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -816,7 +816,7 @@
                     "Identifier": "desired_camera_temperature",
                     "Definition": "-5",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -830,7 +830,7 @@
                     "Identifier": "has_flat_panel_cover",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -844,7 +844,7 @@
                     "Identifier": "in_shared_observatory",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -854,7 +854,7 @@
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                     "Text": "---------- This variable tracks whether the power on has been run ----------",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -868,7 +868,7 @@
                     "Identifier": "power_is_on",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -878,7 +878,7 @@
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                     "Text": "---------- keep_going will be used to determine whether we should run continuously",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -892,7 +892,7 @@
                     "Identifier": "keep_going",
                     "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -902,7 +902,7 @@
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                     "Text": "---------- These track the actual number of automatic darks/bias subs completed ---------- ",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -916,7 +916,7 @@
                     "Identifier": "actual_bb_dark1_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -930,7 +930,7 @@
                     "Identifier": "actual_nb_dark1_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -944,7 +944,7 @@
                     "Identifier": "actual_bb_dark2_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -958,7 +958,7 @@
                     "Identifier": "actual_bb_bias1_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -972,7 +972,7 @@
                     "Identifier": "actual_bb_bias2_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -986,7 +986,7 @@
                     "Identifier": "actual_nb_bias1_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -996,7 +996,7 @@
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                     "Text": "---------- These track the atual number of flat darkss taken for each needed ombination ----------",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1010,7 +1010,7 @@
                     "Identifier": "actual_l1_flat_dark_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1024,7 +1024,7 @@
                     "Identifier": "actual_r1_flat_dark_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1038,7 +1038,7 @@
                     "Identifier": "actual_g1_flat_dark_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1052,7 +1052,7 @@
                     "Identifier": "actual_b1_flat_dark_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1066,7 +1066,7 @@
                     "Identifier": "actual_r2_flat_dark_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1080,7 +1080,7 @@
                     "Identifier": "actual_g2_flat_dark_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1094,7 +1094,7 @@
                     "Identifier": "actual_b2_flat_dark_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1108,7 +1108,7 @@
                     "Identifier": "actual_h1_flat_dark_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1122,7 +1122,7 @@
                     "Identifier": "actual_s1_flat_dark_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1136,7 +1136,7 @@
                     "Identifier": "actual_o1_flat_dark_count",
                     "Definition": "0",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1146,7 +1146,7 @@
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                     "Text": "---------- The number of dark and bias frames desired -- this can be overriden in the observatory specific initialization ----------",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1160,7 +1160,7 @@
                     "Identifier": "desired_dark_count",
                     "Definition": "25",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1174,7 +1174,7 @@
                     "Identifier": "desired_bias_count",
                     "Definition": "100",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1184,7 +1184,7 @@
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                     "Text": "---------- This is used to track whether live stacking is turned on or off ----------",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1196,9 +1196,9 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "live_stacking_active",
-                    "Definition": "0",
+                    "Definition": "1",
                     "Parent": {
-                      "$ref": "32"
+                      "$ref": "25"
                     },
                     "ErrorBehavior": 0,
                     "Attempts": 1
@@ -1808,9 +1808,9 @@
                                 "$id": "179",
                                 "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                 "Hours": 19,
-                                "Minutes": 50,
+                                "Minutes": 3,
                                 "MinutesOffset": -45,
-                                "Seconds": 29,
+                                "Seconds": 11,
                                 "SelectedProvider": {
                                   "$id": "180",
                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunsetProvider, NINA.Sequencer"
@@ -1885,10 +1885,10 @@
                                                   {
                                                     "$id": "192",
                                                     "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                    "Hours": 20,
-                                                    "Minutes": 35,
+                                                    "Hours": 19,
+                                                    "Minutes": 48,
                                                     "MinutesOffset": 0,
-                                                    "Seconds": 29,
+                                                    "Seconds": 11,
                                                     "SelectedProvider": {
                                                       "$ref": "180"
                                                     },
@@ -2298,10 +2298,10 @@
                                                   {
                                                     "$id": "242",
                                                     "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                    "Hours": 20,
-                                                    "Minutes": 35,
+                                                    "Hours": 19,
+                                                    "Minutes": 48,
                                                     "MinutesOffset": 0,
-                                                    "Seconds": 29,
+                                                    "Seconds": 11,
                                                     "SelectedProvider": {
                                                       "$ref": "180"
                                                     },
@@ -2790,9 +2790,9 @@
                                         "$id": "301",
                                         "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                                         "Hours": 19,
-                                        "Minutes": 50,
+                                        "Minutes": 3,
                                         "MinutesOffset": -45,
-                                        "Seconds": 29,
+                                        "Seconds": 11,
                                         "SelectedProvider": {
                                           "$ref": "180"
                                         },
@@ -3061,10 +3061,10 @@
                         {
                           "$id": "329",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                          "Hours": 21,
-                          "Minutes": 5,
+                          "Hours": 20,
+                          "Minutes": 28,
                           "MinutesOffset": -60,
-                          "Seconds": 5,
+                          "Seconds": 17,
                           "SelectedProvider": {
                             "$id": "330",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.DuskProvider, NINA.Sequencer"
@@ -3102,10 +3102,10 @@
                         {
                           "$id": "334",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                          "Hours": 6,
-                          "Minutes": 13,
+                          "Hours": 4,
+                          "Minutes": 57,
                           "MinutesOffset": 1,
-                          "Seconds": 44,
+                          "Seconds": 52,
                           "SelectedProvider": {
                             "$id": "335",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -3208,10 +3208,10 @@
                               {
                                 "$id": "348",
                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                "Hours": 21,
-                                "Minutes": 33,
+                                "Hours": 20,
+                                "Minutes": 51,
                                 "MinutesOffset": 0,
-                                "Seconds": 20,
+                                "Seconds": 39,
                                 "SelectedProvider": {
                                   "$id": "349",
                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
@@ -4143,13 +4143,13 @@
                                 "Coordinates": {
                                   "$id": "465",
                                   "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
-                                  "RAHours": 17,
-                                  "RAMinutes": 20,
-                                  "RASeconds": 14.33472,
-                                  "NegativeDec": false,
-                                  "DecDegrees": 57,
-                                  "DecMinutes": 55,
-                                  "DecSeconds": 16.3884
+                                  "RAHours": 16,
+                                  "RAMinutes": 30,
+                                  "RASeconds": 27.1551,
+                                  "NegativeDec": true,
+                                  "DecDegrees": -19,
+                                  "DecMinutes": 40,
+                                  "DecSeconds": 36.83666
                                 },
                                 "DistanceArcMinutes": 5.0,
                                 "AfterExposures": 1,
@@ -4592,10 +4592,10 @@
                                       {
                                         "$id": "523",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 22,
-                                        "Minutes": 5,
+                                        "Hours": 21,
+                                        "Minutes": 28,
                                         "MinutesOffset": 0,
-                                        "Seconds": 5,
+                                        "Seconds": 17,
                                         "SelectedProvider": {
                                           "$ref": "330"
                                         },
@@ -4633,10 +4633,10 @@
                                       {
                                         "$id": "527",
                                         "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                        "Hours": 22,
-                                        "Minutes": 5,
+                                        "Hours": 21,
+                                        "Minutes": 28,
                                         "MinutesOffset": 0,
-                                        "Seconds": 5,
+                                        "Seconds": 17,
                                         "SelectedProvider": {
                                           "$ref": "330"
                                         },
@@ -4767,10 +4767,10 @@
                                                             {
                                                               "$id": "546",
                                                               "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                              "Hours": 6,
-                                                              "Minutes": 12,
+                                                              "Hours": 4,
+                                                              "Minutes": 56,
                                                               "MinutesOffset": 0,
-                                                              "Seconds": 44,
+                                                              "Seconds": 52,
                                                               "SelectedProvider": {
                                                                 "$ref": "335"
                                                               },
@@ -5007,10 +5007,10 @@
                                                             {
                                                               "$id": "574",
                                                               "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                                              "Hours": 6,
-                                                              "Minutes": 12,
+                                                              "Hours": 4,
+                                                              "Minutes": 56,
                                                               "MinutesOffset": 0,
-                                                              "Seconds": 44,
+                                                              "Seconds": 52,
                                                               "SelectedProvider": {
                                                                 "$ref": "335"
                                                               },
@@ -5809,8 +5809,8 @@
                                       {
                                         "$id": "669",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 6,
-                                        "Minutes": 50,
+                                        "Hours": 5,
+                                        "Minutes": 40,
                                         "MinutesOffset": -20,
                                         "Seconds": 29,
                                         "SelectedProvider": {
@@ -5986,10 +5986,10 @@
                                               {
                                                 "$id": "693",
                                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                                "Hours": 6,
-                                                "Minutes": 12,
+                                                "Hours": 4,
+                                                "Minutes": 56,
                                                 "MinutesOffset": 0,
-                                                "Seconds": 44,
+                                                "Seconds": 52,
                                                 "SelectedProvider": {
                                                   "$ref": "335"
                                                 },
@@ -6508,7 +6508,7 @@
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
-                    "IsExpanded": true,
+                    "IsExpanded": false,
                     "Items": {
                       "$id": "752",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -6616,8 +6616,8 @@
                                       {
                                         "$id": "767",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 7,
-                                        "Minutes": 5,
+                                        "Hours": 5,
+                                        "Minutes": 55,
                                         "MinutesOffset": -5,
                                         "Seconds": 29,
                                         "SelectedProvider": {
@@ -6798,8 +6798,8 @@
                         {
                           "$id": "787",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                          "Hours": 7,
-                          "Minutes": 10,
+                          "Hours": 6,
+                          "Minutes": 0,
                           "MinutesOffset": 0,
                           "Seconds": 29,
                           "SelectedProvider": {

@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.35.6\"",
+              "Definition": "\"0.35.7\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -1792,56 +1792,56 @@
                       "$values": [
                         {
                           "$id": "177",
-                          "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                          "Message": "waiting for sunset\r\ndarks may be requested by setting need_darks to 1; flats will be checked every 30 minutes until sunset",
-                          "EmbedTitle": "",
-                          "EmbedText": "",
-                          "EmbedEdgeColor": "#FF206694",
-                          "Parent": {
-                            "$ref": "174"
-                          },
-                          "ErrorBehavior": 0,
-                          "Attempts": 1
-                        },
-                        {
-                          "$id": "178",
                           "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                           "Strategy": {
                             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                           },
                           "Name": "actual day loop",
                           "Conditions": {
-                            "$id": "179",
+                            "$id": "178",
                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                             "$values": [
                               {
-                                "$id": "180",
+                                "$id": "179",
                                 "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                 "Hours": 19,
                                 "Minutes": 49,
                                 "MinutesOffset": 0,
                                 "Seconds": 4,
                                 "SelectedProvider": {
-                                  "$id": "181",
+                                  "$id": "180",
                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunsetProvider, NINA.Sequencer"
                                 },
                                 "Parent": {
-                                  "$ref": "178"
+                                  "$ref": "177"
                                 }
                               }
                             ]
                           },
-                          "IsExpanded": false,
+                          "IsExpanded": true,
                           "Items": {
-                            "$id": "182",
+                            "$id": "181",
                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                             "$values": [
                               {
-                                "$id": "183",
+                                "$id": "182",
                                 "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                                 "Text": "We stay in actual day loop until the sun has gone below 0 degrees above the horizon",
                                 "Parent": {
-                                  "$ref": "178"
+                                  "$ref": "177"
+                                },
+                                "ErrorBehavior": 0,
+                                "Attempts": 1
+                              },
+                              {
+                                "$id": "183",
+                                "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                                "Message": "waiting for sunset\r\ndarks may be requested by setting need_darks to 1; flats will be checked every 30 minutes until sunset",
+                                "EmbedTitle": "",
+                                "EmbedText": "",
+                                "EmbedEdgeColor": "#FF206694",
+                                "Parent": {
+                                  "$ref": "177"
                                 },
                                 "ErrorBehavior": 0,
                                 "Attempts": 1
@@ -2151,7 +2151,7 @@
                                   "$values": []
                                 },
                                 "Parent": {
-                                  "$ref": "178"
+                                  "$ref": "177"
                                 },
                                 "ErrorBehavior": 0,
                                 "Attempts": 1
@@ -2454,7 +2454,7 @@
                                   "$values": []
                                 },
                                 "Parent": {
-                                  "$ref": "178"
+                                  "$ref": "177"
                                 },
                                 "ErrorBehavior": 0,
                                 "Attempts": 1
@@ -2771,7 +2771,7 @@
                                   ]
                                 },
                                 "Parent": {
-                                  "$ref": "178"
+                                  "$ref": "177"
                                 },
                                 "ErrorBehavior": 0,
                                 "Attempts": 1
@@ -3252,7 +3252,7 @@
                         }
                       ]
                     },
-                    "IsExpanded": false,
+                    "IsExpanded": true,
                     "Items": {
                       "$id": "356",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",

@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.35.8\"",
+              "Definition": "\"0.35.9\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -3278,7 +3278,7 @@
                         }
                       ]
                     },
-                    "IsExpanded": false,
+                    "IsExpanded": true,
                     "Items": {
                       "$id": "358",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -4901,7 +4901,7 @@
                                                             {
                                                               "$id": "567",
                                                               "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                                              "Message": "finished flats during unsafe conditions",
+                                                              "Message": "finished flats\r\nunsafe conditions\r\ndarks may be requested  by setting need_darks to 1; flats will be checked every 15 minutes",
                                                               "EmbedTitle": "",
                                                               "EmbedText": "",
                                                               "EmbedEdgeColor": "#FF206694",
@@ -5049,7 +5049,7 @@
                                                             }
                                                           ]
                                                         },
-                                                        "IsExpanded": true,
+                                                        "IsExpanded": false,
                                                         "Items": {
                                                           "$id": "585",
                                                           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -5158,11 +5158,24 @@
                                                         },
                                                         "ErrorBehavior": 0,
                                                         "Attempts": 1
+                                                      },
+                                                      {
+                                                        "$id": "599",
+                                                        "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                                                        "Message": "finished darks\r\nunsafe conditions\r\ndarks may be requested  by setting need_darks to 1; flats will be checked every 15 minutes",
+                                                        "EmbedTitle": "",
+                                                        "EmbedText": "",
+                                                        "EmbedEdgeColor": "#FF206694",
+                                                        "Parent": {
+                                                          "$ref": "572"
+                                                        },
+                                                        "ErrorBehavior": 0,
+                                                        "Attempts": 1
                                                       }
                                                     ]
                                                   },
                                                   "Triggers": {
-                                                    "$id": "599",
+                                                    "$id": "600",
                                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                                     "$values": []
                                                   },
@@ -5181,7 +5194,7 @@
                                             ]
                                           },
                                           "Triggers": {
-                                            "$id": "600",
+                                            "$id": "601",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                             "$values": []
                                           },
@@ -5198,28 +5211,28 @@
                                         "Attempts": 1
                                       },
                                       {
-                                        "$id": "601",
+                                        "$id": "602",
                                         "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                                         "Strategy": {
                                           "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                         },
                                         "Name": "wait 15 minutes",
                                         "Conditions": {
-                                          "$id": "602",
+                                          "$id": "603",
                                           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                           "$values": []
                                         },
                                         "IsExpanded": true,
                                         "Items": {
-                                          "$id": "603",
+                                          "$id": "604",
                                           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                           "$values": [
                                             {
-                                              "$id": "604",
+                                              "$id": "605",
                                               "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTimeSpan, NINA.Sequencer",
                                               "Time": 900.0,
                                               "Parent": {
-                                                "$ref": "601"
+                                                "$ref": "602"
                                               },
                                               "ErrorBehavior": 0,
                                               "Attempts": 1
@@ -5227,70 +5240,70 @@
                                           ]
                                         },
                                         "Triggers": {
-                                          "$id": "605",
+                                          "$id": "606",
                                           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                           "$values": [
                                             {
-                                              "$id": "606",
+                                              "$id": "607",
                                               "$type": "WhenPlugin.When.WhenSwitch, WhenPlugin",
                                               "OnceOnly": false,
                                               "Predicate": null,
                                               "IfExpr": {
-                                                "$id": "607",
+                                                "$id": "608",
                                                 "$type": "WhenPlugin.When.Expr, WhenPlugin",
                                                 "Expression": "need_darks",
                                                 "Type": null
                                               },
                                               "Instructions": {
-                                                "$id": "608",
+                                                "$id": "609",
                                                 "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                                                 "Strategy": {
                                                   "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                                 },
                                                 "Name": "When",
                                                 "Conditions": {
-                                                  "$id": "609",
+                                                  "$id": "610",
                                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                                   "$values": []
                                                 },
                                                 "IsExpanded": true,
                                                 "Items": {
-                                                  "$id": "610",
+                                                  "$id": "611",
                                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                                   "$values": [
                                                     {
-                                                      "$id": "611",
+                                                      "$id": "612",
                                                       "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
                                                       "Predicate": null,
                                                       "IfExpr": {
-                                                        "$id": "612",
+                                                        "$id": "613",
                                                         "$type": "WhenPlugin.When.Expr, WhenPlugin",
                                                         "Expression": "need_darks",
                                                         "Type": null
                                                       },
                                                       "Condition": null,
                                                       "Instructions": {
-                                                        "$id": "613",
+                                                        "$id": "614",
                                                         "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                                                         "Strategy": {
                                                           "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                                         },
                                                         "Name": "If",
                                                         "Conditions": {
-                                                          "$id": "614",
+                                                          "$id": "615",
                                                           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                                           "$values": []
                                                         },
                                                         "IsExpanded": true,
                                                         "Items": {
-                                                          "$id": "615",
+                                                          "$id": "616",
                                                           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                                           "$values": [
                                                             {
-                                                              "$id": "616",
+                                                              "$id": "617",
                                                               "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                                                               "Expr": {
-                                                                "$id": "617",
+                                                                "$id": "618",
                                                                 "$type": "WhenPlugin.When.Expr, WhenPlugin",
                                                                 "Expression": "0",
                                                                 "Type": null
@@ -5298,16 +5311,16 @@
                                                               "Variable": "need_darks",
                                                               "CValueExpr": null,
                                                               "Parent": {
-                                                                "$ref": "613"
+                                                                "$ref": "614"
                                                               },
                                                               "ErrorBehavior": 0,
                                                               "Attempts": 1
                                                             },
                                                             {
-                                                              "$id": "618",
+                                                              "$id": "619",
                                                               "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                                                               "Expr": {
-                                                                "$id": "619",
+                                                                "$id": "620",
                                                                 "$type": "WhenPlugin.When.Expr, WhenPlugin",
                                                                 "Expression": "1",
                                                                 "Type": null
@@ -5315,20 +5328,20 @@
                                                               "Variable": "get_darks",
                                                               "CValueExpr": null,
                                                               "Parent": {
-                                                                "$ref": "613"
+                                                                "$ref": "614"
                                                               },
                                                               "ErrorBehavior": 0,
                                                               "Attempts": 1
                                                             },
                                                             {
-                                                              "$id": "620",
+                                                              "$id": "621",
                                                               "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
                                                               "Message": "dark acquisition has been triggered",
                                                               "EmbedTitle": "",
                                                               "EmbedText": "",
                                                               "EmbedEdgeColor": "#FF206694",
                                                               "Parent": {
-                                                                "$ref": "613"
+                                                                "$ref": "614"
                                                               },
                                                               "ErrorBehavior": 0,
                                                               "Attempts": 1
@@ -5336,28 +5349,28 @@
                                                           ]
                                                         },
                                                         "Triggers": {
-                                                          "$id": "621",
+                                                          "$id": "622",
                                                           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                                           "$values": []
                                                         },
                                                         "Parent": {
-                                                          "$ref": "608"
+                                                          "$ref": "609"
                                                         },
                                                         "ErrorBehavior": 0,
                                                         "Attempts": 1
                                                       },
                                                       "Parent": {
-                                                        "$ref": "608"
+                                                        "$ref": "609"
                                                       },
                                                       "ErrorBehavior": 0,
                                                       "Attempts": 1
                                                     },
                                                     {
-                                                      "$id": "622",
+                                                      "$id": "623",
                                                       "$type": "WhenPlugin.When.EndInstructionSet, WhenPlugin",
                                                       "InstructionSetName": "wait 15 minutes",
                                                       "Parent": {
-                                                        "$ref": "608"
+                                                        "$ref": "609"
                                                       },
                                                       "ErrorBehavior": 0,
                                                       "Attempts": 1
@@ -5365,22 +5378,22 @@
                                                   ]
                                                 },
                                                 "Triggers": {
-                                                  "$id": "623",
+                                                  "$id": "624",
                                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                                   "$values": []
                                                 },
                                                 "Parent": {
-                                                  "$ref": "601"
+                                                  "$ref": "602"
                                                 },
                                                 "ErrorBehavior": 0,
                                                 "Attempts": 1
                                               },
                                               "Interrupt": true,
                                               "Parent": {
-                                                "$ref": "601"
+                                                "$ref": "602"
                                               },
                                               "TriggerRunner": {
-                                                "$ref": "608"
+                                                "$ref": "609"
                                               }
                                             }
                                           ]
@@ -5394,7 +5407,7 @@
                                     ]
                                   },
                                   "Triggers": {
-                                    "$id": "624",
+                                    "$id": "625",
                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                     "$values": []
                                   },
@@ -5405,116 +5418,116 @@
                                   "Attempts": 1
                                 },
                                 {
-                                  "$id": "625",
+                                  "$id": "626",
                                   "$type": "WhenPlugin.When.OnceSafe, WhenPlugin",
                                   "Condition": null,
                                   "Instructions": {
-                                    "$id": "626",
+                                    "$id": "627",
                                     "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                                     "Strategy": {
                                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                     },
                                     "Name": null,
                                     "Conditions": {
-                                      "$id": "627",
+                                      "$id": "628",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                       "$values": [
                                         {
-                                          "$id": "628",
+                                          "$id": "629",
                                           "$type": "NINA.Sequencer.Conditions.LoopCondition, NINA.Sequencer",
                                           "CompletedIterations": 0,
                                           "Iterations": 1,
                                           "Parent": {
-                                            "$ref": "626"
+                                            "$ref": "627"
                                           }
                                         },
                                         {
-                                          "$id": "629",
+                                          "$id": "630",
                                           "$type": "NINA.Sequencer.Conditions.SafetyMonitorCondition, NINA.Sequencer",
                                           "Parent": {
-                                            "$ref": "626"
+                                            "$ref": "627"
                                           }
                                         }
                                       ]
                                     },
                                     "IsExpanded": true,
                                     "Items": {
-                                      "$id": "630",
+                                      "$id": "631",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                       "$values": [
                                         {
-                                          "$id": "631",
+                                          "$id": "632",
                                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
                                           "Predicate": null,
                                           "IfExpr": {
-                                            "$id": "632",
+                                            "$id": "633",
                                             "$type": "WhenPlugin.When.Expr, WhenPlugin",
                                             "Expression": "power_is_on",
                                             "Type": null
                                           },
                                           "Condition": null,
                                           "Instructions": {
-                                            "$id": "633",
+                                            "$id": "634",
                                             "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                                             "Strategy": {
                                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                             },
                                             "Name": "If",
                                             "Conditions": {
-                                              "$id": "634",
+                                              "$id": "635",
                                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                               "$values": []
                                             },
                                             "IsExpanded": true,
                                             "Items": {
-                                              "$id": "635",
+                                              "$id": "636",
                                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                               "$values": [
                                                 {
-                                                  "$id": "636",
+                                                  "$id": "637",
                                                   "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                                                   "Text": "We won't get here if we never become safe but if we do",
                                                   "Parent": {
-                                                    "$ref": "633"
-                                                  },
-                                                  "ErrorBehavior": 0,
-                                                  "Attempts": 1
-                                                },
-                                                {
-                                                  "$id": "637",
-                                                  "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
-                                                  "OnOff": false,
-                                                  "Parent": {
-                                                    "$ref": "633"
+                                                    "$ref": "634"
                                                   },
                                                   "ErrorBehavior": 0,
                                                   "Attempts": 1
                                                 },
                                                 {
                                                   "$id": "638",
+                                                  "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
+                                                  "OnOff": false,
+                                                  "Parent": {
+                                                    "$ref": "634"
+                                                  },
+                                                  "ErrorBehavior": 0,
+                                                  "Attempts": 1
+                                                },
+                                                {
+                                                  "$id": "639",
                                                   "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
                                                   "TemplateName": "open shutter",
                                                   "Condition": null,
                                                   "Instructions": {
-                                                    "$id": "639",
+                                                    "$id": "640",
                                                     "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                                                     "Strategy": {
                                                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                                     },
                                                     "Name": null,
                                                     "Conditions": {
-                                                      "$id": "640",
+                                                      "$id": "641",
                                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                                       "$values": []
                                                     },
                                                     "IsExpanded": true,
                                                     "Items": {
-                                                      "$id": "641",
+                                                      "$id": "642",
                                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                                       "$values": []
                                                     },
                                                     "Triggers": {
-                                                      "$id": "642",
+                                                      "$id": "643",
                                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                                       "$values": []
                                                     },
@@ -5523,16 +5536,16 @@
                                                     "Attempts": 1
                                                   },
                                                   "Parent": {
-                                                    "$ref": "633"
+                                                    "$ref": "634"
                                                   },
                                                   "ErrorBehavior": 0,
                                                   "Attempts": 1
                                                 },
                                                 {
-                                                  "$id": "643",
+                                                  "$id": "644",
                                                   "$type": "NINA.Sequencer.SequenceItem.Telescope.UnparkScope, NINA.Sequencer",
                                                   "Parent": {
-                                                    "$ref": "633"
+                                                    "$ref": "634"
                                                   },
                                                   "ErrorBehavior": 0,
                                                   "Attempts": 1
@@ -5540,60 +5553,60 @@
                                               ]
                                             },
                                             "Triggers": {
-                                              "$id": "644",
+                                              "$id": "645",
                                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                               "$values": []
                                             },
                                             "Parent": {
-                                              "$ref": "626"
+                                              "$ref": "627"
                                             },
                                             "ErrorBehavior": 0,
                                             "Attempts": 1
                                           },
                                           "Parent": {
-                                            "$ref": "626"
-                                          },
-                                          "ErrorBehavior": 0,
-                                          "Attempts": 1
-                                        },
-                                        {
-                                          "$id": "645",
-                                          "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                          "Message": "safe conditions",
-                                          "EmbedTitle": "",
-                                          "EmbedText": "",
-                                          "EmbedEdgeColor": "#FF206694",
-                                          "Parent": {
-                                            "$ref": "626"
+                                            "$ref": "627"
                                           },
                                           "ErrorBehavior": 0,
                                           "Attempts": 1
                                         },
                                         {
                                           "$id": "646",
+                                          "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                                          "Message": "safe conditions",
+                                          "EmbedTitle": "",
+                                          "EmbedText": "",
+                                          "EmbedEdgeColor": "#FF206694",
+                                          "Parent": {
+                                            "$ref": "627"
+                                          },
+                                          "ErrorBehavior": 0,
+                                          "Attempts": 1
+                                        },
+                                        {
+                                          "$id": "647",
                                           "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
                                           "TemplateName": "report on weather and roof status",
                                           "Condition": null,
                                           "Instructions": {
-                                            "$id": "647",
+                                            "$id": "648",
                                             "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                                             "Strategy": {
                                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                             },
                                             "Name": null,
                                             "Conditions": {
-                                              "$id": "648",
+                                              "$id": "649",
                                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                               "$values": []
                                             },
                                             "IsExpanded": true,
                                             "Items": {
-                                              "$id": "649",
+                                              "$id": "650",
                                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                               "$values": []
                                             },
                                             "Triggers": {
-                                              "$id": "650",
+                                              "$id": "651",
                                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                               "$values": []
                                             },
@@ -5602,7 +5615,7 @@
                                             "Attempts": 1
                                           },
                                           "Parent": {
-                                            "$ref": "626"
+                                            "$ref": "627"
                                           },
                                           "ErrorBehavior": 0,
                                           "Attempts": 1
@@ -5610,7 +5623,7 @@
                                       ]
                                     },
                                     "Triggers": {
-                                      "$id": "651",
+                                      "$id": "652",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
@@ -5629,7 +5642,7 @@
                               ]
                             },
                             "Triggers": {
-                              "$id": "652",
+                              "$id": "653",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
@@ -5648,7 +5661,7 @@
                       ]
                     },
                     "Triggers": {
-                      "$id": "653",
+                      "$id": "654",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
@@ -5659,66 +5672,66 @@
                     "Attempts": 1
                   },
                   {
-                    "$id": "654",
+                    "$id": "655",
                     "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                     "Strategy": {
                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                     },
                     "Name": "turn flat panel off",
                     "Conditions": {
-                      "$id": "655",
+                      "$id": "656",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
                     "IsExpanded": false,
                     "Items": {
-                      "$id": "656",
+                      "$id": "657",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                       "$values": [
                         {
-                          "$id": "657",
+                          "$id": "658",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                           "Text": "If we were doing flats when unsafe and we didn't fnish and were interrupted by the flat loop ending at nautical dawn then the panel might be on so turn it off to be sure",
                           "Parent": {
-                            "$ref": "654"
+                            "$ref": "655"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
                         },
                         {
-                          "$id": "658",
+                          "$id": "659",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
                           "Predicate": null,
                           "IfExpr": {
-                            "$id": "659",
+                            "$id": "660",
                             "$type": "WhenPlugin.When.Expr, WhenPlugin",
                             "Expression": "power_is_on",
                             "Type": null
                           },
                           "Condition": null,
                           "Instructions": {
-                            "$id": "660",
+                            "$id": "661",
                             "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                             "Strategy": {
                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                             },
                             "Name": "If",
                             "Conditions": {
-                              "$id": "661",
+                              "$id": "662",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "IsExpanded": true,
                             "Items": {
-                              "$id": "662",
+                              "$id": "663",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                               "$values": [
                                 {
-                                  "$id": "663",
+                                  "$id": "664",
                                   "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                                   "OnOff": false,
                                   "Parent": {
-                                    "$ref": "660"
+                                    "$ref": "661"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
@@ -5726,18 +5739,18 @@
                               ]
                             },
                             "Triggers": {
-                              "$id": "664",
+                              "$id": "665",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "Parent": {
-                              "$ref": "654"
+                              "$ref": "655"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
                           },
                           "Parent": {
-                            "$ref": "654"
+                            "$ref": "655"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
@@ -5745,7 +5758,7 @@
                       ]
                     },
                     "Triggers": {
-                      "$id": "665",
+                      "$id": "666",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
@@ -5756,126 +5769,126 @@
                     "Attempts": 1
                   },
                   {
-                    "$id": "666",
+                    "$id": "667",
                     "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                     "Strategy": {
                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                     },
                     "Name": "morning flats",
                     "Conditions": {
-                      "$id": "667",
+                      "$id": "668",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
                     "IsExpanded": false,
                     "Items": {
-                      "$id": "668",
+                      "$id": "669",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                       "$values": [
                         {
-                          "$id": "669",
+                          "$id": "670",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                           "Text": "only get morning flats if the power is already on or we are going to get daytime darks when we cycle to the new day",
                           "Parent": {
-                            "$ref": "666"
+                            "$ref": "667"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
                         },
                         {
-                          "$id": "670",
+                          "$id": "671",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
                           "Predicate": null,
                           "IfExpr": {
-                            "$id": "671",
+                            "$id": "672",
                             "$type": "WhenPlugin.When.Expr, WhenPlugin",
                             "Expression": "get_flats_when_morning",
                             "Type": null
                           },
                           "Condition": null,
                           "Instructions": {
-                            "$id": "672",
+                            "$id": "673",
                             "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                             "Strategy": {
                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                             },
                             "Name": "If",
                             "Conditions": {
-                              "$id": "673",
+                              "$id": "674",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "IsExpanded": true,
                             "Items": {
-                              "$id": "674",
+                              "$id": "675",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                               "$values": [
                                 {
-                                  "$id": "675",
+                                  "$id": "676",
                                   "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                                   "Strategy": {
                                     "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                   },
                                   "Name": "morning flats container",
                                   "Conditions": {
-                                    "$id": "676",
+                                    "$id": "677",
                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                     "$values": [
                                       {
-                                        "$id": "677",
+                                        "$id": "678",
                                         "$type": "NINA.Plugin.TargetScheduler.Sequencer.TargetSchedulerCondition, NINA.Plugin.TargetScheduler",
                                         "SelectedMode": "While Flats Needed",
                                         "Parent": {
-                                          "$ref": "675"
+                                          "$ref": "676"
                                         }
                                       },
                                       {
-                                        "$id": "678",
+                                        "$id": "679",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                         "Hours": 5,
                                         "Minutes": 59,
                                         "MinutesOffset": 0,
                                         "Seconds": 25,
                                         "SelectedProvider": {
-                                          "$id": "679",
+                                          "$id": "680",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
                                         },
                                         "Parent": {
-                                          "$ref": "675"
+                                          "$ref": "676"
                                         }
                                       }
                                     ]
                                   },
                                   "IsExpanded": true,
                                   "Items": {
-                                    "$id": "680",
+                                    "$id": "681",
                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                     "$values": [
                                       {
-                                        "$id": "681",
+                                        "$id": "682",
                                         "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
                                         "TemplateName": "startup",
                                         "Condition": null,
                                         "Instructions": {
-                                          "$id": "682",
+                                          "$id": "683",
                                           "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                                           "Strategy": {
                                             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                           },
                                           "Name": null,
                                           "Conditions": {
-                                            "$id": "683",
+                                            "$id": "684",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                             "$values": []
                                           },
                                           "IsExpanded": true,
                                           "Items": {
-                                            "$id": "684",
+                                            "$id": "685",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                             "$values": []
                                           },
                                           "Triggers": {
-                                            "$id": "685",
+                                            "$id": "686",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                             "$values": []
                                           },
@@ -5884,56 +5897,56 @@
                                           "Attempts": 1
                                         },
                                         "Parent": {
-                                          "$ref": "675"
+                                          "$ref": "676"
                                         },
                                         "ErrorBehavior": 0,
                                         "Attempts": 1
                                       },
                                       {
-                                        "$id": "686",
+                                        "$id": "687",
                                         "$type": "WhenPlugin.When.IfThenElse, WhenPlugin",
                                         "ElseInstructions": {
-                                          "$id": "687",
+                                          "$id": "688",
                                           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                                           "Strategy": {
                                             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                           },
                                           "Name": "If/Then/Else",
                                           "Conditions": {
-                                            "$id": "688",
+                                            "$id": "689",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                             "$values": []
                                           },
                                           "IsExpanded": true,
                                           "Items": {
-                                            "$id": "689",
+                                            "$id": "690",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                             "$values": [
                                               {
-                                                "$id": "690",
+                                                "$id": "691",
                                                 "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
                                                 "TemplateName": "close shutter",
                                                 "Condition": null,
                                                 "Instructions": {
-                                                  "$id": "691",
+                                                  "$id": "692",
                                                   "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                                                   "Strategy": {
                                                     "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                                   },
                                                   "Name": null,
                                                   "Conditions": {
-                                                    "$id": "692",
+                                                    "$id": "693",
                                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                                     "$values": []
                                                   },
                                                   "IsExpanded": true,
                                                   "Items": {
-                                                    "$id": "693",
+                                                    "$id": "694",
                                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                                     "$values": []
                                                   },
                                                   "Triggers": {
-                                                    "$id": "694",
+                                                    "$id": "695",
                                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                                     "$values": []
                                                   },
@@ -5942,7 +5955,7 @@
                                                   "Attempts": 1
                                                 },
                                                 "Parent": {
-                                                  "$ref": "687"
+                                                  "$ref": "688"
                                                 },
                                                 "ErrorBehavior": 0,
                                                 "Attempts": 1
@@ -5950,67 +5963,67 @@
                                             ]
                                           },
                                           "Triggers": {
-                                            "$id": "695",
+                                            "$id": "696",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                             "$values": []
                                           },
                                           "Parent": {
-                                            "$ref": "675"
+                                            "$ref": "676"
                                           },
                                           "ErrorBehavior": 0,
                                           "Attempts": 1
                                         },
                                         "Predicate": null,
                                         "IfExpr": {
-                                          "$id": "696",
+                                          "$id": "697",
                                           "$type": "WhenPlugin.When.Expr, WhenPlugin",
                                           "Expression": "in_shared_observatory",
                                           "Type": null
                                         },
                                         "Condition": null,
                                         "Instructions": {
-                                          "$id": "697",
+                                          "$id": "698",
                                           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                                           "Strategy": {
                                             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                           },
                                           "Name": "If/Then/Else",
                                           "Conditions": {
-                                            "$id": "698",
+                                            "$id": "699",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                             "$values": []
                                           },
                                           "IsExpanded": true,
                                           "Items": {
-                                            "$id": "699",
+                                            "$id": "700",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                             "$values": [
                                               {
-                                                "$id": "700",
+                                                "$id": "701",
                                                 "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
                                                 "Message": "waiting for nautical dawn to get morning flats",
                                                 "EmbedTitle": "",
                                                 "EmbedText": "",
                                                 "EmbedEdgeColor": "#FF206694",
                                                 "Parent": {
-                                                  "$ref": "697"
+                                                  "$ref": "698"
                                                 },
                                                 "ErrorBehavior": 0,
                                                 "Attempts": 1
                                               },
                                               {
-                                                "$id": "701",
+                                                "$id": "702",
                                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                                                 "Hours": 4,
                                                 "Minutes": 55,
                                                 "MinutesOffset": 0,
                                                 "Seconds": 34,
                                                 "SelectedProvider": {
-                                                  "$id": "702",
+                                                  "$id": "703",
                                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
                                                 },
                                                 "Parent": {
-                                                  "$ref": "697"
+                                                  "$ref": "698"
                                                 },
                                                 "ErrorBehavior": 0,
                                                 "Attempts": 1
@@ -6018,103 +6031,103 @@
                                             ]
                                           },
                                           "Triggers": {
-                                            "$id": "703",
+                                            "$id": "704",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                             "$values": []
                                           },
                                           "Parent": {
-                                            "$ref": "675"
+                                            "$ref": "676"
                                           },
                                           "ErrorBehavior": 0,
                                           "Attempts": 1
                                         },
                                         "Parent": {
-                                          "$ref": "675"
-                                        },
-                                        "ErrorBehavior": 0,
-                                        "Attempts": 1
-                                      },
-                                      {
-                                        "$id": "704",
-                                        "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                        "Message": "starting morning flats",
-                                        "EmbedTitle": "",
-                                        "EmbedText": "",
-                                        "EmbedEdgeColor": "#FF206694",
-                                        "Parent": {
-                                          "$ref": "675"
+                                          "$ref": "676"
                                         },
                                         "ErrorBehavior": 0,
                                         "Attempts": 1
                                       },
                                       {
                                         "$id": "705",
-                                        "$type": "NINA.Plugin.TargetScheduler.Sequencer.TargetSchedulerFlats, NINA.Plugin.TargetScheduler",
-                                        "AlwaysRepeatFlatSet": true,
-                                        "FlatCount": 10,
+                                        "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                                        "Message": "starting morning flats",
+                                        "EmbedTitle": "",
+                                        "EmbedText": "",
+                                        "EmbedEdgeColor": "#FF206694",
                                         "Parent": {
-                                          "$ref": "675"
+                                          "$ref": "676"
                                         },
                                         "ErrorBehavior": 0,
                                         "Attempts": 1
                                       },
                                       {
                                         "$id": "706",
-                                        "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                        "Message": "finished morning flats",
-                                        "EmbedTitle": "",
-                                        "EmbedText": "",
-                                        "EmbedEdgeColor": "#FF206694",
+                                        "$type": "NINA.Plugin.TargetScheduler.Sequencer.TargetSchedulerFlats, NINA.Plugin.TargetScheduler",
+                                        "AlwaysRepeatFlatSet": true,
+                                        "FlatCount": 10,
                                         "Parent": {
-                                          "$ref": "675"
+                                          "$ref": "676"
                                         },
                                         "ErrorBehavior": 0,
                                         "Attempts": 1
                                       },
                                       {
                                         "$id": "707",
-                                        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-                                        "Text": "ensure the flat panel is off if the instruction got interrupted and never had a chance to turn it off",
+                                        "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                                        "Message": "finished morning flats",
+                                        "EmbedTitle": "",
+                                        "EmbedText": "",
+                                        "EmbedEdgeColor": "#FF206694",
                                         "Parent": {
-                                          "$ref": "675"
+                                          "$ref": "676"
                                         },
                                         "ErrorBehavior": 0,
                                         "Attempts": 1
                                       },
                                       {
                                         "$id": "708",
+                                        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+                                        "Text": "ensure the flat panel is off if the instruction got interrupted and never had a chance to turn it off",
+                                        "Parent": {
+                                          "$ref": "676"
+                                        },
+                                        "ErrorBehavior": 0,
+                                        "Attempts": 1
+                                      },
+                                      {
+                                        "$id": "709",
                                         "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
                                         "Predicate": null,
                                         "IfExpr": {
-                                          "$id": "709",
+                                          "$id": "710",
                                           "$type": "WhenPlugin.When.Expr, WhenPlugin",
                                           "Expression": "power_is_on",
                                           "Type": null
                                         },
                                         "Condition": null,
                                         "Instructions": {
-                                          "$id": "710",
+                                          "$id": "711",
                                           "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                                           "Strategy": {
                                             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                           },
                                           "Name": "If",
                                           "Conditions": {
-                                            "$id": "711",
+                                            "$id": "712",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                             "$values": []
                                           },
                                           "IsExpanded": true,
                                           "Items": {
-                                            "$id": "712",
+                                            "$id": "713",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                             "$values": [
                                               {
-                                                "$id": "713",
+                                                "$id": "714",
                                                 "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
                                                 "OnOff": false,
                                                 "Parent": {
-                                                  "$ref": "710"
+                                                  "$ref": "711"
                                                 },
                                                 "ErrorBehavior": 0,
                                                 "Attempts": 1
@@ -6122,18 +6135,18 @@
                                             ]
                                           },
                                           "Triggers": {
-                                            "$id": "714",
+                                            "$id": "715",
                                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                             "$values": []
                                           },
                                           "Parent": {
-                                            "$ref": "675"
+                                            "$ref": "676"
                                           },
                                           "ErrorBehavior": 0,
                                           "Attempts": 1
                                         },
                                         "Parent": {
-                                          "$ref": "675"
+                                          "$ref": "676"
                                         },
                                         "ErrorBehavior": 0,
                                         "Attempts": 1
@@ -6141,12 +6154,12 @@
                                     ]
                                   },
                                   "Triggers": {
-                                    "$id": "715",
+                                    "$id": "716",
                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                     "$values": []
                                   },
                                   "Parent": {
-                                    "$ref": "672"
+                                    "$ref": "673"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
@@ -6154,18 +6167,18 @@
                               ]
                             },
                             "Triggers": {
-                              "$id": "716",
+                              "$id": "717",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "Parent": {
-                              "$ref": "666"
+                              "$ref": "667"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
                           },
                           "Parent": {
-                            "$ref": "666"
+                            "$ref": "667"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
@@ -6173,7 +6186,7 @@
                       ]
                     },
                     "Triggers": {
-                      "$id": "717",
+                      "$id": "718",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
@@ -6184,47 +6197,47 @@
                     "Attempts": 1
                   },
                   {
-                    "$id": "718",
+                    "$id": "719",
                     "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                     "Strategy": {
                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                     },
                     "Name": "power off",
                     "Conditions": {
-                      "$id": "719",
+                      "$id": "720",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
                     "IsExpanded": false,
                     "Items": {
-                      "$id": "720",
+                      "$id": "721",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                       "$values": [
                         {
-                          "$id": "721",
+                          "$id": "722",
                           "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
                           "TemplateName": "park scope",
                           "Condition": null,
                           "Instructions": {
-                            "$id": "722",
+                            "$id": "723",
                             "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                             "Strategy": {
                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                             },
                             "Name": null,
                             "Conditions": {
-                              "$id": "723",
+                              "$id": "724",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "IsExpanded": true,
                             "Items": {
-                              "$id": "724",
+                              "$id": "725",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "Triggers": {
-                              "$id": "725",
+                              "$id": "726",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
@@ -6233,36 +6246,36 @@
                             "Attempts": 1
                           },
                           "Parent": {
-                            "$ref": "718"
+                            "$ref": "719"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
                         },
                         {
-                          "$id": "726",
+                          "$id": "727",
                           "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
                           "TemplateName": "close shutter",
                           "Condition": null,
                           "Instructions": {
-                            "$id": "727",
+                            "$id": "728",
                             "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                             "Strategy": {
                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                             },
                             "Name": null,
                             "Conditions": {
-                              "$id": "728",
+                              "$id": "729",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "IsExpanded": true,
                             "Items": {
-                              "$id": "729",
+                              "$id": "730",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "Triggers": {
-                              "$id": "730",
+                              "$id": "731",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
@@ -6271,77 +6284,77 @@
                             "Attempts": 1
                           },
                           "Parent": {
-                            "$ref": "718"
+                            "$ref": "719"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
                         },
                         {
-                          "$id": "731",
+                          "$id": "732",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
                           "Predicate": null,
                           "IfExpr": {
-                            "$id": "732",
+                            "$id": "733",
                             "$type": "WhenPlugin.When.Expr, WhenPlugin",
                             "Expression": "not ((need_darks or get_darks) and get_darks_when_daytime) and power_is_on",
                             "Type": null
                           },
                           "Condition": null,
                           "Instructions": {
-                            "$id": "733",
+                            "$id": "734",
                             "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                             "Strategy": {
                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                             },
                             "Name": "If",
                             "Conditions": {
-                              "$id": "734",
+                              "$id": "735",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "IsExpanded": true,
                             "Items": {
-                              "$id": "735",
+                              "$id": "736",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                               "$values": [
                                 {
-                                  "$id": "736",
+                                  "$id": "737",
                                   "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
                                   "Message": "starting power off",
                                   "EmbedTitle": "",
                                   "EmbedText": "",
                                   "EmbedEdgeColor": "#FF206694",
                                   "Parent": {
-                                    "$ref": "733"
+                                    "$ref": "734"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
                                 },
                                 {
-                                  "$id": "737",
+                                  "$id": "738",
                                   "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
                                   "TemplateName": "warm camera",
                                   "Condition": null,
                                   "Instructions": {
-                                    "$id": "738",
+                                    "$id": "739",
                                     "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                                     "Strategy": {
                                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                     },
                                     "Name": null,
                                     "Conditions": {
-                                      "$id": "739",
+                                      "$id": "740",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
                                     "IsExpanded": true,
                                     "Items": {
-                                      "$id": "740",
+                                      "$id": "741",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
                                     "Triggers": {
-                                      "$id": "741",
+                                      "$id": "742",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
@@ -6350,45 +6363,45 @@
                                     "Attempts": 1
                                   },
                                   "Parent": {
-                                    "$ref": "733"
-                                  },
-                                  "ErrorBehavior": 0,
-                                  "Attempts": 1
-                                },
-                                {
-                                  "$id": "742",
-                                  "$type": "NINA.Sequencer.SequenceItem.Connect.DisconnectAllEquipment, NINA.Sequencer",
-                                  "Parent": {
-                                    "$ref": "733"
+                                    "$ref": "734"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
                                 },
                                 {
                                   "$id": "743",
+                                  "$type": "NINA.Sequencer.SequenceItem.Connect.DisconnectAllEquipment, NINA.Sequencer",
+                                  "Parent": {
+                                    "$ref": "734"
+                                  },
+                                  "ErrorBehavior": 0,
+                                  "Attempts": 1
+                                },
+                                {
+                                  "$id": "744",
                                   "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
                                   "TemplateName": "connect sws",
                                   "Condition": null,
                                   "Instructions": {
-                                    "$id": "744",
+                                    "$id": "745",
                                     "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                                     "Strategy": {
                                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                     },
                                     "Name": null,
                                     "Conditions": {
-                                      "$id": "745",
+                                      "$id": "746",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
                                     "IsExpanded": true,
                                     "Items": {
-                                      "$id": "746",
+                                      "$id": "747",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
                                     "Triggers": {
-                                      "$id": "747",
+                                      "$id": "748",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
@@ -6397,36 +6410,36 @@
                                     "Attempts": 1
                                   },
                                   "Parent": {
-                                    "$ref": "733"
+                                    "$ref": "734"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
                                 },
                                 {
-                                  "$id": "748",
+                                  "$id": "749",
                                   "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
                                   "TemplateName": "custom power off",
                                   "Condition": null,
                                   "Instructions": {
-                                    "$id": "749",
+                                    "$id": "750",
                                     "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                                     "Strategy": {
                                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                     },
                                     "Name": null,
                                     "Conditions": {
-                                      "$id": "750",
+                                      "$id": "751",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
                                     "IsExpanded": true,
                                     "Items": {
-                                      "$id": "751",
+                                      "$id": "752",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
                                     "Triggers": {
-                                      "$id": "752",
+                                      "$id": "753",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
@@ -6435,26 +6448,26 @@
                                     "Attempts": 1
                                   },
                                   "Parent": {
-                                    "$ref": "733"
-                                  },
-                                  "ErrorBehavior": 0,
-                                  "Attempts": 1
-                                },
-                                {
-                                  "$id": "753",
-                                  "$type": "NINA.Sequencer.SequenceItem.Utility.ExternalScript, NINA.Sequencer",
-                                  "Script": "\"c:\\AutonomousScripts\\shutdown.bat\"",
-                                  "Parent": {
-                                    "$ref": "733"
+                                    "$ref": "734"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
                                 },
                                 {
                                   "$id": "754",
+                                  "$type": "NINA.Sequencer.SequenceItem.Utility.ExternalScript, NINA.Sequencer",
+                                  "Script": "\"c:\\AutonomousScripts\\shutdown.bat\"",
+                                  "Parent": {
+                                    "$ref": "734"
+                                  },
+                                  "ErrorBehavior": 0,
+                                  "Attempts": 1
+                                },
+                                {
+                                  "$id": "755",
                                   "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                                   "Expr": {
-                                    "$id": "755",
+                                    "$id": "756",
                                     "$type": "WhenPlugin.When.Expr, WhenPlugin",
                                     "Expression": "0",
                                     "Type": null
@@ -6462,20 +6475,20 @@
                                   "Variable": "power_is_on",
                                   "CValueExpr": null,
                                   "Parent": {
-                                    "$ref": "733"
+                                    "$ref": "734"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
                                 },
                                 {
-                                  "$id": "756",
+                                  "$id": "757",
                                   "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
                                   "Message": "power off finished",
                                   "EmbedTitle": "",
                                   "EmbedText": "",
                                   "EmbedEdgeColor": "#FF206694",
                                   "Parent": {
-                                    "$ref": "733"
+                                    "$ref": "734"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
@@ -6483,18 +6496,18 @@
                               ]
                             },
                             "Triggers": {
-                              "$id": "757",
+                              "$id": "758",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "Parent": {
-                              "$ref": "718"
+                              "$ref": "719"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
                           },
                           "Parent": {
-                            "$ref": "718"
+                            "$ref": "719"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
@@ -6502,7 +6515,7 @@
                       ]
                     },
                     "Triggers": {
-                      "$id": "758",
+                      "$id": "759",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
@@ -6513,85 +6526,85 @@
                     "Attempts": 1
                   },
                   {
-                    "$id": "759",
+                    "$id": "760",
                     "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                     "Strategy": {
                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                     },
                     "Name": "transition to next day",
                     "Conditions": {
-                      "$id": "760",
+                      "$id": "761",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
                     "IsExpanded": false,
                     "Items": {
-                      "$id": "761",
+                      "$id": "762",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                       "$values": [
                         {
-                          "$id": "762",
+                          "$id": "763",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
                           "Predicate": null,
                           "IfExpr": {
-                            "$id": "763",
+                            "$id": "764",
                             "$type": "WhenPlugin.When.Expr, WhenPlugin",
                             "Expression": "get_darks and get_darks_when_daytime",
                             "Type": null
                           },
                           "Condition": null,
                           "Instructions": {
-                            "$id": "764",
+                            "$id": "765",
                             "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                             "Strategy": {
                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                             },
                             "Name": "If",
                             "Conditions": {
-                              "$id": "765",
+                              "$id": "766",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "IsExpanded": true,
                             "Items": {
-                              "$id": "766",
+                              "$id": "767",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                               "$values": [
                                 {
-                                  "$id": "767",
+                                  "$id": "768",
                                   "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
                                   "Text": "if we will be getting daytime darks tomorrow then we can get a head start here by getting darks while waiting for sunrise",
                                   "Parent": {
-                                    "$ref": "764"
+                                    "$ref": "765"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
                                 },
                                 {
-                                  "$id": "768",
+                                  "$id": "769",
                                   "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
                                   "TemplateName": "startup",
                                   "Condition": null,
                                   "Instructions": {
-                                    "$id": "769",
+                                    "$id": "770",
                                     "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                                     "Strategy": {
                                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                     },
                                     "Name": null,
                                     "Conditions": {
-                                      "$id": "770",
+                                      "$id": "771",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
                                     "IsExpanded": true,
                                     "Items": {
-                                      "$id": "771",
+                                      "$id": "772",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
                                     "Triggers": {
-                                      "$id": "772",
+                                      "$id": "773",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
@@ -6600,81 +6613,81 @@
                                     "Attempts": 1
                                   },
                                   "Parent": {
-                                    "$ref": "764"
-                                  },
-                                  "ErrorBehavior": 0,
-                                  "Attempts": 1
-                                },
-                                {
-                                  "$id": "773",
-                                  "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                  "Message": "getting morning darks until just brefore sunrise",
-                                  "EmbedTitle": "",
-                                  "EmbedText": "",
-                                  "EmbedEdgeColor": "#FF206694",
-                                  "Parent": {
-                                    "$ref": "764"
+                                    "$ref": "765"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
                                 },
                                 {
                                   "$id": "774",
+                                  "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                                  "Message": "getting morning darks until just brefore sunrise",
+                                  "EmbedTitle": "",
+                                  "EmbedText": "",
+                                  "EmbedEdgeColor": "#FF206694",
+                                  "Parent": {
+                                    "$ref": "765"
+                                  },
+                                  "ErrorBehavior": 0,
+                                  "Attempts": 1
+                                },
+                                {
+                                  "$id": "775",
                                   "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                                   "Strategy": {
                                     "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                   },
                                   "Name": "darks until sunrise",
                                   "Conditions": {
-                                    "$id": "775",
+                                    "$id": "776",
                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                     "$values": [
                                       {
-                                        "$id": "776",
+                                        "$id": "777",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                         "Hours": 5,
                                         "Minutes": 54,
                                         "MinutesOffset": -5,
                                         "Seconds": 25,
                                         "SelectedProvider": {
-                                          "$ref": "679"
+                                          "$ref": "680"
                                         },
                                         "Parent": {
-                                          "$ref": "774"
+                                          "$ref": "775"
                                         }
                                       },
                                       {
-                                        "$id": "777",
+                                        "$id": "778",
                                         "$type": "WhenPlugin.When.LoopWhile, WhenPlugin",
                                         "Predicate": null,
                                         "PredicateExpr": {
-                                          "$id": "778",
+                                          "$id": "779",
                                           "$type": "WhenPlugin.When.Expr, WhenPlugin",
                                           "Expression": "get_darks",
                                           "Type": null
                                         },
                                         "Parent": {
-                                          "$ref": "774"
+                                          "$ref": "775"
                                         }
                                       }
                                     ]
                                   },
                                   "IsExpanded": true,
                                   "Items": {
-                                    "$id": "779",
+                                    "$id": "780",
                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                     "$values": [
                                       {
-                                        "$id": "780",
+                                        "$id": "781",
                                         "$type": "NINA.Sequencer.Container.DeepSkyObjectContainer, NINA.Sequencer",
                                         "Target": {
-                                          "$id": "781",
+                                          "$id": "782",
                                           "$type": "NINA.Astrometry.InputTarget, NINA.Astrometry",
                                           "Expanded": true,
                                           "TargetName": "calibration",
                                           "PositionAngle": 0.0,
                                           "InputCoordinates": {
-                                            "$id": "782",
+                                            "$id": "783",
                                             "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
                                             "RAHours": 0,
                                             "RAMinutes": 0,
@@ -6687,7 +6700,7 @@
                                         },
                                         "ExposureInfoListExpanded": false,
                                         "ExposureInfoList": {
-                                          "$id": "783",
+                                          "$id": "784",
                                           "$type": "NINA.Core.Utility.AsyncObservableCollection`1[[NINA.Sequencer.Utility.ExposureInfo, NINA.Sequencer]], NINA.Core",
                                           "$values": []
                                         },
@@ -6696,40 +6709,40 @@
                                         },
                                         "Name": "calibration",
                                         "Conditions": {
-                                          "$id": "784",
+                                          "$id": "785",
                                           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                           "$values": []
                                         },
                                         "IsExpanded": true,
                                         "Items": {
-                                          "$id": "785",
+                                          "$id": "786",
                                           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                           "$values": [
                                             {
-                                              "$id": "786",
+                                              "$id": "787",
                                               "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
                                               "TemplateName": "one iteration of darks",
                                               "Condition": null,
                                               "Instructions": {
-                                                "$id": "787",
+                                                "$id": "788",
                                                 "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                                                 "Strategy": {
                                                   "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                                 },
                                                 "Name": null,
                                                 "Conditions": {
-                                                  "$id": "788",
+                                                  "$id": "789",
                                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                                   "$values": []
                                                 },
                                                 "IsExpanded": true,
                                                 "Items": {
-                                                  "$id": "789",
+                                                  "$id": "790",
                                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                                   "$values": []
                                                 },
                                                 "Triggers": {
-                                                  "$id": "790",
+                                                  "$id": "791",
                                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                                   "$values": []
                                                 },
@@ -6738,7 +6751,7 @@
                                                 "Attempts": 1
                                               },
                                               "Parent": {
-                                                "$ref": "780"
+                                                "$ref": "781"
                                               },
                                               "ErrorBehavior": 0,
                                               "Attempts": 1
@@ -6746,12 +6759,12 @@
                                           ]
                                         },
                                         "Triggers": {
-                                          "$id": "791",
+                                          "$id": "792",
                                           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                           "$values": []
                                         },
                                         "Parent": {
-                                          "$ref": "774"
+                                          "$ref": "775"
                                         },
                                         "ErrorBehavior": 0,
                                         "Attempts": 1
@@ -6759,12 +6772,12 @@
                                     ]
                                   },
                                   "Triggers": {
-                                    "$id": "792",
+                                    "$id": "793",
                                     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                     "$values": []
                                   },
                                   "Parent": {
-                                    "$ref": "764"
+                                    "$ref": "765"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
@@ -6772,72 +6785,72 @@
                               ]
                             },
                             "Triggers": {
-                              "$id": "793",
+                              "$id": "794",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "Parent": {
-                              "$ref": "759"
+                              "$ref": "760"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
                           },
                           "Parent": {
-                            "$ref": "759"
-                          },
-                          "ErrorBehavior": 0,
-                          "Attempts": 1
-                        },
-                        {
-                          "$id": "794",
-                          "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                          "Message": "waiting for divil dawn",
-                          "EmbedTitle": "",
-                          "EmbedText": "",
-                          "EmbedEdgeColor": "#FF206694",
-                          "Parent": {
-                            "$ref": "759"
+                            "$ref": "760"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
                         },
                         {
                           "$id": "795",
-                          "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                          "Hours": 5,
-                          "Minutes": 59,
-                          "MinutesOffset": 0,
-                          "Seconds": 25,
-                          "SelectedProvider": {
-                            "$ref": "679"
-                          },
+                          "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                          "Message": "waiting for divil dawn",
+                          "EmbedTitle": "",
+                          "EmbedText": "",
+                          "EmbedEdgeColor": "#FF206694",
                           "Parent": {
-                            "$ref": "759"
+                            "$ref": "760"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
                         },
                         {
                           "$id": "796",
-                          "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                          "Message": "waiting until sun is 1 degree above horizon",
-                          "EmbedTitle": "",
-                          "EmbedText": "",
-                          "EmbedEdgeColor": "#FF206694",
+                          "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
+                          "Hours": 5,
+                          "Minutes": 59,
+                          "MinutesOffset": 0,
+                          "Seconds": 25,
+                          "SelectedProvider": {
+                            "$ref": "680"
+                          },
                           "Parent": {
-                            "$ref": "759"
+                            "$ref": "760"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
                         },
                         {
                           "$id": "797",
+                          "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
+                          "Message": "waiting until sun is 1 degree above horizon",
+                          "EmbedTitle": "",
+                          "EmbedText": "",
+                          "EmbedEdgeColor": "#FF206694",
+                          "Parent": {
+                            "$ref": "760"
+                          },
+                          "ErrorBehavior": 0,
+                          "Attempts": 1
+                        },
+                        {
+                          "$id": "798",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForSunAltitude, NINA.Sequencer",
                           "Data": {
-                            "$id": "798",
+                            "$id": "799",
                             "$type": "NINA.Sequencer.SequenceItem.Utility.WaitLoopData, NINA.Sequencer",
                             "Coordinates": {
-                              "$id": "799",
+                              "$id": "800",
                               "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
                               "RAHours": 0,
                               "RAMinutes": 0,
@@ -6851,16 +6864,16 @@
                             "Comparator": 1
                           },
                           "Parent": {
-                            "$ref": "759"
+                            "$ref": "760"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
                         },
                         {
-                          "$id": "800",
+                          "$id": "801",
                           "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                           "Expr": {
-                            "$id": "801",
+                            "$id": "802",
                             "$type": "WhenPlugin.When.Expr, WhenPlugin",
                             "Expression": "cycles_completed + 1",
                             "Type": null
@@ -6868,40 +6881,40 @@
                           "Variable": "cycles_completed",
                           "CValueExpr": null,
                           "Parent": {
-                            "$ref": "759"
+                            "$ref": "760"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
                         },
                         {
-                          "$id": "802",
+                          "$id": "803",
                           "$type": "WhenPlugin.When.GSSend, WhenPlugin",
                           "Condition": {
-                            "$id": "803",
+                            "$id": "804",
                             "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                             "Strategy": {
                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                             },
                             "Name": null,
                             "Conditions": {
-                              "$id": "804",
+                              "$id": "805",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "IsExpanded": true,
                             "Items": {
-                              "$id": "805",
+                              "$id": "806",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                               "$values": [
                                 {
-                                  "$id": "806",
+                                  "$id": "807",
                                   "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
                                   "Message": "cycles completed: {cycles_completed}\r\n----------------------",
                                   "EmbedTitle": "",
                                   "EmbedText": "",
                                   "EmbedEdgeColor": "#FF206694",
                                   "Parent": {
-                                    "$ref": "759"
+                                    "$ref": "760"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
@@ -6909,7 +6922,7 @@
                               ]
                             },
                             "Triggers": {
-                              "$id": "807",
+                              "$id": "808",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
@@ -6918,25 +6931,25 @@
                             "Attempts": 1
                           },
                           "Instructions": {
-                            "$id": "808",
+                            "$id": "809",
                             "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                             "Strategy": {
                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                             },
                             "Name": null,
                             "Conditions": {
-                              "$id": "809",
+                              "$id": "810",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "IsExpanded": true,
                             "Items": {
-                              "$id": "810",
+                              "$id": "811",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "Triggers": {
-                              "$id": "811",
+                              "$id": "812",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
@@ -6945,44 +6958,44 @@
                             "Attempts": 1
                           },
                           "Parent": {
-                            "$ref": "759"
+                            "$ref": "760"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
                         },
                         {
-                          "$id": "812",
+                          "$id": "813",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
                           "Predicate": null,
                           "IfExpr": {
-                            "$id": "813",
+                            "$id": "814",
                             "$type": "WhenPlugin.When.Expr, WhenPlugin",
                             "Expression": "not run_continuously",
                             "Type": null
                           },
                           "Condition": null,
                           "Instructions": {
-                            "$id": "814",
+                            "$id": "815",
                             "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                             "Strategy": {
                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                             },
                             "Name": "If",
                             "Conditions": {
-                              "$id": "815",
+                              "$id": "816",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "IsExpanded": true,
                             "Items": {
-                              "$id": "816",
+                              "$id": "817",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                               "$values": [
                                 {
-                                  "$id": "817",
+                                  "$id": "818",
                                   "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                                   "Expr": {
-                                    "$id": "818",
+                                    "$id": "819",
                                     "$type": "WhenPlugin.When.Expr, WhenPlugin",
                                     "Expression": "0",
                                     "Type": null
@@ -6990,7 +7003,7 @@
                                   "Variable": "keep_going",
                                   "CValueExpr": null,
                                   "Parent": {
-                                    "$ref": "814"
+                                    "$ref": "815"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
@@ -6998,18 +7011,18 @@
                               ]
                             },
                             "Triggers": {
-                              "$id": "819",
+                              "$id": "820",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "Parent": {
-                              "$ref": "759"
+                              "$ref": "760"
                             },
                             "ErrorBehavior": 0,
                             "Attempts": 1
                           },
                           "Parent": {
-                            "$ref": "759"
+                            "$ref": "760"
                           },
                           "ErrorBehavior": 0,
                           "Attempts": 1
@@ -7017,7 +7030,7 @@
                       ]
                     },
                     "Triggers": {
-                      "$id": "820",
+                      "$id": "821",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
@@ -7030,7 +7043,7 @@
                 ]
               },
               "Triggers": {
-                "$id": "821",
+                "$id": "822",
                 "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                 "$values": []
               },
@@ -7041,30 +7054,30 @@
               "Attempts": 1
             },
             {
-              "$id": "822",
+              "$id": "823",
               "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
               "TemplateName": "connect sws",
               "Condition": null,
               "Instructions": {
-                "$id": "823",
+                "$id": "824",
                 "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
                 "Strategy": {
                   "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                 },
                 "Name": null,
                 "Conditions": {
-                  "$id": "824",
+                  "$id": "825",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": true,
                 "Items": {
-                  "$id": "825",
+                  "$id": "826",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Triggers": {
-                  "$id": "826",
+                  "$id": "827",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
@@ -7081,7 +7094,7 @@
           ]
         },
         "Triggers": {
-          "$id": "827",
+          "$id": "828",
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
           "$values": []
         },
@@ -7092,31 +7105,31 @@
         "Attempts": 1
       },
       {
-        "$id": "828",
+        "$id": "829",
         "$type": "NINA.Sequencer.Container.EndAreaContainer, NINA.Sequencer",
         "Strategy": {
           "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
         },
         "Name": "End",
         "Conditions": {
-          "$id": "829",
+          "$id": "830",
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
           "$values": []
         },
         "IsExpanded": true,
         "Items": {
-          "$id": "830",
+          "$id": "831",
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
           "$values": [
             {
-              "$id": "831",
+              "$id": "832",
               "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
               "Message": "sequence has completed and is no longer running",
               "EmbedTitle": "",
               "EmbedText": "",
               "EmbedEdgeColor": "#FF206694",
               "Parent": {
-                "$ref": "828"
+                "$ref": "829"
               },
               "ErrorBehavior": 0,
               "Attempts": 1
@@ -7124,7 +7137,7 @@
           ]
         },
         "Triggers": {
-          "$id": "832",
+          "$id": "833",
           "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
           "$values": []
         },
@@ -7137,35 +7150,35 @@
     ]
   },
   "Triggers": {
-    "$id": "833",
+    "$id": "834",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": [
       {
-        "$id": "834",
+        "$id": "835",
         "$type": "DaleGhent.NINA.GroundStation.FailuresToDiscordWebhookTrigger.FailuresToDiscordWebhookTrigger, DaleGhent.NINA.GroundStation",
         "Parent": {
           "$ref": "1"
         },
         "TriggerRunner": {
-          "$id": "835",
+          "$id": "836",
           "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
           "Strategy": {
             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
           },
           "Name": null,
           "Conditions": {
-            "$id": "836",
+            "$id": "837",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "IsExpanded": true,
           "Items": {
-            "$id": "837",
+            "$id": "838",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },
           "Triggers": {
-            "$id": "838",
+            "$id": "839",
             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
             "$values": []
           },

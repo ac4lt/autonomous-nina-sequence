@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.35.9\"",
+              "Definition": "\"0.35.10\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -1779,7 +1779,7 @@
                     "Strategy": {
                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                     },
-                    "Name": "day loop",
+                    "Name": "handle daytime",
                     "Conditions": {
                       "$id": "175",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
@@ -1809,7 +1809,7 @@
                           "Strategy": {
                             "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                           },
-                          "Name": "actual day loop",
+                          "Name": "day loop",
                           "Conditions": {
                             "$id": "179",
                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
@@ -1858,7 +1858,7 @@
                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                   "$values": []
                                 },
-                                "IsExpanded": false,
+                                "IsExpanded": true,
                                 "Items": {
                                   "$id": "186",
                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -2742,7 +2742,7 @@
                                             {
                                               "$id": "296",
                                               "$type": "WhenPlugin.When.EndInstructionSet, WhenPlugin",
-                                              "InstructionSetName": "actual day loop",
+                                              "InstructionSetName": "day loop",
                                               "Parent": {
                                                 "$ref": "282"
                                               },
@@ -2872,7 +2872,7 @@
                     "Strategy": {
                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                     },
-                    "Name": "evening flats",
+                    "Name": "handle civil and nautical dusk",
                     "Conditions": {
                       "$id": "310",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
@@ -3248,7 +3248,7 @@
                     "Strategy": {
                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                     },
-                    "Name": "night loop",
+                    "Name": "handle astronomical dusk and night",
                     "Conditions": {
                       "$id": "354",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
@@ -3278,7 +3278,7 @@
                         }
                       ]
                     },
-                    "IsExpanded": true,
+                    "IsExpanded": false,
                     "Items": {
                       "$id": "358",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",

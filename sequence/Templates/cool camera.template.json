@@ -66,7 +66,7 @@
                       {
                         "$id": "13",
                         "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                        "Message": "cooling camers to {desired_camera_temperature}℃",
+                        "Message": "cooling camera to {desired_camera_temperature}℃",
                         "EmbedTitle": "",
                         "EmbedText": "",
                         "EmbedEdgeColor": "#FF206694",

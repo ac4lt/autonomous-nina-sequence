@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.35.12\"",
+              "Definition": "\"0.35.13\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -284,7 +284,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "cycles_completed",
-                    "Definition": "0",
+                    "Definition": "7",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -308,7 +308,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "observatory",
-                    "Definition": "'DSOC Ceravolo'",
+                    "Definition": "'SRO PW14 C3'",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -370,7 +370,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin1_exposure_time",
-                    "Definition": "600",
+                    "Definition": "900",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -384,7 +384,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "nb_bin1_exposure_time",
-                    "Definition": "600",
+                    "Definition": "900",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -468,7 +468,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_nb_bin1_bias",
-                    "Definition": "0",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -482,7 +482,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_nb_bin1_darks",
-                    "Definition": "0",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -758,7 +758,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "nb_bin1_gain",
-                    "Definition": "0",
+                    "Definition": "2750",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -824,7 +824,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "desired_camera_temperature",
-                    "Definition": "-25",
+                    "Definition": "-5",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -1206,7 +1206,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "live_stacking_active",
-                    "Definition": "0",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -1817,10 +1817,10 @@
                               {
                                 "$id": "180",
                                 "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                "Hours": 21,
-                                "Minutes": 0,
+                                "Hours": 19,
+                                "Minutes": 57,
                                 "MinutesOffset": 0,
-                                "Seconds": 54,
+                                "Seconds": 44,
                                 "SelectedProvider": {
                                   "$id": "181",
                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunsetProvider, NINA.Sequencer"
@@ -2878,7 +2878,7 @@
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
-                    "IsExpanded": true,
+                    "IsExpanded": false,
                     "Items": {
                       "$id": "311",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -3190,10 +3190,10 @@
                         {
                           "$id": "347",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                          "Hours": 22,
+                          "Hours": 21,
                           "Minutes": 3,
                           "MinutesOffset": 0,
-                          "Seconds": 0,
+                          "Seconds": 45,
                           "SelectedProvider": {
                             "$id": "348",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
@@ -3239,10 +3239,10 @@
                         {
                           "$id": "353",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                          "Hours": 5,
-                          "Minutes": 37,
+                          "Hours": 4,
+                          "Minutes": 6,
                           "MinutesOffset": 1,
-                          "Seconds": 47,
+                          "Seconds": 15,
                           "SelectedProvider": {
                             "$id": "354",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.DawnProvider, NINA.Sequencer"
@@ -4142,7 +4142,7 @@
                                                 "EmbedText": "",
                                                 "EmbedEdgeColor": "#FF206694",
                                                 "Parent": {
-                                                  "$ref": "465"
+                                                  "$ref": "461"
                                                 },
                                                 "ErrorBehavior": 0,
                                                 "Attempts": 1
@@ -4242,13 +4242,13 @@
                                 "Coordinates": {
                                   "$id": "480",
                                   "$type": "NINA.Astrometry.InputCoordinates, NINA.Astrometry",
-                                  "RAHours": 12,
-                                  "RAMinutes": 21,
-                                  "RASeconds": 54.92752,
+                                  "RAHours": 18,
+                                  "RAMinutes": 29,
+                                  "RASeconds": 2.1,
                                   "NegativeDec": false,
-                                  "DecDegrees": 4,
-                                  "DecMinutes": 28,
-                                  "DecSeconds": 25.58834
+                                  "DecDegrees": 37,
+                                  "DecMinutes": 20,
+                                  "DecSeconds": 5.352
                                 },
                                 "DistanceArcMinutes": 5.0,
                                 "AfterExposures": 1,
@@ -5820,10 +5820,10 @@
                                       {
                                         "$id": "676",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 7,
-                                        "Minutes": 14,
+                                        "Hours": 5,
+                                        "Minutes": 50,
                                         "MinutesOffset": 0,
-                                        "Seconds": 4,
+                                        "Seconds": 0,
                                         "SelectedProvider": {
                                           "$id": "677",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
@@ -5989,10 +5989,10 @@
                                               {
                                                 "$id": "699",
                                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                                                "Hours": 6,
-                                                "Minutes": 11,
+                                                "Hours": 4,
+                                                "Minutes": 43,
                                                 "MinutesOffset": 0,
-                                                "Seconds": 44,
+                                                "Seconds": 46,
                                                 "SelectedProvider": {
                                                   "$id": "700",
                                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -6620,10 +6620,10 @@
                                       {
                                         "$id": "774",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                                        "Hours": 7,
-                                        "Minutes": 9,
+                                        "Hours": 5,
+                                        "Minutes": 45,
                                         "MinutesOffset": -5,
-                                        "Seconds": 4,
+                                        "Seconds": 0,
                                         "SelectedProvider": {
                                           "$ref": "677"
                                         },
@@ -6792,10 +6792,10 @@
                         {
                           "$id": "793",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
-                          "Hours": 7,
-                          "Minutes": 14,
+                          "Hours": 5,
+                          "Minutes": 50,
                           "MinutesOffset": 0,
-                          "Seconds": 4,
+                          "Seconds": 0,
                           "SelectedProvider": {
                             "$ref": "677"
                           },
@@ -6884,7 +6884,7 @@
                                 {
                                   "$id": "804",
                                   "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                  "Message": "cycles completed: 2\r\n----------------------",
+                                  "Message": "cycles completed: {cycles_completed}\r\n----------------------",
                                   "EmbedTitle": "",
                                   "EmbedText": "",
                                   "EmbedEdgeColor": "#FF206694",

@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.37.1\"",
+              "Definition": "\"0.37.2\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -1900,7 +1900,7 @@
                                 {
                                   "$id": "189",
                                   "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                  "Message": "waiting for noon\r\ndarks may be requested by setting need_darks to 1; flats will be checked every 30 minutes until sunset",
+                                  "Message": "waiting for noon\r\ndarks may be requested by setting need_darks to 1; flats will be checked every 30 minutes until noon",
                                   "EmbedTitle": "",
                                   "EmbedText": "",
                                   "EmbedEdgeColor": "#FF206694",

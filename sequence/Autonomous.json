@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.37.4\"",
+              "Definition": "\"0.37.5\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -284,7 +284,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "cycles_completed",
-                    "Definition": "0",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -1268,7 +1268,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "next_time_of_interest",
-                    "Definition": "1747745128",
+                    "Definition": "1747767600",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -7592,7 +7592,7 @@
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                       "$values": []
                     },
-                    "IsExpanded": true,
+                    "IsExpanded": false,
                     "Items": {
                       "$id": "890",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -8052,7 +8052,7 @@
                                   "EmbedText": "",
                                   "EmbedEdgeColor": "#FF206694",
                                   "Parent": {
-                                    "$ref": "945"
+                                    "$ref": "888"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
@@ -8184,7 +8184,7 @@
                                   "EmbedText": "",
                                   "EmbedEdgeColor": "#FF206694",
                                   "Parent": {
-                                    "$ref": "960"
+                                    "$ref": "888"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
@@ -8366,7 +8366,7 @@
                             "Expression": "''",
                             "Type": "Any"
                           },
-                          "Variable": "workdd_on_targets",
+                          "Variable": "worked_on_targets",
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "888"

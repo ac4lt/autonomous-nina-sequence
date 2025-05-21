@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.37.8\"",
+              "Definition": "\"0.37.9\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -1593,7 +1593,7 @@
                   }
                 ]
               },
-              "IsExpanded": true,
+              "IsExpanded": false,
               "Items": {
                 "$id": "149",
                 "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -3000,9 +3000,9 @@
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunsetProvider, NINA.Sequencer"
                           },
                           "Hours": 20,
-                          "Minutes": 3,
+                          "Minutes": 4,
                           "MinutesOffset": 0,
-                          "Seconds": 27,
+                          "Seconds": 14,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "180"
@@ -3102,9 +3102,9 @@
                                 "$id": "336",
                                 "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                 "Hours": 20,
-                                "Minutes": 3,
+                                "Minutes": 4,
                                 "MinutesOffset": 0,
-                                "Seconds": 27,
+                                "Seconds": 14,
                                 "SelectedProvider": {
                                   "$ref": "323"
                                 },
@@ -4512,9 +4512,9 @@
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
                           },
                           "Hours": 21,
-                          "Minutes": 11,
+                          "Minutes": 12,
                           "MinutesOffset": 0,
-                          "Seconds": 6,
+                          "Seconds": 7,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "470"
@@ -4603,9 +4603,9 @@
                           "$id": "520",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                           "Hours": 21,
-                          "Minutes": 11,
+                          "Minutes": 12,
                           "MinutesOffset": 0,
-                          "Seconds": 6,
+                          "Seconds": 7,
                           "SelectedProvider": {
                             "$ref": "509"
                           },
@@ -4651,9 +4651,9 @@
                           "$id": "525",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                           "Hours": 3,
-                          "Minutes": 58,
+                          "Minutes": 57,
                           "MinutesOffset": 1,
-                          "Seconds": 16,
+                          "Seconds": 15,
                           "SelectedProvider": {
                             "$id": "526",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.DawnProvider, NINA.Sequencer"
@@ -4664,7 +4664,7 @@
                         }
                       ]
                     },
-                    "IsExpanded": false,
+                    "IsExpanded": true,
                     "Items": {
                       "$id": "527",
                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -4689,7 +4689,7 @@
                               }
                             ]
                           },
-                          "IsExpanded": true,
+                          "IsExpanded": false,
                           "Items": {
                             "$id": "531",
                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -5173,7 +5173,7 @@
                                                 "Expr": {
                                                   "$id": "594",
                                                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                                                  "Expression": "worked_on_targets + ', ' + TS_TargetName",
+                                                  "Expression": "worked_on_targets + TS_TargetName + ' (' + TS_ProjectName + ')\\n'",
                                                   "Type": "Any"
                                                 },
                                                 "Variable": "worked_on_targets",
@@ -5228,7 +5228,7 @@
                                                 "Expr": {
                                                   "$id": "601",
                                                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                                                  "Expression": "TS_TargetName",
+                                                  "Expression": "TS_TargetName + ' (' + TS_ProjectName + ')\\n'",
                                                   "Type": "Any"
                                                 },
                                                 "Variable": "worked_on_targets",
@@ -5739,7 +5739,7 @@
                                                 "Expr": {
                                                   "$id": "665",
                                                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                                                  "Expression": "completed_targets + ', ' + TS_TargetName",
+                                                  "Expression": "completed_targets + TS_TargetName + ' (' + TS_ProjectName + ')\\n'",
                                                   "Type": "Any"
                                                 },
                                                 "Variable": "completed_targets",
@@ -5794,7 +5794,7 @@
                                                 "Expr": {
                                                   "$id": "672",
                                                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                                                  "Expression": "TS_TargetName",
+                                                  "Expression": "TS_TargetName + ' (' + TS_ProjectName + ')\\n'",
                                                   "Type": "Any"
                                                 },
                                                 "Variable": "completed_targets",
@@ -7456,7 +7456,7 @@
                                         "Hours": 5,
                                         "Minutes": 44,
                                         "MinutesOffset": 0,
-                                        "Seconds": 48,
+                                        "Seconds": 10,
                                         "SelectedProvider": {
                                           "$id": "877",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
@@ -7623,9 +7623,9 @@
                                                 "$id": "899",
                                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                                                 "Hours": 4,
-                                                "Minutes": 37,
+                                                "Minutes": 36,
                                                 "MinutesOffset": 0,
-                                                "Seconds": 0,
+                                                "Seconds": 9,
                                                 "SelectedProvider": {
                                                   "$id": "900",
                                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -8033,7 +8033,7 @@
                                         "Hours": 5,
                                         "Minutes": 39,
                                         "MinutesOffset": -5,
-                                        "Seconds": 48,
+                                        "Seconds": 10,
                                         "SelectedProvider": {
                                           "$ref": "877"
                                         },
@@ -8240,7 +8240,7 @@
                           "Hours": 5,
                           "Minutes": 44,
                           "MinutesOffset": 0,
-                          "Seconds": 48,
+                          "Seconds": 10,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "916"
@@ -8331,7 +8331,7 @@
                           "Hours": 5,
                           "Minutes": 44,
                           "MinutesOffset": 0,
-                          "Seconds": 48,
+                          "Seconds": 10,
                           "SelectedProvider": {
                             "$ref": "877"
                           },
@@ -8474,7 +8474,7 @@
                                         {
                                           "$id": "1001",
                                           "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                          "Message": "The following targets were worked on last night: {worked_on_targets}.\r\n",
+                                          "Message": "The following targets were worked on last night:\r\n{worked_on_targets}.\r\n",
                                           "EmbedTitle": "",
                                           "EmbedText": "",
                                           "EmbedEdgeColor": "#FF206694",
@@ -8598,7 +8598,7 @@
                                         {
                                           "$id": "1017",
                                           "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                          "Message": "The following targets completed last night: {completed_targets}.\r\nFlats will be taken when this flat session is done within the next 7 days.",
+                                          "Message": "The following targets completed last night:\r\n{completed_targets}.\r\nFlats will be taken when this flat session is done within the next 7 days.",
                                           "EmbedTitle": "",
                                           "EmbedText": "",
                                           "EmbedEdgeColor": "#FF206694",

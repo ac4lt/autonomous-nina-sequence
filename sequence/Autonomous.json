@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.37.11\"",
+              "Definition": "\"0.37.12\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -876,7 +876,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "power_is_on",
-                    "Definition": "0",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -4864,12 +4864,12 @@
                                               {
                                                 "$id": "555",
                                                 "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                                "Message": "target scheduler is waiting for a target until {TS_WaitStart}",
+                                                "Message": "target scheduler is waiting for a target",
                                                 "EmbedTitle": "",
                                                 "EmbedText": "",
                                                 "EmbedEdgeColor": "#FF206694",
                                                 "Parent": {
-                                                  "$ref": "552"
+                                                  "$ref": "548"
                                                 },
                                                 "ErrorBehavior": 0,
                                                 "Attempts": 1

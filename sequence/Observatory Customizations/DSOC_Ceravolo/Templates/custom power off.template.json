@@ -18,40 +18,7 @@
       {
         "$id": "4",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-        "Text": "custom power off for DSOC_CERAVOLO",
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "5",
-        "$type": "NINA.Sequencer.SequenceItem.Switch.SetSwitchValue, NINA.Sequencer",
-        "Value": 0.0,
-        "SwitchIndex": 3,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "6",
-        "$type": "NINA.Sequencer.SequenceItem.Switch.SetSwitchValue, NINA.Sequencer",
-        "Value": 0.0,
-        "SwitchIndex": 4,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "7",
-        "$type": "NINA.Sequencer.SequenceItem.Switch.SetSwitchValue, NINA.Sequencer",
-        "Value": 0.0,
-        "SwitchIndex": 6,
+        "Text": "custom power off for DSOC_CERAVOLO - WPS is powered off in shuutdown.bat to avoid ASCOM driver flakiness",
         "Parent": {
           "$ref": "1"
         },
@@ -61,7 +28,7 @@
     ]
   },
   "Triggers": {
-    "$id": "8",
+    "$id": "5",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

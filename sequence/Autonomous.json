@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.37.13\"",
+              "Definition": "\"0.37.14\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -1268,7 +1268,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "next_time_of_interest",
-                    "Definition": "1747940400",
+                    "Definition": "1747973587",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -1282,7 +1282,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "time_delta",
-                    "Definition": "20296",
+                    "Definition": "3521",
                     "Parent": {
                       "$ref": "26"
                     },
@@ -1995,7 +1995,7 @@
                               }
                             ]
                           },
-                          "IsExpanded": true,
+                          "IsExpanded": false,
                           "Items": {
                             "$id": "199",
                             "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -2012,7 +2012,7 @@
                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                   "$values": []
                                 },
-                                "IsExpanded": false,
+                                "IsExpanded": true,
                                 "Items": {
                                   "$id": "202",
                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -2239,7 +2239,7 @@
                                                   {
                                                     "$id": "232",
                                                     "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                                    "Message": "waiting for sunset\r\ndarks may be requested by setting need_darks to 1; flats will be checked every 30 minutes until sunset",
+                                                    "Message": "waiting for {next_time_of_interest}\r\ndarks may be requested by setting need_darks to 1; flats will be checked periodically",
                                                     "EmbedTitle": "",
                                                     "EmbedText": "",
                                                     "EmbedEdgeColor": "#FF206694",
@@ -3000,9 +3000,9 @@
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunsetProvider, NINA.Sequencer"
                           },
                           "Hours": 20,
-                          "Minutes": 4,
+                          "Minutes": 5,
                           "MinutesOffset": 0,
-                          "Seconds": 14,
+                          "Seconds": 1,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "180"
@@ -3102,9 +3102,9 @@
                                 "$id": "336",
                                 "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                 "Hours": 20,
-                                "Minutes": 4,
+                                "Minutes": 5,
                                 "MinutesOffset": 0,
-                                "Seconds": 14,
+                                "Seconds": 1,
                                 "SelectedProvider": {
                                   "$ref": "323"
                                 },
@@ -3141,7 +3141,7 @@
                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                   "$values": []
                                 },
-                                "IsExpanded": false,
+                                "IsExpanded": true,
                                 "Items": {
                                   "$id": "341",
                                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
@@ -3368,7 +3368,7 @@
                                                   {
                                                     "$id": "371",
                                                     "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                                    "Message": "waiting for sunset\r\ndarks may be requested by setting need_darks to 1; flats will be checked every 30 minutes until sunset",
+                                                    "Message": "waiting for {next_time_of_interest}\r\ndarks may be requested by setting need_darks to 1; flats will be checked periodically",
                                                     "EmbedTitle": "",
                                                     "EmbedText": "",
                                                     "EmbedEdgeColor": "#FF206694",
@@ -4512,7 +4512,7 @@
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
                           },
                           "Hours": 21,
-                          "Minutes": 12,
+                          "Minutes": 13,
                           "MinutesOffset": 0,
                           "Seconds": 7,
                           "CValueExpr": null,
@@ -4603,7 +4603,7 @@
                           "$id": "520",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                           "Hours": 21,
-                          "Minutes": 12,
+                          "Minutes": 13,
                           "MinutesOffset": 0,
                           "Seconds": 7,
                           "SelectedProvider": {
@@ -4651,9 +4651,9 @@
                           "$id": "525",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                           "Hours": 3,
-                          "Minutes": 57,
+                          "Minutes": 56,
                           "MinutesOffset": 1,
-                          "Seconds": 15,
+                          "Seconds": 16,
                           "SelectedProvider": {
                             "$id": "526",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.DawnProvider, NINA.Sequencer"
@@ -4922,7 +4922,7 @@
                                               {
                                                 "$id": "562",
                                                 "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                                "Message": "target scheduler is waiting for a target {TS_WaitStart}",
+                                                "Message": "target scheduler is waiting for a target until {TS_WaitStart}",
                                                 "EmbedTitle": "",
                                                 "EmbedText": "",
                                                 "EmbedEdgeColor": "#FF206694",
@@ -6397,7 +6397,7 @@
                                 {
                                   "$id": "747",
                                   "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                  "Message": "darks may be requested  by setting need_darks to 1; flats will be checked every 15 minutes",
+                                  "Message": "darks may be requested  by setting need_darks to 1; flats will be checked periodically",
                                   "EmbedTitle": "",
                                   "EmbedText": "",
                                   "EmbedEdgeColor": "#FF206694",
@@ -7538,9 +7538,9 @@
                                         "$id": "887",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                         "Hours": 5,
-                                        "Minutes": 44,
+                                        "Minutes": 43,
                                         "MinutesOffset": 0,
-                                        "Seconds": 10,
+                                        "Seconds": 34,
                                         "SelectedProvider": {
                                           "$id": "888",
                                           "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
@@ -7707,9 +7707,9 @@
                                                 "$id": "910",
                                                 "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                                                 "Hours": 4,
-                                                "Minutes": 36,
+                                                "Minutes": 35,
                                                 "MinutesOffset": 0,
-                                                "Seconds": 9,
+                                                "Seconds": 20,
                                                 "SelectedProvider": {
                                                   "$id": "911",
                                                   "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -8115,9 +8115,9 @@
                                         "$id": "958",
                                         "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                                         "Hours": 5,
-                                        "Minutes": 39,
+                                        "Minutes": 38,
                                         "MinutesOffset": -5,
-                                        "Seconds": 10,
+                                        "Seconds": 34,
                                         "SelectedProvider": {
                                           "$ref": "888"
                                         },
@@ -8322,9 +8322,9 @@
                             "$ref": "888"
                           },
                           "Hours": 5,
-                          "Minutes": 44,
+                          "Minutes": 43,
                           "MinutesOffset": 0,
-                          "Seconds": 10,
+                          "Seconds": 34,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "927"
@@ -8413,9 +8413,9 @@
                           "$id": "993",
                           "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTime, NINA.Sequencer",
                           "Hours": 5,
-                          "Minutes": 44,
+                          "Minutes": 43,
                           "MinutesOffset": 0,
-                          "Seconds": 10,
+                          "Seconds": 34,
                           "SelectedProvider": {
                             "$ref": "888"
                           },

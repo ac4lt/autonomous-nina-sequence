@@ -27,50 +27,6 @@
       },
       {
         "$id": "5",
-        "$type": "NINA.Sequencer.SequenceItem.Switch.SetSwitchValue, NINA.Sequencer",
-        "Value": 1.0,
-        "SwitchIndex": 4,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "6",
-        "$type": "NINA.Sequencer.SequenceItem.Switch.SetSwitchValue, NINA.Sequencer",
-        "Value": 1.0,
-        "SwitchIndex": 5,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "7",
-        "$type": "NINA.Sequencer.SequenceItem.Switch.SetSwitchValue, NINA.Sequencer",
-        "Value": 1.0,
-        "SwitchIndex": 6,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "8",
-        "$type": "NINA.Sequencer.SequenceItem.Switch.SetSwitchValue, NINA.Sequencer",
-        "Value": 1.0,
-        "SwitchIndex": 7,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "9",
         "$type": "NINA.Joko.Plugin.TenMicron.SequenceItems.PowerOn, NINA.Joko.Plugin.TenMicron",
         "Parent": {
           "$ref": "1"
@@ -81,7 +37,7 @@
     ]
   },
   "Triggers": {
-    "$id": "10",
+    "$id": "6",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

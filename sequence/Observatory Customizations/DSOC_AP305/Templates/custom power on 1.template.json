@@ -24,20 +24,11 @@
         },
         "ErrorBehavior": 0,
         "Attempts": 1
-      },
-      {
-        "$id": "5",
-        "$type": "NINA.Joko.Plugin.TenMicron.SequenceItems.PowerOn, NINA.Joko.Plugin.TenMicron",
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
       }
     ]
   },
   "Triggers": {
-    "$id": "6",
+    "$id": "5",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

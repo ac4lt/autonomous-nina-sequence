@@ -42,7 +42,7 @@
       {
         "$id": "6",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-        "Text": "---------- set run_continuously to 1 to run so long as there are active targets in Target Scheduler or 0 to run for just one night",
+        "Text": "---------- set max_cycles to the number of nights you want the sequence to run continuously ----------",
         "Parent": {
           "$ref": "1"
         },
@@ -55,10 +55,10 @@
         "Expr": {
           "$id": "8",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "1",
           "Type": "Any"
         },
-        "Variable": "run_continuously",
+        "Variable": "max_cycles",
         "CValueExpr": null,
         "Parent": {
           "$ref": "1"

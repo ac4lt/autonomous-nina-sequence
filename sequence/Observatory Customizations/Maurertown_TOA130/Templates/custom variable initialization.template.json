@@ -55,7 +55,7 @@
       {
         "$id": "8",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-        "Text": "set whether to run continuously or just for one night",
+        "Text": "---------- set max_cycles to the number of cycles you want the sequence to run without stopping",
         "Parent": {
           "$ref": "1"
         },
@@ -68,10 +68,10 @@
         "Expr": {
           "$id": "10",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "1",
           "Type": "Any"
         },
-        "Variable": "run_continuously",
+        "Variable": "max_cycles",
         "CValueExpr": null,
         "Parent": {
           "$ref": "1"

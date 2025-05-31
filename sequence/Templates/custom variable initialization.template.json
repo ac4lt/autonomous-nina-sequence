@@ -628,23 +628,6 @@
           "Expression": "1",
           "Type": "Any"
         },
-        "Variable": "get_flats_when_evening",
-        "CValueExpr": null,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "75",
-        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-        "Expr": {
-          "$id": "76",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "1",
-          "Type": "Any"
-        },
         "Variable": "get_flats_when_unsafe",
         "CValueExpr": null,
         "Parent": {
@@ -654,24 +637,7 @@
         "Attempts": 1
       },
       {
-        "$id": "77",
-        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-        "Expr": {
-          "$id": "78",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "1",
-          "Type": "Any"
-        },
-        "Variable": "get_flats_when_morning",
-        "CValueExpr": null,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "79",
+        "$id": "75",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "---------- set to 1 if your system has a flat panel cover that can rais or lower; 0 if it doe snot",
         "Parent": {
@@ -681,10 +647,10 @@
         "Attempts": 1
       },
       {
-        "$id": "80",
+        "$id": "76",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "81",
+          "$id": "77",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "0",
           "Type": "Any"
@@ -698,7 +664,7 @@
         "Attempts": 1
       },
       {
-        "$id": "82",
+        "$id": "78",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "---------- set to 1 if you are in a shared observatory where you do not control the roof; 0 if you do control the roof",
         "Parent": {
@@ -708,10 +674,10 @@
         "Attempts": 1
       },
       {
-        "$id": "83",
+        "$id": "79",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "84",
+          "$id": "80",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "1",
           "Type": "Any"
@@ -727,7 +693,7 @@
     ]
   },
   "Triggers": {
-    "$id": "85",
+    "$id": "81",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

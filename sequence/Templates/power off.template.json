@@ -98,7 +98,7 @@
         "IfExpr": {
           "$id": "15",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "not ((need_darks or get_darks) and get_darks_when_daytime) and power_is_on",
+          "Expression": "not (need_darks or get_darks or flats_in_progress) and power_is_on",
           "Type": "Any"
         },
         "Condition": null,

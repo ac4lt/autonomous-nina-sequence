@@ -641,23 +641,6 @@
           "Expression": "1",
           "Type": "Any"
         },
-        "Variable": "get_flats_when_evening",
-        "CValueExpr": null,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "77",
-        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-        "Expr": {
-          "$id": "78",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "1",
-          "Type": "Any"
-        },
         "Variable": "get_flats_when_unsafe",
         "CValueExpr": null,
         "Parent": {
@@ -667,24 +650,7 @@
         "Attempts": 1
       },
       {
-        "$id": "79",
-        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-        "Expr": {
-          "$id": "80",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "1",
-          "Type": "Any"
-        },
-        "Variable": "get_flats_when_morning",
-        "CValueExpr": null,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "81",
+        "$id": "77",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "---------- set to 1 if your flat panel has a raisable cover; 0 if it is permanently uncovered",
         "Parent": {
@@ -694,10 +660,10 @@
         "Attempts": 1
       },
       {
-        "$id": "82",
+        "$id": "78",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "83",
+          "$id": "79",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "0",
           "Type": "Any"
@@ -711,7 +677,7 @@
         "Attempts": 1
       },
       {
-        "$id": "84",
+        "$id": "80",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "---------- set to 1 if you are in a shred observatory; 0 if you are in a private observatory where you control the roof or shutter.",
         "Parent": {
@@ -721,10 +687,10 @@
         "Attempts": 1
       },
       {
-        "$id": "85",
+        "$id": "81",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "86",
+          "$id": "82",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "1",
           "Type": "Any"
@@ -740,7 +706,7 @@
     ]
   },
   "Triggers": {
-    "$id": "87",
+    "$id": "83",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

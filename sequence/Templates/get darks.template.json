@@ -460,9 +460,47 @@
                     },
                     {
                       "$id": "63",
+                      "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
+                      "TemplateName": "report on roof status",
+                      "Condition": null,
+                      "Instructions": {
+                        "$id": "64",
+                        "$type": "WhenPlugin.When.TemplateContainer, WhenPlugin",
+                        "Strategy": {
+                          "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
+                        },
+                        "Name": null,
+                        "Conditions": {
+                          "$id": "65",
+                          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
+                          "$values": []
+                        },
+                        "IsExpanded": true,
+                        "Items": {
+                          "$id": "66",
+                          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
+                          "$values": []
+                        },
+                        "Triggers": {
+                          "$id": "67",
+                          "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
+                          "$values": []
+                        },
+                        "Parent": null,
+                        "ErrorBehavior": 0,
+                        "Attempts": 1
+                      },
+                      "Parent": {
+                        "$ref": "50"
+                      },
+                      "ErrorBehavior": 0,
+                      "Attempts": 1
+                    },
+                    {
+                      "$id": "68",
                       "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
                       "Expr": {
-                        "$id": "64",
+                        "$id": "69",
                         "$type": "WhenPlugin.When.Expr, WhenPlugin",
                         "Expression": "true",
                         "Type": "Any"
@@ -476,7 +514,7 @@
                       "Attempts": 1
                     },
                     {
-                      "$id": "65",
+                      "$id": "70",
                       "$type": "WhenPlugin.When.EndInstructionSet, WhenPlugin",
                       "InstructionSetName": "get darks inner loop",
                       "Parent": {
@@ -488,7 +526,7 @@
                   ]
                 },
                 "Triggers": {
-                  "$id": "66",
+                  "$id": "71",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
@@ -503,25 +541,25 @@
                 "$ref": "8"
               },
               "TriggerRunner": {
-                "$id": "67",
+                "$id": "72",
                 "$type": "NINA.Sequencer.Container.SequentialContainer, NINA.Sequencer",
                 "Strategy": {
                   "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                 },
                 "Name": null,
                 "Conditions": {
-                  "$id": "68",
+                  "$id": "73",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "IsExpanded": true,
                 "Items": {
-                  "$id": "69",
+                  "$id": "74",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
                 "Triggers": {
-                  "$id": "70",
+                  "$id": "75",
                   "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                   "$values": []
                 },
@@ -541,7 +579,7 @@
     ]
   },
   "Triggers": {
-    "$id": "71",
+    "$id": "76",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

@@ -257,7 +257,7 @@
                     {
                       "$id": "37",
                       "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                      "Message": "waiting for {next_time_of_interest} ({next_time_of_interest_name})\r\ndarks may be requested by setting need_darks to 1",
+                      "Message": "waiting until {next_time_of_interest} ({next_time_of_interest_name})\r\ndarks may be requested by setting need_darks to 1",
                       "EmbedTitle": "",
                       "EmbedText": "",
                       "EmbedEdgeColor": "#FF206694",

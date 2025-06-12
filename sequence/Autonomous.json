@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.42.1\"",
+              "Definition": "\"0.42.2\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -1153,7 +1153,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "next_time_of_interest",
-                    "Definition": "1749063599",
+                    "Definition": "1749702531",
                     "Parent": {
                       "$ref": "16"
                     },
@@ -1167,7 +1167,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "next_time_of_interest_name",
-                    "Definition": "'just before noon'",
+                    "Definition": "'the start of astronomical dusk'",
                     "Parent": {
                       "$ref": "16"
                     },
@@ -1181,7 +1181,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "time_delta",
-                    "Definition": "20215",
+                    "Definition": "31165",
                     "Parent": {
                       "$ref": "16"
                     },

@@ -169,7 +169,7 @@
             {
               "$id": "24",
               "$type": "WhenPlugin.When.TemplateByReference, WhenPlugin",
-              "TemplateName": "power on",
+              "TemplateName": "startup",
               "Condition": null,
               "Instructions": {
                 "$id": "25",

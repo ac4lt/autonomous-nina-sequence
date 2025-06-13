@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.42.3\"",
+              "Definition": "\"0.43.0\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -145,7 +145,7 @@
                   {
                     "$id": "20",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "need_darks",
@@ -179,7 +179,7 @@
                   {
                     "$id": "23",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "1",
+                    "OriginalDefinition": "True",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "live_stack",
@@ -275,7 +275,7 @@
                   {
                     "$id": "31",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks",
@@ -331,7 +331,7 @@
                   {
                     "$id": "35",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_bb_bin1_bias",
@@ -345,7 +345,7 @@
                   {
                     "$id": "36",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_bb_bin2_bias",
@@ -359,7 +359,7 @@
                   {
                     "$id": "37",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_bb_bin1_darks",
@@ -373,7 +373,7 @@
                   {
                     "$id": "38",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_bb_bin2_darks",
@@ -387,7 +387,7 @@
                   {
                     "$id": "39",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_nb_bin1_bias",
@@ -401,7 +401,7 @@
                   {
                     "$id": "40",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_nb_bin1_darks",
@@ -415,7 +415,7 @@
                   {
                     "$id": "41",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks_when_unsafe",
@@ -429,7 +429,7 @@
                   {
                     "$id": "42",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks_when_daytime",
@@ -443,7 +443,7 @@
                   {
                     "$id": "43",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_flats_when_daytime",
@@ -457,7 +457,7 @@
                   {
                     "$id": "44",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_flats_when_unsafe",
@@ -471,7 +471,7 @@
                   {
                     "$id": "45",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_l1_flat_darks",
@@ -485,7 +485,7 @@
                   {
                     "$id": "46",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_r1_flat_darks",
@@ -499,7 +499,7 @@
                   {
                     "$id": "47",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_g1_flat_darks",
@@ -513,7 +513,7 @@
                   {
                     "$id": "48",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_b1_flat_darks",
@@ -527,7 +527,7 @@
                   {
                     "$id": "49",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_r2_flat_darks",
@@ -541,7 +541,7 @@
                   {
                     "$id": "50",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_g2_flat_darks",
@@ -555,7 +555,7 @@
                   {
                     "$id": "51",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_b2_flat_darks",
@@ -569,7 +569,7 @@
                   {
                     "$id": "52",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_h1_flat_darks",
@@ -583,7 +583,7 @@
                   {
                     "$id": "53",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_s1_flat_darks",
@@ -597,7 +597,7 @@
                   {
                     "$id": "54",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_o1_flat_darks",
@@ -729,7 +729,7 @@
                   {
                     "$id": "64",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "has_flat_panel_cover",
@@ -743,7 +743,7 @@
                   {
                     "$id": "65",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "1",
+                    "OriginalDefinition": "True",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "in_shared_observatory",
@@ -767,7 +767,7 @@
                   {
                     "$id": "67",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "power_is_on",
@@ -1087,7 +1087,7 @@
                   {
                     "$id": "91",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "0",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "live_stacking_active",
@@ -1201,7 +1201,7 @@
                   {
                     "$id": "100",
                     "$type": "WhenPlugin.When.SetVariable, WhenPlugin",
-                    "OriginalDefinition": "false",
+                    "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "operations_paused",
@@ -1503,7 +1503,7 @@
                                   "Expr": {
                                     "$id": "140",
                                     "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                                    "Expression": "0",
+                                    "Expression": "False",
                                     "Type": null
                                   },
                                   "Variable": "need_darks",
@@ -1520,7 +1520,7 @@
                                   "Expr": {
                                     "$id": "142",
                                     "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                                    "Expression": "1",
+                                    "Expression": "True",
                                     "Type": null
                                   },
                                   "Variable": "get_darks",
@@ -1844,10 +1844,10 @@
                             "$id": "180",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
                           },
-                          "Hours": 22,
-                          "Minutes": 2,
+                          "Hours": 21,
+                          "Minutes": 29,
                           "MinutesOffset": 0,
-                          "Seconds": 11,
+                          "Seconds": 21,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "175"
@@ -1945,10 +1945,10 @@
                         {
                           "$id": "192",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                          "Hours": 5,
-                          "Minutes": 51,
+                          "Hours": 4,
+                          "Minutes": 27,
                           "MinutesOffset": 1,
-                          "Seconds": 39,
+                          "Seconds": 2,
                           "SelectedProvider": {
                             "$id": "193",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -2715,7 +2715,7 @@
                                                 "Expr": {
                                                   "$id": "291",
                                                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                                                  "Expression": "1",
+                                                  "Expression": "True",
                                                   "Type": "Any"
                                                 },
                                                 "Variable": "live_stacking_active",
@@ -2924,7 +2924,7 @@
                                                 "Expr": {
                                                   "$id": "318",
                                                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                                                  "Expression": "0",
+                                                  "Expression": "False",
                                                   "Type": "Any"
                                                 },
                                                 "Variable": "live_stacking_active",
@@ -3974,7 +3974,7 @@
                                                         "Expr": {
                                                           "$id": "454",
                                                           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                                                          "Expression": "0",
+                                                          "Expression": "False",
                                                           "Type": null
                                                         },
                                                         "Variable": "need_darks",
@@ -3991,7 +3991,7 @@
                                                         "Expr": {
                                                           "$id": "456",
                                                           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                                                          "Expression": "1",
+                                                          "Expression": "True",
                                                           "Type": null
                                                         },
                                                         "Variable": "get_darks",
@@ -4845,10 +4845,10 @@
                             "$id": "557",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
                           },
-                          "Hours": 6,
-                          "Minutes": 53,
+                          "Hours": 5,
+                          "Minutes": 37,
                           "MinutesOffset": 0,
-                          "Seconds": 13,
+                          "Seconds": 23,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "552"

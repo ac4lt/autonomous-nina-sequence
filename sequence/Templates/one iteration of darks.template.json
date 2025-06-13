@@ -4814,7 +4814,7 @@
                 "Expr": {
                   "$id": "600",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                  "Expression": "0",
+                  "Expression": "False",
                   "Type": "Any"
                 },
                 "Variable": "get_darks",

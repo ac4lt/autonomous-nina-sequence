@@ -36,7 +36,7 @@
         "Expr": {
           "$id": "7",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "false",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "operations_paused",
@@ -136,7 +136,7 @@
                       "Expr": {
                         "$id": "22",
                         "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                        "Expression": "false",
+                        "Expression": "False",
                         "Type": "Any"
                       },
                       "Variable": "operations_paused",

@@ -30,7 +30,7 @@
         "Expr": {
           "$id": "6",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "false",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "operations_paused",
@@ -64,7 +64,7 @@
               "Expr": {
                 "$id": "11",
                 "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                "Expression": "true",
+                "Expression": "True",
                 "Type": "Any"
               },
               "Variable": "flats_in_progress",
@@ -147,7 +147,7 @@
                       "Expr": {
                         "$id": "23",
                         "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                        "Expression": "false",
+                        "Expression": "False",
                         "Type": "Any"
                       },
                       "Variable": "operations_paused",
@@ -462,7 +462,7 @@
                       "Expr": {
                         "$id": "62",
                         "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                        "Expression": "true",
+                        "Expression": "True",
                         "Type": "Any"
                       },
                       "Variable": "operations_paused",

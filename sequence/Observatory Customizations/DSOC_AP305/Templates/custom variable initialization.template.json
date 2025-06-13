@@ -132,7 +132,7 @@
         "Expr": {
           "$id": "17",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "1",
+          "Expression": "True",
           "Type": "Any"
         },
         "Variable": "get_bb_bin1_bias",
@@ -149,7 +149,7 @@
         "Expr": {
           "$id": "19",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_bb_bin2_bias",
@@ -166,7 +166,7 @@
         "Expr": {
           "$id": "21",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "1",
+          "Expression": "True",
           "Type": "Any"
         },
         "Variable": "get_bb_bin1_darks",
@@ -183,7 +183,7 @@
         "Expr": {
           "$id": "23",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_bb_bin2_darks",
@@ -200,7 +200,7 @@
         "Expr": {
           "$id": "25",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_nb_bin1_bias",
@@ -217,7 +217,7 @@
         "Expr": {
           "$id": "27",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_nb_bin1_darks",
@@ -234,7 +234,7 @@
         "Expr": {
           "$id": "29",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_l1_flat_darks",
@@ -251,7 +251,7 @@
         "Expr": {
           "$id": "31",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_r1_flat_darks",
@@ -268,7 +268,7 @@
         "Expr": {
           "$id": "33",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_g1_flat_darks",
@@ -285,7 +285,7 @@
         "Expr": {
           "$id": "35",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_b1_flat_darks",
@@ -302,7 +302,7 @@
         "Expr": {
           "$id": "37",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_r2_flat_darks",
@@ -319,7 +319,7 @@
         "Expr": {
           "$id": "39",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_g2_flat_darks",
@@ -336,7 +336,7 @@
         "Expr": {
           "$id": "41",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_b2_flat_darks",
@@ -353,7 +353,7 @@
         "Expr": {
           "$id": "43",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_h1_flat_darks",
@@ -370,7 +370,7 @@
         "Expr": {
           "$id": "45",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_s1_flat_darks",
@@ -387,7 +387,7 @@
         "Expr": {
           "$id": "47",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "get_o1_flat_darks",
@@ -597,7 +597,7 @@
         "Expr": {
           "$id": "71",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "1",
+          "Expression": "True",
           "Type": "Any"
         },
         "Variable": "get_darks_when_unsafe",
@@ -614,7 +614,7 @@
         "Expr": {
           "$id": "73",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "1",
+          "Expression": "True",
           "Type": "Any"
         },
         "Variable": "get_darks_when_daytime",
@@ -631,7 +631,7 @@
         "Expr": {
           "$id": "75",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "1",
+          "Expression": "True",
           "Type": "Any"
         },
         "Variable": "get_flats_when_daytime",
@@ -648,7 +648,7 @@
         "Expr": {
           "$id": "77",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "1",
+          "Expression": "True",
           "Type": "Any"
         },
         "Variable": "get_flats_when_unsafe",
@@ -675,7 +675,7 @@
         "Expr": {
           "$id": "80",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "False",
           "Type": "Any"
         },
         "Variable": "has_flat_panel_cover",
@@ -702,7 +702,7 @@
         "Expr": {
           "$id": "83",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "1",
+          "Expression": "True",
           "Type": "Any"
         },
         "Variable": "in_shared_observatory",

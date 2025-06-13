@@ -525,7 +525,7 @@
                 "Expr": {
                   "$id": "72",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                  "Expression": "0",
+                  "Expression": "False",
                   "Type": "Any"
                 },
                 "Variable": "need_darks",
@@ -542,7 +542,7 @@
                 "Expr": {
                   "$id": "74",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                  "Expression": "1",
+                  "Expression": "True",
                   "Type": "Any"
                 },
                 "Variable": "get_darks",

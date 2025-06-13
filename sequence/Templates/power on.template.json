@@ -241,7 +241,7 @@
                 "Expr": {
                   "$id": "34",
                   "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                  "Expression": "1",
+                  "Expression": "True",
                   "Type": "Any"
                 },
                 "Variable": "power_is_on",

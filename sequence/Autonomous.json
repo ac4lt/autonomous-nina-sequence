@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.43.0\"",
+              "Definition": "\"0.43.1\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -149,7 +149,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "need_darks",
-                    "Definition": "0",
+                    "Definition": "False",
                     "Parent": {
                       "$ref": "16"
                     },
@@ -183,7 +183,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "live_stack",
-                    "Definition": "1",
+                    "Definition": "True",
                     "Parent": {
                       "$ref": "16"
                     },
@@ -279,7 +279,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks",
-                    "Definition": "0",
+                    "Definition": "False",
                     "Parent": {
                       "$ref": "16"
                     },
@@ -771,7 +771,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "power_is_on",
-                    "Definition": "0",
+                    "Definition": "False",
                     "Parent": {
                       "$ref": "16"
                     },
@@ -1091,7 +1091,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "live_stacking_active",
-                    "Definition": "0",
+                    "Definition": "False",
                     "Parent": {
                       "$ref": "16"
                     },
@@ -1153,7 +1153,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "next_time_of_interest",
-                    "Definition": "1749702531",
+                    "Definition": "1749875390",
                     "Parent": {
                       "$ref": "16"
                     },
@@ -1181,7 +1181,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "time_delta",
-                    "Definition": "31165",
+                    "Definition": "34183",
                     "Parent": {
                       "$ref": "16"
                     },
@@ -1191,7 +1191,7 @@
                   {
                     "$id": "99",
                     "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-                    "Text": "---------- operations_paused is used to control flat or dark acquisition based on the current roof status",
+                    "Text": "---------- calibration_acquisition_paused is used to control flat or dark acquisition based on the current roof status",
                     "Parent": {
                       "$ref": "16"
                     },
@@ -1204,8 +1204,8 @@
                     "OriginalDefinition": "False",
                     "Variable": null,
                     "OValueExpr": null,
-                    "Identifier": "operations_paused",
-                    "Definition": "false",
+                    "Identifier": "calibration_acquisition_paused",
+                    "Definition": "False",
                     "Parent": {
                       "$ref": "16"
                     },
@@ -1847,7 +1847,7 @@
                           "Hours": 21,
                           "Minutes": 29,
                           "MinutesOffset": 0,
-                          "Seconds": 21,
+                          "Seconds": 50,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "175"
@@ -1946,9 +1946,9 @@
                           "$id": "192",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                           "Hours": 4,
-                          "Minutes": 27,
+                          "Minutes": 26,
                           "MinutesOffset": 1,
-                          "Seconds": 2,
+                          "Seconds": 59,
                           "SelectedProvider": {
                             "$id": "193",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -4848,7 +4848,7 @@
                           "Hours": 5,
                           "Minutes": 37,
                           "MinutesOffset": 0,
-                          "Seconds": 23,
+                          "Seconds": 25,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "552"

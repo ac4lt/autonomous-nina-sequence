@@ -39,7 +39,7 @@
           "Expression": "False",
           "Type": "Any"
         },
-        "Variable": "operations_paused",
+        "Variable": "calibration_acquisition_paused",
         "CValueExpr": null,
         "Parent": {
           "$ref": "1"
@@ -71,7 +71,7 @@
               "IfExpr": {
                 "$id": "12",
                 "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                "Expression": "operations_paused",
+                "Expression": "calibration_acquisition_paused",
                 "Type": "Any"
               },
               "Condition": null,
@@ -139,7 +139,7 @@
                         "Expression": "False",
                         "Type": "Any"
                       },
-                      "Variable": "operations_paused",
+                      "Variable": "calibration_acquisition_paused",
                       "CValueExpr": null,
                       "Parent": {
                         "$ref": "13"
@@ -361,7 +361,7 @@
               "IfExpr": {
                 "$id": "49",
                 "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                "Expression": "RoofStatus != RoofNotOpen and not operations_paused",
+                "Expression": "RoofStatus != RoofNotOpen and not calibration_acquisition_paused",
                 "Type": "Any"
               },
               "Instructions": {
@@ -505,7 +505,7 @@
                         "Expression": "true",
                         "Type": "Any"
                       },
-                      "Variable": "operations_paused",
+                      "Variable": "calibration_acquisition_paused",
                       "CValueExpr": null,
                       "Parent": {
                         "$ref": "50"

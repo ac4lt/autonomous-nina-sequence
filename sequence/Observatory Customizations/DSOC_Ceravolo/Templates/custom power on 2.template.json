@@ -38,7 +38,7 @@
       {
         "$id": "6",
         "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
-        "OnOff": false,
+        "OnOff": true,
         "Parent": {
           "$ref": "1"
         },

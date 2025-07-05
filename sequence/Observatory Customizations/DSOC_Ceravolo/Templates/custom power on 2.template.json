@@ -77,8 +77,18 @@
       },
       {
         "$id": "10",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "changed to 5625 on 2025-07-05 because now that's warmer, the focuser needs to start further in. if this doesn't work then we may need to pick a startup position based on ambient temperature or time of year",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "11",
         "$type": "NINA.Sequencer.SequenceItem.Focuser.MoveFocuserAbsolute, NINA.Sequencer",
-        "Position": 5700,
+        "Position": 5625,
         "Parent": {
           "$ref": "1"
         },
@@ -88,7 +98,7 @@
     ]
   },
   "Triggers": {
-    "$id": "11",
+    "$id": "12",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

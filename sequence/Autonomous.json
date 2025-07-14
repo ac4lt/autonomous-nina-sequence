@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.44.0\"",
+              "Definition": "\"0.45.0\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -1844,10 +1844,10 @@
                             "$id": "180",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
                           },
-                          "Hours": 21,
-                          "Minutes": 25,
+                          "Hours": 22,
+                          "Minutes": 29,
                           "MinutesOffset": 0,
-                          "Seconds": 32,
+                          "Seconds": 47,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "175"
@@ -1945,10 +1945,10 @@
                         {
                           "$id": "192",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
-                          "Hours": 4,
-                          "Minutes": 42,
+                          "Hours": 6,
+                          "Minutes": 5,
                           "MinutesOffset": 1,
-                          "Seconds": 50,
+                          "Seconds": 20,
                           "SelectedProvider": {
                             "$id": "193",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -4845,10 +4845,10 @@
                             "$id": "557",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
                           },
-                          "Hours": 5,
-                          "Minutes": 49,
+                          "Hours": 7,
+                          "Minutes": 8,
                           "MinutesOffset": 0,
-                          "Seconds": 25,
+                          "Seconds": 52,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "552"

@@ -702,11 +702,21 @@
         },
         "ErrorBehavior": 0,
         "Attempts": 1
+      },
+      {
+        "$id": "83",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "---------- You can set the variables desired_bias_count and desired_dark_count here if you want to override the default values set in the main sequence.",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
       }
     ]
   },
   "Triggers": {
-    "$id": "83",
+    "$id": "84",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

@@ -404,7 +404,7 @@
         "Expr": {
           "$id": "49",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "900",
+          "Expression": "300",
           "Type": "Any"
         },
         "Variable": "bb_bin1_exposure_time",

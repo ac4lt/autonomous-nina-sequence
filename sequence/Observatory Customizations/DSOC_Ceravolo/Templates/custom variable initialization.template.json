@@ -68,7 +68,7 @@
         "Expr": {
           "$id": "10",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "10",
+          "Expression": "15",
           "Type": "Any"
         },
         "Variable": "max_cycles",

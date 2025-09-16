@@ -457,7 +457,7 @@
                           {
                             "$id": "64",
                             "$type": "WhenPlugin.When.EndInstructionSet, WhenPlugin",
-                            "InstructionSetName": "do the wait",
+                            "InstructionSetName": "handle darks and flats",
                             "Parent": {
                               "$ref": "56"
                             },

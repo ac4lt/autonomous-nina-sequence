@@ -53,7 +53,7 @@
               {
                 "$id": "10",
                 "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                "Message": "waiting for the roof to close or the current time period to expire\r\n",
+                "Message": "waiting for the roof to close or the current time period to expire at {next_time_of_interest} ({next_time_of_interest_name})\r\n",
                 "EmbedTitle": "",
                 "EmbedText": "",
                 "EmbedEdgeColor": "#FF206694",

@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.48.0-alpha.8\"",
+              "Definition": "\"0.48.0-alpha.9\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -245,7 +245,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "need_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -279,7 +279,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "live_stack",
-                    "Definition": "",
+                    "Definition": "True",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -303,7 +303,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "cycles_completed",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -327,7 +327,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "observatory",
-                    "Definition": "",
+                    "Definition": "'SRO PW14 C3'",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -351,7 +351,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "max_cycles",
-                    "Definition": "",
+                    "Definition": "15",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -375,7 +375,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -389,7 +389,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks_when_unsafe",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -403,7 +403,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks_when_daytime",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -417,7 +417,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_flats_when_daytime",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -431,7 +431,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_flats_when_unsafe",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -445,7 +445,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_l1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -459,7 +459,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_r1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -473,7 +473,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_g1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -487,7 +487,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_b1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -501,7 +501,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_r2_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -515,7 +515,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_g2_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -529,7 +529,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_b2_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -543,7 +543,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_h1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -557,7 +557,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_s1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -571,7 +571,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_o1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -595,7 +595,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin1_gain",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -609,7 +609,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin2_gain",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -623,7 +623,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "nb_bin1_gain",
-                    "Definition": "",
+                    "Definition": "2750",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -637,7 +637,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin1_offset",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -651,7 +651,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin2_offset",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -665,7 +665,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "nb_bin1_offset",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -689,7 +689,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "desired_camera_temperature",
-                    "Definition": "",
+                    "Definition": "-5",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -703,7 +703,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "has_flat_panel_cover",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -717,7 +717,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "in_shared_observatory",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -741,7 +741,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "power_is_on",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -765,7 +765,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_bb_bias1_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -779,7 +779,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_bb_bias2_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -793,7 +793,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_nb_bias1_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -817,7 +817,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_l1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -831,7 +831,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_r1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -845,7 +845,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_g1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -859,7 +859,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_b1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -873,7 +873,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_r2_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -887,7 +887,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_g2_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -901,7 +901,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_b2_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -915,7 +915,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_h1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -929,7 +929,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_s1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -943,7 +943,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_o1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -957,7 +957,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "flats_in_progress",
-                    "Definition": "",
+                    "Definition": "false",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -981,7 +981,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "desired_dark_count",
-                    "Definition": "",
+                    "Definition": "25",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -995,7 +995,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "desired_bias_count",
-                    "Definition": "",
+                    "Definition": "50",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1019,7 +1019,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "live_stacking_active",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1043,7 +1043,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "worked_on_target",
-                    "Definition": "",
+                    "Definition": "'-    Abell 2634 (Normal Priority Targets)'",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1057,7 +1057,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "dont_care",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1071,7 +1071,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "completed_targets",
-                    "Definition": "",
+                    "Definition": "''",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1095,7 +1095,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "next_time_of_interest",
-                    "Definition": "",
+                    "Definition": "1758049199",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1109,7 +1109,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "next_time_of_interest_name",
-                    "Definition": "",
+                    "Definition": "'just before noon'",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1123,7 +1123,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "time_delta",
-                    "Definition": "",
+                    "Definition": "412",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1147,7 +1147,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "calibration_acquisition_paused",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1171,7 +1171,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "current_roof_status",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -4559,11 +4559,27 @@
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
+                                },
+                                {
+                                  "$id": "531",
+                                  "$type": "WhenPlugin.When.InitializeArray, WhenPlugin",
+                                  "NameExpr": {
+                                    "$id": "532",
+                                    "$type": "WhenPlugin.When.Expr, WhenPlugin",
+                                    "Expression": "'worked_on_targets'",
+                                    "Type": "Any"
+                                  },
+                                  "Identifier": null,
+                                  "Parent": {
+                                    "$ref": "512"
+                                  },
+                                  "ErrorBehavior": 0,
+                                  "Attempts": 1
                                 }
                               ]
                             },
                             "Triggers": {
-                              "$id": "531",
+                              "$id": "533",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
@@ -4580,62 +4596,62 @@
                           "Attempts": 1
                         },
                         {
-                          "$id": "532",
+                          "$id": "534",
                           "$type": "WhenPlugin.When.IfConstant, WhenPlugin",
                           "Predicate": null,
                           "IfExpr": {
-                            "$id": "533",
+                            "$id": "535",
                             "$type": "WhenPlugin.When.Expr, WhenPlugin",
                             "Expression": "completed_targets != ''",
                             "Type": "Any"
                           },
                           "Condition": null,
                           "Instructions": {
-                            "$id": "534",
+                            "$id": "536",
                             "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                             "Strategy": {
                               "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                             },
                             "Name": "If",
                             "Conditions": {
-                              "$id": "535",
+                              "$id": "537",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
                             "IsExpanded": true,
                             "Items": {
-                              "$id": "536",
+                              "$id": "538",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                               "$values": [
                                 {
-                                  "$id": "537",
+                                  "$id": "539",
                                   "$type": "WhenPlugin.When.GSSend, WhenPlugin",
                                   "Condition": {
-                                    "$id": "538",
+                                    "$id": "540",
                                     "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                                     "Strategy": {
                                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                     },
                                     "Name": null,
                                     "Conditions": {
-                                      "$id": "539",
+                                      "$id": "541",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
                                     "IsExpanded": true,
                                     "Items": {
-                                      "$id": "540",
+                                      "$id": "542",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                       "$values": [
                                         {
-                                          "$id": "541",
+                                          "$id": "543",
                                           "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
                                           "Message": "the following targets completed last night:\r\n{completed_targets}\r\nflats for the final session will be taken when Target Scheduler finishes the flat sessions for these targets",
                                           "EmbedTitle": "",
                                           "EmbedText": "",
                                           "EmbedEdgeColor": "#FF206694",
                                           "Parent": {
-                                            "$ref": "534"
+                                            "$ref": "536"
                                           },
                                           "ErrorBehavior": 0,
                                           "Attempts": 1
@@ -4643,7 +4659,7 @@
                                       ]
                                     },
                                     "Triggers": {
-                                      "$id": "542",
+                                      "$id": "544",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
@@ -4652,25 +4668,25 @@
                                     "Attempts": 1
                                   },
                                   "Instructions": {
-                                    "$id": "543",
+                                    "$id": "545",
                                     "$type": "WhenPlugin.When.IfContainer, WhenPlugin",
                                     "Strategy": {
                                       "$type": "NINA.Sequencer.Container.ExecutionStrategy.SequentialStrategy, NINA.Sequencer"
                                     },
                                     "Name": null,
                                     "Conditions": {
-                                      "$id": "544",
+                                      "$id": "546",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Conditions.ISequenceCondition, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
                                     "IsExpanded": true,
                                     "Items": {
-                                      "$id": "545",
+                                      "$id": "547",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.SequenceItem.ISequenceItem, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
                                     "Triggers": {
-                                      "$id": "546",
+                                      "$id": "548",
                                       "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                                       "$values": []
                                     },
@@ -4679,7 +4695,7 @@
                                     "Attempts": 1
                                   },
                                   "Parent": {
-                                    "$ref": "534"
+                                    "$ref": "536"
                                   },
                                   "ErrorBehavior": 0,
                                   "Attempts": 1
@@ -4687,7 +4703,7 @@
                               ]
                             },
                             "Triggers": {
-                              "$id": "547",
+                              "$id": "549",
                               "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
                               "$values": []
                             },
@@ -4697,23 +4713,6 @@
                             "ErrorBehavior": 0,
                             "Attempts": 1
                           },
-                          "Parent": {
-                            "$ref": "487"
-                          },
-                          "ErrorBehavior": 0,
-                          "Attempts": 1
-                        },
-                        {
-                          "$id": "548",
-                          "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-                          "Expr": {
-                            "$id": "549",
-                            "$type": "WhenPlugin.When.Expr, WhenPlugin",
-                            "Expression": "''",
-                            "Type": "Any"
-                          },
-                          "Variable": "worked_on_targets",
-                          "CValueExpr": null,
                           "Parent": {
                             "$ref": "487"
                           },

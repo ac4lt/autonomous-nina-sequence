@@ -5,6 +5,14 @@ The main audience for this sequence is those who are running a permanent setup i
 
 Although intended for permanent setups in an observatory, the sequence currently runs in two commercial observatories where the sequence does not control the roof so the sequence doesn't currently do that. However, it should not be difficult to modify it to support ASCOM DOME operation.
 
+## Structural Change at revision 0.48.0
+
+This release changes the way dark and bias frames are configured. The scalar variables that defined whether to get bin1 and bin2 broadband darks and biases and bin1 narrowband darks and biases have been removed. In their place are four arrays: dark_length_array, dark_gain_array, dark_offset_array and dark_binning_array. For each dark or bias type desired add an index to each array defining the parameters for that calibration frame. The screenshow below shows a sample configuration for doing 300s bin1 gain 0 darks, 600s, bin1 gain 100 darks and biases for both gain 0 and gain 100 at bin1:
+
+<img width="992" height="766" alt="Screenshot 2025-09-17 at 10 36 05 AM" src="https://github.com/user-attachments/assets/9e798d3e-9aa9-4f7e-b61b-00cdfb63d35c" />
+
+This has the advantage of allowing you to define multipel dark lengths at a given gain and binning all from within the sequence instead of the three pre-defined options in the old method. To define bias frames use a length of 0. The sequence will detect this and tell nina it is a bias frame so it will get the appropriate metadata.
+
 ## Structural Change at revision 0.33.0.0
 
 Beginning with this release, the sequence has been restructured. Instead of there being IF instructions sprinkled throughout to handle differences for different observatories there are a series of templates with names starting with "custom". These are intended to be supplied by each user for their own configuration. With the exception of the "custom warm camera" template the supplied custom templates are empty and do nothing. You can customize them for your own needs. You can refer to the supplied custom observatory implementations that are in the release zip file for examples.

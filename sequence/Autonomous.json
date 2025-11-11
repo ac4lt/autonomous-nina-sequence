@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.49.0\"",
+              "Definition": "\"0.49.1\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -245,7 +245,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "need_darks",
-                    "Definition": "",
+                    "Definition": "False",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -279,7 +279,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "live_stack",
-                    "Definition": "",
+                    "Definition": "True",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -303,7 +303,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "cycles_completed",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -327,7 +327,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "observatory",
-                    "Definition": "",
+                    "Definition": "'SRO PW14 C3'",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -351,7 +351,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "timezone",
-                    "Definition": "",
+                    "Definition": "'PT'",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -375,7 +375,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "max_cycles",
-                    "Definition": "",
+                    "Definition": "15",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -399,7 +399,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks",
-                    "Definition": "",
+                    "Definition": "False",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -413,7 +413,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks_when_unsafe",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -427,7 +427,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_darks_when_daytime",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -441,7 +441,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_flats_when_daytime",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -455,7 +455,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_flats_when_unsafe",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -469,7 +469,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_l1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -483,7 +483,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_r1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -497,7 +497,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_g1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -511,7 +511,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_b1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -525,7 +525,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_r2_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -539,7 +539,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_g2_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -553,7 +553,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_b2_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -567,7 +567,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_h1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -581,7 +581,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_s1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -595,7 +595,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "get_o1_flat_darks",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -619,7 +619,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin1_gain",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -633,7 +633,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin2_gain",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -647,7 +647,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "nb_bin1_gain",
-                    "Definition": "",
+                    "Definition": "2750",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -661,7 +661,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin1_offset",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -675,7 +675,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "bb_bin2_offset",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -689,7 +689,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "nb_bin1_offset",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -713,7 +713,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "desired_camera_temperature",
-                    "Definition": "",
+                    "Definition": "-5",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -727,7 +727,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "has_flat_panel_cover",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -741,7 +741,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "in_shared_observatory",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -765,7 +765,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "power_is_on",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -789,7 +789,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_bb_bias1_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -803,7 +803,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_bb_bias2_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -817,7 +817,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_nb_bias1_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -841,7 +841,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_l1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -855,7 +855,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_r1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -869,7 +869,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_g1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -883,7 +883,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_b1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -897,7 +897,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_r2_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -911,7 +911,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_g2_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -925,7 +925,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_b2_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -939,7 +939,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_h1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -953,7 +953,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_s1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -967,7 +967,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "actual_o1_flat_dark_count",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -981,7 +981,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "flats_in_progress",
-                    "Definition": "",
+                    "Definition": "false",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1005,7 +1005,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "desired_dark_count",
-                    "Definition": "",
+                    "Definition": "25",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1019,7 +1019,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "desired_bias_count",
-                    "Definition": "",
+                    "Definition": "50",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1043,7 +1043,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "live_stacking_active",
-                    "Definition": "",
+                    "Definition": "False",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1067,7 +1067,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "worked_on_target",
-                    "Definition": "",
+                    "Definition": "''",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1081,7 +1081,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "dont_care",
-                    "Definition": "",
+                    "Definition": "false",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1095,7 +1095,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "completed_targets",
-                    "Definition": "",
+                    "Definition": "''",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1119,7 +1119,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "next_time_of_interest",
-                    "Definition": "",
+                    "Definition": "1762825792",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1133,7 +1133,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "next_time_of_interest_name",
-                    "Definition": "",
+                    "Definition": "'the start of astronomical dusk'",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1147,7 +1147,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "time_delta",
-                    "Definition": "",
+                    "Definition": "8307",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1171,7 +1171,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "calibration_acquisition_paused",
-                    "Definition": "",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1195,7 +1195,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "current_roof_status",
-                    "Definition": "",
+                    "Definition": "1",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1811,9 +1811,9 @@
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
                           },
                           "Hours": 17,
-                          "Minutes": 50,
+                          "Minutes": 49,
                           "MinutesOffset": 0,
-                          "Seconds": 36,
+                          "Seconds": 52,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "178"
@@ -1912,9 +1912,9 @@
                           "$id": "195",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                           "Hours": 5,
-                          "Minutes": 34,
+                          "Minutes": 35,
                           "MinutesOffset": 1,
-                          "Seconds": 4,
+                          "Seconds": 0,
                           "SelectedProvider": {
                             "$id": "196",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -2203,7 +2203,7 @@
                                               {
                                                 "$id": "235",
                                                 "$type": "DaleGhent.NINA.GroundStation.DiscordWebhook.SendToDiscordWebhook, DaleGhent.NINA.GroundStation",
-                                                "Message": "target scheduler is waiting until {TS_WaitStart} for the next target",
+                                                "Message": "target scheduler is waiting until {TS_WaitStart} {timezone} for the next target",
                                                 "EmbedTitle": "",
                                                 "EmbedText": "",
                                                 "EmbedEdgeColor": "#FF206694",
@@ -4899,9 +4899,9 @@
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
                           },
                           "Hours": 6,
-                          "Minutes": 31,
+                          "Minutes": 32,
                           "MinutesOffset": 0,
-                          "Seconds": 29,
+                          "Seconds": 31,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "567"

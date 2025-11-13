@@ -21,13 +21,13 @@ This has some advantages. It no longer requires users to install plugins they do
 
 ## Software Prerequisites
 
-- NINA 3.2 RC 4
+- NINA 3.2
  
  ## NINA Plugin Minimum Version Requirements
-- Target Scheduler (5.8.1.0)
+- Target Scheduler (5.8.2.0)
 - Sequencer Powerups (3.28.4.4)
-- Livestack plugin (1.0.1.3)
-- Ground Station (3.0.0.115) [^1]
+- Livestack plugin (1.0.1.5)
+- Ground Station (3.0.0.117) [^1]
 
 [^1]: You could replace the instructions that send notifications to Discord with a different notification mechanism or remove if not needed.
 The first three plugins are initegral to the structure of the sequence. 

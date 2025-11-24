@@ -108,7 +108,7 @@
               "Constant": null,
               "CValueExpr": null,
               "Identifier": "VERSION",
-              "Definition": "\"0.49.1\"",
+              "Definition": "\"1.0.0\"",
               "Parent": {
                 "$ref": "12"
               },
@@ -765,7 +765,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "power_is_on",
-                    "Definition": "1",
+                    "Definition": "False",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1119,7 +1119,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "next_time_of_interest",
-                    "Definition": "1762825792",
+                    "Definition": "1764014399",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1133,7 +1133,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "next_time_of_interest_name",
-                    "Definition": "'the start of astronomical dusk'",
+                    "Definition": "'just before noon'",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1147,7 +1147,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "time_delta",
-                    "Definition": "8307",
+                    "Definition": "6324",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1195,7 +1195,7 @@
                     "Variable": null,
                     "OValueExpr": null,
                     "Identifier": "current_roof_status",
-                    "Definition": "1",
+                    "Definition": "0",
                     "Parent": {
                       "$ref": "28"
                     },
@@ -1811,9 +1811,9 @@
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDuskProvider, NINA.Sequencer"
                           },
                           "Hours": 17,
-                          "Minutes": 49,
+                          "Minutes": 43,
                           "MinutesOffset": 0,
-                          "Seconds": 52,
+                          "Seconds": 10,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "178"
@@ -1912,9 +1912,9 @@
                           "$id": "195",
                           "$type": "NINA.Sequencer.Conditions.TimeCondition, NINA.Sequencer",
                           "Hours": 5,
-                          "Minutes": 35,
+                          "Minutes": 46,
                           "MinutesOffset": 1,
-                          "Seconds": 0,
+                          "Seconds": 59,
                           "SelectedProvider": {
                             "$id": "196",
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.NauticalDawnProvider, NINA.Sequencer"
@@ -4899,9 +4899,9 @@
                             "$type": "NINA.Sequencer.Utility.DateTimeProvider.SunriseProvider, NINA.Sequencer"
                           },
                           "Hours": 6,
-                          "Minutes": 32,
+                          "Minutes": 45,
                           "MinutesOffset": 0,
-                          "Seconds": 31,
+                          "Seconds": 59,
                           "CValueExpr": null,
                           "Parent": {
                             "$ref": "567"

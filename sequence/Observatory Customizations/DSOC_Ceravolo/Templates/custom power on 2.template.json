@@ -28,46 +28,6 @@
       {
         "$id": "5",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-        "Text": "This flat panel turns on its light when power is applied so we need to turn it off. We do it  twice because when power is applied the light turns on but reports it is off. It actually seems to turn off the first try but we're being cautious and trying to make sure it is really off.",
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "6",
-        "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
-        "OnOff": true,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "7",
-        "$type": "NINA.Sequencer.SequenceItem.Utility.WaitForTimeSpan, NINA.Sequencer",
-        "Time": 10.0,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "8",
-        "$type": "NINA.Sequencer.SequenceItem.FlatDevice.ToggleLight, NINA.Sequencer",
-        "OnOff": false,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "9",
-        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "added by linda, 2025-02-28 - this is to mitigate the focuser starting up at the end of its range rather than its previous position - not sure why this is suddently happening",
         "Parent": {
           "$ref": "1"
@@ -76,7 +36,7 @@
         "Attempts": 1
       },
       {
-        "$id": "10",
+        "$id": "6",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "changed to 5625 on 2025-07-05 because now that's warmer, the focuser needs to start further in. if this doesn't work then we may need to pick a startup position based on ambient temperature or time of year",
         "Parent": {
@@ -86,7 +46,7 @@
         "Attempts": 1
       },
       {
-        "$id": "11",
+        "$id": "7",
         "$type": "NINA.Sequencer.SequenceItem.Focuser.MoveFocuserAbsolute, NINA.Sequencer",
         "Position": 5625,
         "Parent": {
@@ -98,7 +58,7 @@
     ]
   },
   "Triggers": {
-    "$id": "12",
+    "$id": "8",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

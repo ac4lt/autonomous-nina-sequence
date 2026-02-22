@@ -62,7 +62,7 @@
       {
         "$id": "9",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-        "Text": "---------- set max_cycles to the number of nights you want the sequence to run continuously ----------",
+        "Text": "---------- set the observer's timezone name and offsset from the observatory (in hours). Use an offset of 0 if in the same timezone",
         "Parent": {
           "$ref": "1"
         },
@@ -74,6 +74,50 @@
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
           "$id": "11",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "''",
+          "Type": "Any"
+        },
+        "Variable": "observer_timezone",
+        "CValueExpr": null,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "12",
+        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+        "Expr": {
+          "$id": "13",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "0",
+          "Type": "Any"
+        },
+        "Variable": "observer_timezone_offset",
+        "CValueExpr": null,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "14",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "---------- set max_cycles to the number of nights you want the sequence to run continuously ----------",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "15",
+        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+        "Expr": {
+          "$id": "16",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "1",
           "Type": "Any"
@@ -87,7 +131,7 @@
         "Attempts": 1
       },
       {
-        "$id": "12",
+        "$id": "17",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "---------- set the desired camera temperature",
         "Parent": {
@@ -97,10 +141,10 @@
         "Attempts": 1
       },
       {
-        "$id": "13",
+        "$id": "18",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "14",
+          "$id": "19",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "-5",
           "Type": "Any"
@@ -114,7 +158,7 @@
         "Attempts": 1
       },
       {
-        "$id": "15",
+        "$id": "20",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "---------- bb is for broadband, nb is for narrowband, set to 1 to get the specifed calibration frames or 0 to skip when darks are requested",
         "Parent": {
@@ -124,7 +168,7 @@
         "Attempts": 1
       },
       {
-        "$id": "16",
+        "$id": "21",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "---------- define darks and biases desired. Supply an entry for each array in a new index for the lengths/gains/offsets/binning you want.",
         "Parent": {
@@ -134,54 +178,26 @@
         "Attempts": 1
       },
       {
-        "$id": "17",
+        "$id": "22",
         "$type": "WhenPlugin.When.PutArray, WhenPlugin",
         "NameExpr": {
-          "$id": "18",
+          "$id": "23",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "'dark_length_array'",
           "Type": "Any"
         },
         "IExpr": {
-          "$id": "19",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
-          "Type": "Any"
-        },
-        "VExpr": {
-          "$id": "20",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
-          "Type": "Any"
-        },
-        "Identifier": null,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "21",
-        "$type": "WhenPlugin.When.PutArray, WhenPlugin",
-        "NameExpr": {
-          "$id": "22",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "'dark_gain_array'",
-          "Type": "Any"
-        },
-        "IExpr": {
-          "$id": "23",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
-          "Type": "Any"
-        },
-        "VExpr": {
           "$id": "24",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "0",
           "Type": "Any"
         },
+        "VExpr": {
+          "$id": "25",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "0",
+          "Type": "Any"
+        },
         "Identifier": null,
         "Parent": {
           "$ref": "1"
@@ -190,26 +206,26 @@
         "Attempts": 1
       },
       {
-        "$id": "25",
+        "$id": "26",
         "$type": "WhenPlugin.When.PutArray, WhenPlugin",
         "NameExpr": {
-          "$id": "26",
+          "$id": "27",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "'dark_offset_array'",
+          "Expression": "'dark_gain_array'",
           "Type": "Any"
         },
         "IExpr": {
-          "$id": "27",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
-          "Type": "Any"
-        },
-        "VExpr": {
           "$id": "28",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "0",
           "Type": "Any"
         },
+        "VExpr": {
+          "$id": "29",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "0",
+          "Type": "Any"
+        },
         "Identifier": null,
         "Parent": {
           "$ref": "1"
@@ -218,22 +234,50 @@
         "Attempts": 1
       },
       {
-        "$id": "29",
+        "$id": "30",
         "$type": "WhenPlugin.When.PutArray, WhenPlugin",
         "NameExpr": {
-          "$id": "30",
+          "$id": "31",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "'dark_binning_array'",
+          "Expression": "'dark_offset_array'",
           "Type": "Any"
         },
         "IExpr": {
-          "$id": "31",
+          "$id": "32",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "0",
           "Type": "Any"
         },
         "VExpr": {
-          "$id": "32",
+          "$id": "33",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "0",
+          "Type": "Any"
+        },
+        "Identifier": null,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "34",
+        "$type": "WhenPlugin.When.PutArray, WhenPlugin",
+        "NameExpr": {
+          "$id": "35",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "'dark_binning_array'",
+          "Type": "Any"
+        },
+        "IExpr": {
+          "$id": "36",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "0",
+          "Type": "Any"
+        },
+        "VExpr": {
+          "$id": "37",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "1",
           "Type": "Any"
@@ -246,22 +290,22 @@
         "Attempts": 1
       },
       {
-        "$id": "33",
+        "$id": "38",
         "$type": "WhenPlugin.When.PutArray, WhenPlugin",
         "NameExpr": {
-          "$id": "34",
+          "$id": "39",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "'dark_length_array'",
           "Type": "Any"
         },
         "IExpr": {
-          "$id": "35",
+          "$id": "40",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "1",
           "Type": "Any"
         },
         "VExpr": {
-          "$id": "36",
+          "$id": "41",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "600",
           "Type": "Any"
@@ -274,22 +318,22 @@
         "Attempts": 1
       },
       {
-        "$id": "37",
+        "$id": "42",
         "$type": "WhenPlugin.When.PutArray, WhenPlugin",
         "NameExpr": {
-          "$id": "38",
+          "$id": "43",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "'dark_gain_array'",
           "Type": "Any"
         },
         "IExpr": {
-          "$id": "39",
+          "$id": "44",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "1",
           "Type": "Any"
         },
         "VExpr": {
-          "$id": "40",
+          "$id": "45",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "0",
           "Type": "Any"
@@ -302,22 +346,22 @@
         "Attempts": 1
       },
       {
-        "$id": "41",
+        "$id": "46",
         "$type": "WhenPlugin.When.PutArray, WhenPlugin",
         "NameExpr": {
-          "$id": "42",
+          "$id": "47",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "'dark_offset_array'",
           "Type": "Any"
         },
         "IExpr": {
-          "$id": "43",
+          "$id": "48",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "1",
           "Type": "Any"
         },
         "VExpr": {
-          "$id": "44",
+          "$id": "49",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "0",
           "Type": "Any"
@@ -330,22 +374,22 @@
         "Attempts": 1
       },
       {
-        "$id": "45",
+        "$id": "50",
         "$type": "WhenPlugin.When.PutArray, WhenPlugin",
         "NameExpr": {
-          "$id": "46",
+          "$id": "51",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "'dark_binning_array'",
           "Type": "Any"
         },
         "IExpr": {
-          "$id": "47",
+          "$id": "52",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "1",
           "Type": "Any"
         },
         "VExpr": {
-          "$id": "48",
+          "$id": "53",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "1",
           "Type": "Any"
@@ -358,7 +402,7 @@
         "Attempts": 1
       },
       {
-        "$id": "49",
+        "$id": "54",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "---------- set to true for any flat darks you want. They must have been previously trained with flat wizard.",
         "Parent": {
@@ -368,10 +412,10 @@
         "Attempts": 1
       },
       {
-        "$id": "50",
+        "$id": "55",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "51",
+          "$id": "56",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "False",
           "Type": "Any"
@@ -385,10 +429,10 @@
         "Attempts": 1
       },
       {
-        "$id": "52",
+        "$id": "57",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "53",
+          "$id": "58",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "False",
           "Type": "Any"
@@ -402,10 +446,10 @@
         "Attempts": 1
       },
       {
-        "$id": "54",
+        "$id": "59",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "55",
+          "$id": "60",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "False",
           "Type": "Any"
@@ -419,10 +463,10 @@
         "Attempts": 1
       },
       {
-        "$id": "56",
+        "$id": "61",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "57",
+          "$id": "62",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "False",
           "Type": "Any"
@@ -436,10 +480,10 @@
         "Attempts": 1
       },
       {
-        "$id": "58",
+        "$id": "63",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "59",
+          "$id": "64",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "False",
           "Type": "Any"
@@ -453,10 +497,10 @@
         "Attempts": 1
       },
       {
-        "$id": "60",
+        "$id": "65",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "61",
+          "$id": "66",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "False",
           "Type": "Any"
@@ -470,10 +514,10 @@
         "Attempts": 1
       },
       {
-        "$id": "62",
+        "$id": "67",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "63",
+          "$id": "68",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "False",
           "Type": "Any"
@@ -487,10 +531,10 @@
         "Attempts": 1
       },
       {
-        "$id": "64",
+        "$id": "69",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "65",
+          "$id": "70",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "False",
           "Type": "Any"
@@ -504,10 +548,10 @@
         "Attempts": 1
       },
       {
-        "$id": "66",
+        "$id": "71",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "67",
+          "$id": "72",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "False",
           "Type": "Any"
@@ -521,10 +565,10 @@
         "Attempts": 1
       },
       {
-        "$id": "68",
+        "$id": "73",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "69",
+          "$id": "74",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "False",
           "Type": "Any"
@@ -538,7 +582,7 @@
         "Attempts": 1
       },
       {
-        "$id": "70",
+        "$id": "75",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "---------- Set the gain to use for each subexposure ttype - you can use 0 if your camera does not support setting gain",
         "Parent": {
@@ -548,60 +592,16 @@
         "Attempts": 1
       },
       {
-        "$id": "71",
+        "$id": "76",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "72",
+          "$id": "77",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "0",
           "Type": "Any"
         },
         "Variable": "bb_bin1_gain",
         "CValueExpr": null,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "73",
-        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-        "Expr": {
-          "$id": "74",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
-          "Type": "Any"
-        },
-        "Variable": "bb_bin2_gain",
-        "CValueExpr": null,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "75",
-        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-        "Expr": {
-          "$id": "76",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "2750",
-          "Type": "Any"
-        },
-        "Variable": "nb_bin1_gain",
-        "CValueExpr": null,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "77",
-        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-        "Text": "---------- Set the offset to use for each subexpousre type - you can use 0 if your camera does not support setting offset",
         "Parent": {
           "$ref": "1"
         },
@@ -617,7 +617,7 @@
           "Expression": "0",
           "Type": "Any"
         },
-        "Variable": "bb_bin1_offset",
+        "Variable": "bb_bin2_gain",
         "CValueExpr": null,
         "Parent": {
           "$ref": "1"
@@ -631,10 +631,10 @@
         "Expr": {
           "$id": "81",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
+          "Expression": "2750",
           "Type": "Any"
         },
-        "Variable": "bb_bin2_offset",
+        "Variable": "nb_bin1_gain",
         "CValueExpr": null,
         "Parent": {
           "$ref": "1"
@@ -644,15 +644,8 @@
       },
       {
         "$id": "82",
-        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-        "Expr": {
-          "$id": "83",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "0",
-          "Type": "Any"
-        },
-        "Variable": "nb_bin1_offset",
-        "CValueExpr": null,
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "---------- Set the offset to use for each subexpousre type - you can use 0 if your camera does not support setting offset",
         "Parent": {
           "$ref": "1"
         },
@@ -660,9 +653,16 @@
         "Attempts": 1
       },
       {
-        "$id": "84",
-        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-        "Text": "---------- Set to 1 to indicate when it is ok to get darks or flats; use 0 to disallow that time period",
+        "$id": "83",
+        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+        "Expr": {
+          "$id": "84",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "0",
+          "Type": "Any"
+        },
+        "Variable": "bb_bin1_offset",
+        "CValueExpr": null,
         "Parent": {
           "$ref": "1"
         },
@@ -675,10 +675,10 @@
         "Expr": {
           "$id": "86",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "False",
+          "Expression": "0",
           "Type": "Any"
         },
-        "Variable": "get_darks_when_unsafe",
+        "Variable": "bb_bin2_offset",
         "CValueExpr": null,
         "Parent": {
           "$ref": "1"
@@ -692,10 +692,10 @@
         "Expr": {
           "$id": "88",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "False",
+          "Expression": "0",
           "Type": "Any"
         },
-        "Variable": "get_darks_when_daytime",
+        "Variable": "nb_bin1_offset",
         "CValueExpr": null,
         "Parent": {
           "$ref": "1"
@@ -705,42 +705,42 @@
       },
       {
         "$id": "89",
-        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-        "Expr": {
-          "$id": "90",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "False",
-          "Type": "Any"
-        },
-        "Variable": "get_flats_when_daytime",
-        "CValueExpr": null,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "91",
-        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
-        "Expr": {
-          "$id": "92",
-          "$type": "WhenPlugin.When.Expr, WhenPlugin",
-          "Expression": "False",
-          "Type": "Any"
-        },
-        "Variable": "get_flats_when_unsafe",
-        "CValueExpr": null,
-        "Parent": {
-          "$ref": "1"
-        },
-        "ErrorBehavior": 0,
-        "Attempts": 1
-      },
-      {
-        "$id": "93",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
-        "Text": "---------- set to 1 if your system has a flat panel cover that can rais or lower; 0 if it doe snot",
+        "Text": "---------- Set to 1 to indicate when it is ok to get darks or flats; use 0 to disallow that time period",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "90",
+        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+        "Expr": {
+          "$id": "91",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "False",
+          "Type": "Any"
+        },
+        "Variable": "get_darks_when_unsafe",
+        "CValueExpr": null,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "92",
+        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+        "Expr": {
+          "$id": "93",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "False",
+          "Type": "Any"
+        },
+        "Variable": "get_darks_when_daytime",
+        "CValueExpr": null,
         "Parent": {
           "$ref": "1"
         },
@@ -756,7 +756,7 @@
           "Expression": "False",
           "Type": "Any"
         },
-        "Variable": "has_flat_panel_cover",
+        "Variable": "get_flats_when_daytime",
         "CValueExpr": null,
         "Parent": {
           "$ref": "1"
@@ -766,6 +766,50 @@
       },
       {
         "$id": "96",
+        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+        "Expr": {
+          "$id": "97",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "False",
+          "Type": "Any"
+        },
+        "Variable": "get_flats_when_unsafe",
+        "CValueExpr": null,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "98",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "---------- set to 1 if your system has a flat panel cover that can rais or lower; 0 if it doe snot",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "99",
+        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+        "Expr": {
+          "$id": "100",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "False",
+          "Type": "Any"
+        },
+        "Variable": "has_flat_panel_cover",
+        "CValueExpr": null,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "101",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "---------- set to 1 if you are in a shared observatory where you do not control the roof; 0 if you do control the roof",
         "Parent": {
@@ -775,10 +819,10 @@
         "Attempts": 1
       },
       {
-        "$id": "97",
+        "$id": "102",
         "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
         "Expr": {
-          "$id": "98",
+          "$id": "103",
           "$type": "WhenPlugin.When.Expr, WhenPlugin",
           "Expression": "True",
           "Type": "Any"
@@ -792,7 +836,7 @@
         "Attempts": 1
       },
       {
-        "$id": "99",
+        "$id": "104",
         "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
         "Text": "---------- You can set the variables desired_bias_count and desired_dark_count here if you want to override the default values set in the main sequence.",
         "Parent": {
@@ -804,7 +848,7 @@
     ]
   },
   "Triggers": {
-    "$id": "100",
+    "$id": "105",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },

@@ -1134,11 +1134,38 @@
         },
         "ErrorBehavior": 0,
         "Attempts": 1
+      },
+      {
+        "$id": "146",
+        "$type": "NINA.Sequencer.SequenceItem.Utility.Annotation, NINA.Sequencer",
+        "Text": "---------- Set to true if you want to get night summary reports at the end of each night",
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
+      },
+      {
+        "$id": "147",
+        "$type": "WhenPlugin.When.ResetVariable, WhenPlugin",
+        "Expr": {
+          "$id": "148",
+          "$type": "WhenPlugin.When.Expr, WhenPlugin",
+          "Expression": "true",
+          "Type": "Any"
+        },
+        "Variable": "do_night_summary",
+        "CValueExpr": null,
+        "Parent": {
+          "$ref": "1"
+        },
+        "ErrorBehavior": 0,
+        "Attempts": 1
       }
     ]
   },
   "Triggers": {
-    "$id": "146",
+    "$id": "149",
     "$type": "System.Collections.ObjectModel.ObservableCollection`1[[NINA.Sequencer.Trigger.ISequenceTrigger, NINA.Sequencer]], System.ObjectModel",
     "$values": []
   },
